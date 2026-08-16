@@ -51,7 +51,8 @@ Enes'in tekrar elle eklemesi gerekmiyor.
 |---|---|---|
 | **Logo** | `presets/marka/viralyorum-logo.png`, ölçek 0.145, x 0.0 / y 0.827 (üst-orta), video boyunca, overlay track | Enes'in `ahtapot-uc-kalp` yerleşimi (2026-08-16) |
 | **Arkaplan sesi** | `presets/muzik/good-starts-jingle-punks.mp3`, volume 0.24, dosyanın 1.87. sn'sinden başlar | Enes seçti (2026-08-16) |
-| **Geçişler** | Girişte `Unfold`, sonra `Camera Left → Camera Down → Camera Right → Camera Up` sırayla | Enes'in kararı (2026-08-16) |
+| **Geçişler** | `Left → Down → Pull In II → Pull & Reveal`, kesme fazlaysa baştan döner | Enes kurdu, `ahtapot-uc-kalp` (2026-08-16) |
+| **VO seviyesi** | volume 1.63 (arkaplan sesinin üstünde net dursun) | Enes ayarladı (2026-08-16) |
 | **Altyazı stili** | `ahtapot-uc-kalp` taslağından klonlanır (CapCut şablonu 跟读手写黄), 2-3 kelimelik karaoke | Enes kurdu (2026-08-16) |
 | **Senaryo** | `presets/senaryo-stili.md` formülü | "Tüy Hırsızı Kuşlar" referansı |
 
@@ -59,28 +60,31 @@ Logo ve müzik dosyaları `Downloads`'tan repoya alındı — Downloads temizlen
 üretim kırılmasın diye. Logonun zemini `logo_seffaf.py` ile şeffaflaştırıldı
 (CapCut'taki jpg sürümü beyaz kare gösteriyordu).
 
-**Geçişler için tek seferlik ön koşul:** `capcut_gecis.py` geçiş prototipini
-diskteki taslaklardan buluyor. `Camera Right` mevcut, ama **`Unfold`, `Camera Left`,
-`Camera Down`, `Camera Up` bu makinede hiç kullanılmamış** — Enes bunları CapCut'ta
-bir kere uygulayınca prototipleri diske yazılıyor ve sonrasında her video otomatik alıyor.
+**`ahtapot-uc-kalp` referans taslaktır — silme.** Logo yerleşimi, altyazı stili ve
+geçiş prototipleri oradan klonlanıyor. Silinirse şablon kaybolur.
+
+Marka zinciri boş bir taslak kopyası üzerinde uçtan uca test edildi (2026-08-16):
+logo doğru ölçek/konumla (0.145 / x 0.0 / y 0.827) tam video boyunca, arkaplan sesi
+0.24 seviyede 1.87. sn'den, 6 geçiş doğru sırayla eklendi.
 
 ## Yapılacaklar
 
-### 1. Enes: kontrol + export  ← ŞU AN BURADA
+### Sonraki video  ← ŞU AN BURADA
 
-Video hazır: 7 klip (33.3 sn) + VO (33.1 sn) + 31 karaoke altyazı.
-CapCut'ı aç, altyazıları gözden geçir, export al. Export daima elde.
+`ahtapot-uc-kalp` **bitti ve export edildi** (2026-08-16). Artık referans şablon.
 
-**Müzik / efekt / geçiş / hook text hâlâ atlanıyor** — `preset.json`'daki o bloklar
-boş. Bu video export edilince kendisi şablon kaynağı olur; o bloklar
-`ahtapot-uc-kalp` taslağını gösterecek şekilde doldurulur.
+```bash
+python scripts/yeni.py <slug>
+```
 
-### 2. Sonraki video
+1. `plan.json`: konu + `presets/senaryo-stili.md` formülüyle anlatım (~15 karakter/sn;
+   kurgu süresini aşmasın, VO videodan uzunsa sonu kırpılıyor)
+2. Claude MCP ile klip seçer (4K, gerçek çekim, AI üretimi eleniyor) → `indir.py`
+3. `capcut_havuz.py` → Enes CapCut'ta dizer → tepsiden tam kapatır
+4. `uret.py`: TTS → VO → altyazı → **arkaplan sesi + logo + geçişler otomatik**
+5. Enes: kontrol + export
 
-`python scripts/yeni.py <slug>` → plan.json'u `presets/senaryo-stili.md` formülüne
-göre yaz → MCP ile klip seç → `indir.py` → `capcut_havuz.py` → Enes dizer →
-`uret.py`. Altyazı stili artık `preset.json > style_from = ahtapot-uc-kalp`
-üzerinden otomatik klonlanıyor, Enes'in tekrar stil kurmasına gerek yok.
+Enes'in elle yapması gereken tek şey: **dizme ve export**.
 
 ---
 

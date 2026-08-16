@@ -171,8 +171,9 @@ def main():
             proto = yapilandirma.get("vo_proto")
             if proto:
                 calistir("capcut_muzik.py",
-                         ["--draft", draft, "--from", proto,
-                          "--volume", "1.0", "--audio", vo_mp3], "VO enjekte (prototipten klon)")
+                         ["--draft", draft, "--from", proto, "--audio", vo_mp3,
+                          "--volume", str(yapilandirma.get("vo_volume", 1.0))],
+                         "VO enjekte (prototipten klon)")
             else:
                 print("  ! VO enjekte edilemedi: taslakta ses materyali yok ve "
                       "preset.json > seslendirme.vo_proto bos.")
@@ -221,7 +222,8 @@ def main():
     # 5) GECIS
     if "gecis" not in atla and yapilandirma.get("gecis"):
         gecis = yapilandirma["gecis"]
-        gecis_arg = ["--draft", draft]
+        # --clear: tekrar uretimde gecisler ustuste binmesin (her calistirmada yeniden kurulur)
+        gecis_arg = ["--draft", draft, "--clear"]
         if gecis.get("names"):
             gecis_arg += ["--names", gecis["names"]]
         if gecis.get("from"):

@@ -32,18 +32,23 @@ def add_logo_from(dc, m, image, template):
     sf = json.loads((DRAFTS / template / "draft_content.json").read_text(encoding="utf-8"))
     sby = {it["id"]: (k, it) for k, v in sf["materials"].items() if isinstance(v, list)
            for it in v if isinstance(it, dict) and "id" in it}
-    # KULLANILAN logo: sablonda birden fazla photo materyali olabilir (import edilip
-    # silinmis gorseller materyalde kaliyor) -> timeline'da SEGMENTI olani sec.
-    kullanilan = {s["material_id"] for t in sf["tracks"] if t["type"] == "video"
-                  for s in t["segments"]}
-    photo = next((v for v in sf["materials"]["videos"]
-                  if v.get("type") == "photo" and v["id"] in kullanilan), None)
+    # Logo = OVERLAY track'teki (flag 2) photo segmenti. Sablonda ana kurgunun icinde
+    # de foto olabiliyor (sahne gorseli) ve 'ilk photo materyali' onu secip yanlis
+    # olcek/konum klonluyordu. Once overlay'e bak, yoksa timeline'da kullanilan ilk fotoya dus.
+    def photo_segmentleri(flag):
+        for t in sf["tracks"]:
+            if t["type"] != "video" or (flag is not None and t.get("flag") != flag):
+                continue
+            for s in t["segments"]:
+                mat = sby.get(s["material_id"], (None, None))[1]
+                if mat and mat.get("type") == "photo":
+                    yield mat, s
+
+    photo, pseg = next(photo_segmentleri(2), (None, None))
+    if not photo:
+        photo, pseg = next(photo_segmentleri(None), (None, None))
     if not photo:
         sys.exit(f"HATA: '{template}' icinde timeline'da kullanilan logo (photo) yok.")
-    pseg = next((s for t in sf["tracks"] if t["type"] == "video"
-                 for s in t["segments"] if s["material_id"] == photo["id"]), None)
-    if not pseg:
-        sys.exit("HATA: kaynak logo segmenti bulunamadı.")
     nid = lambda: str(uuid.uuid4()).upper()
     w, h = img_dims(image)
     np_ = copy.deepcopy(photo); np_["id"] = nid()
