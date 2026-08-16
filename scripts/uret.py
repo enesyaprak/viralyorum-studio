@@ -152,9 +152,20 @@ def main():
             elif oran > 1.1:
                 print("  ! VO UZUN — anlatimi kisalt, videoya tasiyor.")
 
-        calistir("capcut_audio.py",
-                 ["--draft", draft, "--audio", vo_mp3,
-                  "--match", yapilandirma.get("vo_match", "ElevenLabs")], "VO enjekte")
+        if not calistir("capcut_audio.py",
+                        ["--draft", draft, "--audio", vo_mp3,
+                         "--match", yapilandirma.get("vo_match", "ElevenLabs")], "VO enjekte"):
+            # capcut_audio.py var olan bir ses materyalini DEGISTIRIR. Sifirdan kurulan
+            # taslakta (sablonsuz ilk video) degistirecek materyal yok -> ses elementini
+            # bir prototip taslaktan klonlayip VO'yu YENI audio track olarak ekle.
+            proto = yapilandirma.get("vo_proto")
+            if proto:
+                calistir("capcut_muzik.py",
+                         ["--draft", draft, "--from", proto,
+                          "--volume", "1.0", "--audio", vo_mp3], "VO enjekte (prototipten klon)")
+            else:
+                print("  ! VO enjekte edilemedi: taslakta ses materyali yok ve "
+                      "preset.json > seslendirme.vo_proto bos.")
 
     # 2) ALTYAZI (VO'yu transcribe et -> karaoke)
     if "altyazi" not in atla:

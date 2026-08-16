@@ -29,30 +29,37 @@ Hedef: `ahtapot-uc-kalp` videosunu uçtan uca bitirmek. Stok üretimi ondan sonr
 üstünde. Dikey gerçek ahtapot görüntüsü stokta neredeyse yok; dikey olanların hepsi
 AI üretimiydi ve elendi.
 
+## Durum: kurgu + VO tamam, altyazı bekliyor
+
+Enes 7 klibi timeline'a dizdi (33.3 sn). Anlatım metni bu kurguya sığsın diye
+kısaltıldı (619 → 467 karakter), VO yeniden üretildi: **31.5 sn**, taslağa enjekte
+edildi (audio track, volume 1.0). Kelime zamanlı transkript hazır:
+`output/ahtapot-uc-kalp_vo_tr.json`.
+
 ## Yapılacaklar
 
-### 1. Enes: CapCut'ta dizer  ← ŞU AN BURADA
+### 1. Enes: altyazı stilini bir kere kur  ← ŞU AN BURADA
 
-CapCut'ı aç → `ahtapot-uc-kalp` taslağı → 7 klip medya sekmesinde.
-Smart clipping ile dizer/keser, sonra **CapCut'ı tepsiden TAM kapatır**.
-Açılışta "kurtar/recover" dialogu çıkarsa **reddet**.
+Kanalın karaoke altyazı stilini taşıyan taslak yok, klonlanacak kaynak lazım.
+Karar: **stili Enes kuracak** (reklam taslaklarından klonlanmayacak — kanal kimliği).
 
-### 2. Üret
+CapCut'ta `ahtapot-uc-kalp` taslağını aç → tek bir metin ekle, fontu/rengi/konturu/
+animasyonu kanalın istediği gibi ayarla → **tepsiden TAM kapat**.
+Sonra `preset.json > seslendirme.style_from` = `ahtapot-uc-kalp` yapılır ve
+altyazı bu stille üretilir:
 
 ```bash
-python scripts/uret.py --proje ahtapot-uc-kalp --draft ahtapot-uc-kalp
+python scripts/capcut_captions.py --draft ahtapot-uc-kalp --transcript output/ahtapot-uc-kalp_vo_tr.json
 ```
 
-TTS → VO enjekte → Scribe transcribe → karaoke altyazı → sözlük düzeltmesi →
-şüpheli altyazı raporu.
+Stil bir kere kurulduktan sonra sonraki tüm videolar bu taslaktan klonlar.
 
-**Şablon olmadığı için müzik / efekt / geçiş / hook text adımları atlanacak**
-(`preset.json`'daki o bloklar boş). İlk video çıktıktan sonra o videonun kendisi
-şablon kaynağı olur ve bloklar doldurulur.
-
-### 3. Enes: kontrol + export
+### 2. Enes: kontrol + export
 
 Export daima elde.
+
+**Müzik / efekt / geçiş / hook text hâlâ atlanıyor** — `preset.json`'daki o bloklar
+boş. İlk video çıktıktan sonra o videonun kendisi şablon kaynağı olur.
 
 ---
 
@@ -63,6 +70,12 @@ Export daima elde.
 - **CapCut taslak kimliği:** kök `draft_content.json > id`, `Timelines/project.json >
   main_timeline_id`, `Timelines/<UUID>/` klasör adı ve iç `draft_content.json > id`
   **dördü de aynı olmak zorunda**. `capcut_havuz.py > dogrula()` bunu kontrol ediyor.
+- **`capcut_audio.py` var olan ses materyalini DEĞİŞTİRİR, sıfırdan eklemez.**
+  Şablonsuz ilk videoda taslakta hiç ses materyali olmadığı için hata veriyordu.
+  `uret.py` artık bu durumda `capcut_muzik.py --audio` ile ses elementini
+  `preset.json > seslendirme.vo_proto` taslağından klonlayıp VO'yu yeni bir audio
+  track olarak ekliyor. **VO, timeline süresine kırpılıyor** (`min(vo, video)`) —
+  yani VO videodan uzunsa sonu kesilir; oran 1.0'ın altında olmalı.
 - **`capcut_havuz.py` var olan taslak adının üstüne yazmaz.** Yeniden kurmak
   gerekirse önce `%LOCALAPPDATA%\CapCut Drafts\<ad>` klasörünü kaldır.
   (2026-08-16'da eski 1 kliplik taslak yedeklenip kaldırıldı, yenisi kuruldu.)
