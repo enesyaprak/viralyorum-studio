@@ -29,7 +29,7 @@ Hedef: `ahtapot-uc-kalp` videosunu uçtan uca bitirmek. Stok üretimi ondan sonr
 üstünde. Dikey gerçek ahtapot görüntüsü stokta neredeyse yok; dikey olanların hepsi
 AI üretimiydi ve elendi.
 
-## Durum: kurgu + VO tamam, altyazı bekliyor
+## Durum: video export'a hazır
 
 Enes 7 klibi timeline'a dizdi (33.3 sn). Anlatım **clickbait/anlatı stiline göre
 yeniden yazıldı** (`presets/senaryo-stili.md` — referans: "Tüy Hırsızı Kuşlar"
@@ -44,28 +44,21 @@ anons edilmez.
 
 ## Yapılacaklar
 
-### 1. Enes: altyazı stilini bir kere kur  ← ŞU AN BURADA
+### 1. Enes: kontrol + export  ← ŞU AN BURADA
 
-Kanalın karaoke altyazı stilini taşıyan taslak yok, klonlanacak kaynak lazım.
-Karar: **stili Enes kuracak** (reklam taslaklarından klonlanmayacak — kanal kimliği).
-
-CapCut'ta `ahtapot-uc-kalp` taslağını aç → tek bir metin ekle, fontu/rengi/konturu/
-animasyonu kanalın istediği gibi ayarla → **tepsiden TAM kapat**.
-Sonra `preset.json > seslendirme.style_from` = `ahtapot-uc-kalp` yapılır ve
-altyazı bu stille üretilir:
-
-```bash
-python scripts/capcut_captions.py --draft ahtapot-uc-kalp --transcript output/ahtapot-uc-kalp_vo_tr.json
-```
-
-Stil bir kere kurulduktan sonra sonraki tüm videolar bu taslaktan klonlar.
-
-### 2. Enes: kontrol + export
-
-Export daima elde.
+Video hazır: 7 klip (33.3 sn) + VO (33.1 sn) + 31 karaoke altyazı.
+CapCut'ı aç, altyazıları gözden geçir, export al. Export daima elde.
 
 **Müzik / efekt / geçiş / hook text hâlâ atlanıyor** — `preset.json`'daki o bloklar
-boş. İlk video çıktıktan sonra o videonun kendisi şablon kaynağı olur.
+boş. Bu video export edilince kendisi şablon kaynağı olur; o bloklar
+`ahtapot-uc-kalp` taslağını gösterecek şekilde doldurulur.
+
+### 2. Sonraki video
+
+`python scripts/yeni.py <slug>` → plan.json'u `presets/senaryo-stili.md` formülüne
+göre yaz → MCP ile klip seç → `indir.py` → `capcut_havuz.py` → Enes dizer →
+`uret.py`. Altyazı stili artık `preset.json > style_from = ahtapot-uc-kalp`
+üzerinden otomatik klonlanıyor, Enes'in tekrar stil kurmasına gerek yok.
 
 ---
 
