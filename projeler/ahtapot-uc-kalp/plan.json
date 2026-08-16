@@ -41,7 +41,18 @@
         "octopus tentacles close up",
         "sea creature underwater macro"
       ],
-      "klipler": []
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "11334970",
+          "url": "https://videos.pexels.com/video-files/11334970/11334970-uhd_3840_2160_30fps.mp4",
+          "genislik": 3840,
+          "yukseklik": 2160,
+          "sure": 32,
+          "sahibi": "Magda Ehlers",
+          "sayfa": "https://www.pexels.com/video/close-up-view-of-fish-11334970/"
+        }
+      ]
     },
     {
       "no": 3,
@@ -51,7 +62,18 @@
         "octopus moving seabed",
         "deep sea dark water"
       ],
-      "klipler": []
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "17841948",
+          "url": "https://videos.pexels.com/video-files/17841948/17841948-uhd_3840_2160_25fps.mp4",
+          "genislik": 3840,
+          "yukseklik": 2160,
+          "sure": 12,
+          "sahibi": "Adrien JACTA",
+          "sayfa": "https://www.pexels.com/video/octopus-swimming-underwater-17841948/"
+        }
+      ]
     },
     {
       "no": 4,
@@ -61,7 +83,18 @@
         "octopus crawling rocks",
         "coral reef ocean floor"
       ],
-      "klipler": []
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "15623348",
+          "url": "https://videos.pexels.com/video-files/15623348/15623348-uhd_3840_2160_25fps.mp4",
+          "genislik": 3840,
+          "yukseklik": 2160,
+          "sure": 22,
+          "sahibi": "Jozef Papp",
+          "sayfa": "https://www.pexels.com/video/underwater-footage-of-an-octopus-swimming-in-the-sea-15623348/"
+        }
+      ]
     },
     {
       "no": 5,
@@ -71,7 +104,18 @@
         "blue ocean water abstract",
         "underwater blue light rays"
       ],
-      "klipler": []
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "34268912",
+          "url": "https://videos.pexels.com/video-files/34268912/14519804_2160_3840_30fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 3840,
+          "sure": 17,
+          "sahibi": "Pramod Giri",
+          "sayfa": "https://www.pexels.com/video/graceful-jellyfish-gliding-in-deep-blue-ocean-34268912/"
+        }
+      ]
     },
     {
       "no": 6,
@@ -81,7 +125,18 @@
         "deep ocean underwater",
         "jellyfish deep sea"
       ],
-      "klipler": []
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "33422094",
+          "url": "https://videos.pexels.com/video-files/33422094/14225440_2160_3840_60fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 3840,
+          "sure": 12,
+          "sahibi": "JUN HO LEE",
+          "sayfa": "https://www.pexels.com/video/cave-diving-adventure-into-the-deep-blue-33422094/"
+        }
+      ]
     },
     {
       "no": 7,
@@ -91,7 +146,18 @@
         "octopus eye close up",
         "octopus dramatic underwater"
       ],
-      "klipler": []
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "17836505",
+          "url": "https://videos.pexels.com/video-files/17836505/17836505-uhd_2160_3840_25fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 3840,
+          "sure": 17,
+          "sahibi": "Entdecker Fuchs",
+          "sayfa": "https://www.pexels.com/video/pulpa-aquarium-biarritz-17836505/"
+        }
+      ]
     }
   ],
   "text": [
