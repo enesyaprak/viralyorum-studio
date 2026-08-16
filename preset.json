@@ -24,22 +24,30 @@
     "style_from": "ahtapot-uc-kalp",
     "_style_from_not": "Karaoke altyazi stilinin klonlanacagi CapCut taslagi. Enes stili 2026-08-16'da ahtapot-uc-kalp taslaginda kurdu (CapCut sablonu: 跟读手写黄). Hedef taslakta zaten caption varsa oradaki stil kullanilir, bu alan sadece caption YOKKEN devreye girer.",
 
+    "logo": {
+      "dosya": "presets/marka/viralyorum-logo.png",
+      "from": "ahtapot-uc-kalp",
+      "_not": "HER VIDEOYA otomatik eklenir. Konum/olcek Enes'in 2026-08-16'da ahtapot-uc-kalp taslaginda kurdugu yerlesimden klonlanir: olcek 0.145, x 0.0, y 0.827 (ust-orta), alpha 1.0, overlay track, video boyunca. Kaynak gorsel Downloads'tan repoya alindi ve zemini seffaflastirildi (logo_seffaf.py); CapCut'ta duran jpg surumu beyaz kare gosteriyordu."
+    },
+
     "muzik": {
-      "from": "",
+      "from": "seyrangul-beauty",
       "match": "",
-      "volume": 0.18,
-      "_not": "Anlatim videosunda muzik VO'yu bastirmasin: 0.15-0.20 bandi."
+      "dosya": "presets/muzik/good-starts-jingle-punks.mp3",
+      "kaynak_baslangic": 1.87,
+      "volume": 0.24,
+      "_not": "HER VIDEOYA otomatik eklenir. Enes'in sectigi arkaplan sesi (YouTube Audio Library, telif temiz). volume 0.24 ve kaynak_baslangic 1.87sn onun ahtapot-uc-kalp'teki ayarindan alindi (intro sessizligi atlaniyor). 'from' sadece ses ELEMENTININ semasi icin kullaniliyor, o taslagin muzigi degil."
+    },
+
+    "gecis": {
+      "from": "ahtapot-uc-kalp",
+      "names": "Unfold,Camera Left,Camera Down,Camera Right,Camera Up",
+      "_not": "HER VIDEOYA otomatik eklenir. Girise Unfold, sonrasinda camera transition'lar sirayla (left, down, right, up) donerek. Enes'in karari (2026-08-16). names'teki gecislerin CapCut'ta en az bir kere kullanilmis olmasi gerekiyor - prototip JSON'u ancak o zaman diskte oluyor."
     },
 
     "efekt": {
       "from": "",
       "_not": "Vignette + filtre track'lerinin klonlanacagi taslak."
-    },
-
-    "gecis": {
-      "from": "",
-      "names": "",
-      "_not": "from = gecislerin klonlanacagi taslak; names = belirli gecis adlari (virgulle)."
     },
 
     "text_from": "",

@@ -32,9 +32,14 @@ def add_logo_from(dc, m, image, template):
     sf = json.loads((DRAFTS / template / "draft_content.json").read_text(encoding="utf-8"))
     sby = {it["id"]: (k, it) for k, v in sf["materials"].items() if isinstance(v, list)
            for it in v if isinstance(it, dict) and "id" in it}
-    photo = next((v for v in sf["materials"]["videos"] if v.get("type") == "photo"), None)
+    # KULLANILAN logo: sablonda birden fazla photo materyali olabilir (import edilip
+    # silinmis gorseller materyalde kaliyor) -> timeline'da SEGMENTI olani sec.
+    kullanilan = {s["material_id"] for t in sf["tracks"] if t["type"] == "video"
+                  for s in t["segments"]}
+    photo = next((v for v in sf["materials"]["videos"]
+                  if v.get("type") == "photo" and v["id"] in kullanilan), None)
     if not photo:
-        sys.exit(f"HATA: '{template}' içinde logo (photo) yok.")
+        sys.exit(f"HATA: '{template}' icinde timeline'da kullanilan logo (photo) yok.")
     pseg = next((s for t in sf["tracks"] if t["type"] == "video"
                  for s in t["segments"] if s["material_id"] == photo["id"]), None)
     if not pseg:
@@ -57,7 +62,12 @@ def add_logo_from(dc, m, image, template):
         m.setdefault(kind, []).append(nit)
         new_refs.append(nit["id"])
     ns["extra_material_refs"] = new_refs
-    dc["tracks"].append({"type": "video", "attribute": 0, "flag": 0, "id": nid(),
+    # logo videonun TAMAMI boyunca dursun (sablonun suresi farkli olabilir)
+    hedef_sure = dc.get("duration") or ns["target_timerange"]["duration"]
+    ns["source_timerange"] = {"start": 0, "duration": hedef_sure}
+    ns["target_timerange"] = {"start": 0, "duration": hedef_sure}
+    # flag 2 = overlay (ust katman) track; ana video track'inin uzerinde dursun
+    dc["tracks"].append({"type": "video", "attribute": 0, "flag": 2, "id": nid(),
                          "segments": [ns], "is_default_name": True, "name": ""})
 
 

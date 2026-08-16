@@ -42,6 +42,28 @@ formülüne göre yazılır — kanca (izleyiciye hitap + absürt tehdit/vaat) �
 iç ses (hayvana replik) → "ama" ile tersine dönüş → kısa kapanış. Konu asla başta
 anons edilmez.
 
+## Her videoda sabit (marka şablonu)
+
+Bunlar `preset.json`'da tanımlı ve `uret.py` her videoda **otomatik** uyguluyor.
+Enes'in tekrar elle eklemesi gerekmiyor.
+
+| Öğe | Ayar | Kaynak |
+|---|---|---|
+| **Logo** | `presets/marka/viralyorum-logo.png`, ölçek 0.145, x 0.0 / y 0.827 (üst-orta), video boyunca, overlay track | Enes'in `ahtapot-uc-kalp` yerleşimi (2026-08-16) |
+| **Arkaplan sesi** | `presets/muzik/good-starts-jingle-punks.mp3`, volume 0.24, dosyanın 1.87. sn'sinden başlar | Enes seçti (2026-08-16) |
+| **Geçişler** | Girişte `Unfold`, sonra `Camera Left → Camera Down → Camera Right → Camera Up` sırayla | Enes'in kararı (2026-08-16) |
+| **Altyazı stili** | `ahtapot-uc-kalp` taslağından klonlanır (CapCut şablonu 跟读手写黄), 2-3 kelimelik karaoke | Enes kurdu (2026-08-16) |
+| **Senaryo** | `presets/senaryo-stili.md` formülü | "Tüy Hırsızı Kuşlar" referansı |
+
+Logo ve müzik dosyaları `Downloads`'tan repoya alındı — Downloads temizlenirse
+üretim kırılmasın diye. Logonun zemini `logo_seffaf.py` ile şeffaflaştırıldı
+(CapCut'taki jpg sürümü beyaz kare gösteriyordu).
+
+**Geçişler için tek seferlik ön koşul:** `capcut_gecis.py` geçiş prototipini
+diskteki taslaklardan buluyor. `Camera Right` mevcut, ama **`Unfold`, `Camera Left`,
+`Camera Down`, `Camera Up` bu makinede hiç kullanılmamış** — Enes bunları CapCut'ta
+bir kere uygulayınca prototipleri diske yazılıyor ve sonrasında her video otomatik alıyor.
+
 ## Yapılacaklar
 
 ### 1. Enes: kontrol + export  ← ŞU AN BURADA

@@ -77,6 +77,16 @@ def calistir(arac, argumanlar, etiket):
     return True
 
 
+def logo_var_mi(draft, dosya_adi):
+    """Taslakta bu logo zaten duruyor mu (tekrar uretimde ikinci kez eklenmesin)."""
+    try:
+        dc = json.loads((DRAFTS / draft / "draft_content.json").read_text(encoding="utf-8"))
+    except Exception:
+        return False
+    return any(v.get("type") == "photo" and dosya_adi.lower() in str(v.get("path", "")).lower()
+               for v in dc.get("materials", {}).get("videos", []))
+
+
 def plan_oku(slug):
     plan_yolu = KOK / "projeler" / slug / "plan.json"
     if not plan_yolu.exists():
@@ -175,13 +185,33 @@ def main():
             altyazi_arg += ["--style-from", yapilandirma["style_from"]]
         calistir("capcut_captions.py", altyazi_arg, "Karaoke altyazi")
 
-    # 3) MUZIK
+    # 3) MUZIK (arkaplan sesi — her videoda ayni)
     if "muzik" not in atla and yapilandirma.get("muzik", {}).get("from"):
         muzik = yapilandirma["muzik"]
-        calistir("capcut_muzik.py",
-                 ["--draft", draft, "--from", muzik["from"],
-                  "--match", muzik.get("match", ""),
-                  "--volume", str(muzik.get("volume", 0.18))], "Muzik")
+        muzik_arg = ["--draft", draft, "--from", muzik["from"],
+                     "--match", muzik.get("match", ""),
+                     "--volume", str(muzik.get("volume", 0.18))]
+        if muzik.get("dosya"):
+            dosya = KOK / muzik["dosya"]
+            if not dosya.exists():
+                sys.exit(f"HATA: arkaplan sesi bulunamadi: {dosya}")
+            muzik_arg += ["--audio", str(dosya), "--varsa-atla",
+                          "--kaynak-baslangic", str(muzik.get("kaynak_baslangic", 0))]
+        calistir("capcut_muzik.py", muzik_arg, "Arkaplan sesi")
+
+    # 3b) LOGO (kanal logosu — her videoda ayni yer/olcek)
+    if "logo" not in atla and yapilandirma.get("logo", {}).get("dosya"):
+        logo = yapilandirma["logo"]
+        gorsel = KOK / logo["dosya"]
+        if not gorsel.exists():
+            sys.exit(f"HATA: logo bulunamadi: {gorsel}")
+        if logo_var_mi(draft, gorsel.name):
+            print("\n--- Logo ---\n  [=] logo taslakta zaten var, atlandi.")
+        elif logo.get("from"):
+            calistir("capcut_logo.py",
+                     ["--draft", draft, "--add", str(gorsel), "--from", logo["from"]], "Logo")
+        else:
+            print("\n--- Logo ---\n  ! preset.json > seslendirme.logo.from bos, logo eklenemedi.")
 
     # 4) EFEKT (vignette + filtre track klonu)
     if "efekt" not in atla and yapilandirma.get("efekt", {}).get("from"):

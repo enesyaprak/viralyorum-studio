@@ -25,6 +25,10 @@ def main():
     ap.add_argument("--match", default="", help="müzik materyali adı (boşsa ilk 'music')")
     ap.add_argument("--volume", type=float, default=0.22, help="ses seviyesi (müzik 0.22, voiceover 1.0)")
     ap.add_argument("--audio", help="harici ses dosyası (verilirse müzik yerine bu eklenir; voiceover için)")
+    ap.add_argument("--kaynak-baslangic", dest="kaynak_baslangic", type=float, default=0.0,
+                    help="ses dosyasının kaçıncı saniyesinden başlansın (girişteki sessizliği/intro'yu atlamak için)")
+    ap.add_argument("--varsa-atla", dest="varsa_atla", action="store_true",
+                    help="aynı adlı ses taslakta zaten varsa hiçbir şey yapma (tekrar üretimde kopya oluşmasın)")
     args = ap.parse_args()
     if not (DRAFTS / args.draft / "draft_content.json").exists():
         import glob as _g
@@ -45,6 +49,12 @@ def main():
     dc = json.loads(dc_path.read_text(encoding="utf-8"))
     m = dc["materials"]
     total = dc.get("duration", 0)
+
+    if args.varsa_atla and args.audio:
+        ad = Path(args.audio).stem.lower()
+        if any(ad in str(a.get("name", "")).lower() for a in m.get("audios", [])):
+            print(f"[=] '{Path(args.audio).name}' taslakta zaten var, atlandi.")
+            return
 
     sf = json.loads((DRAFTS / args.src / "draft_content.json").read_text(encoding="utf-8"))
     sm = sf["materials"]
@@ -78,7 +88,10 @@ def main():
 
     ns = copy.deepcopy(mseg) if mseg else {"extra_material_refs": []}
     ns["id"] = nid(); ns["material_id"] = nm["id"]
-    ns["source_timerange"] = {"start": 0, "duration": src_dur}
+    kaynak_bas = int(args.kaynak_baslangic * 1_000_000)
+    if kaynak_bas and nm.get("duration"):
+        src_dur = min(src_dur, nm["duration"] - kaynak_bas)  # dosyanın sonunu taşma
+    ns["source_timerange"] = {"start": kaynak_bas, "duration": src_dur}
     ns["target_timerange"] = {"start": 0, "duration": src_dur}
     ns["volume"] = args.volume
     ns["last_nonzero_volume"] = args.volume
