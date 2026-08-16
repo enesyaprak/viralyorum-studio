@@ -31,10 +31,16 @@ AI üretimiydi ve elendi.
 
 ## Durum: kurgu + VO tamam, altyazı bekliyor
 
-Enes 7 klibi timeline'a dizdi (33.3 sn). Anlatım metni bu kurguya sığsın diye
-kısaltıldı (619 → 467 karakter), VO yeniden üretildi: **31.5 sn**, taslağa enjekte
-edildi (audio track, volume 1.0). Kelime zamanlı transkript hazır:
-`output/ahtapot-uc-kalp_vo_tr.json`.
+Enes 7 klibi timeline'a dizdi (33.3 sn). Anlatım **clickbait/anlatı stiline göre
+yeniden yazıldı** (`presets/senaryo-stili.md` — referans: "Tüy Hırsızı Kuşlar"
+shorts'u, transkripti `output/referans_tuy-hirsizi_tr.json`). VO 33.1 sn, taslağa
+enjekte edildi (audio track, volume 1.0), kurguyla oranı 0.99. Kelime zamanlı
+transkript güncel: `output/ahtapot-uc-kalp_vo_tr.json`.
+
+**Senaryo kuralı bundan sonra:** her plan.json anlatımı `presets/senaryo-stili.md`
+formülüne göre yazılır — kanca (izleyiciye hitap + absürt tehdit/vaat) → kurulum →
+iç ses (hayvana replik) → "ama" ile tersine dönüş → kısa kapanış. Konu asla başta
+anons edilmez.
 
 ## Yapılacaklar
 

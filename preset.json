@@ -15,8 +15,8 @@
       "_not": "YUKSEK ENERJI profili - Enes secti (2026-08-16). Doga varsayilani: stability 0.5, style 0.0, speed 1.0. Dusuk stability + yuksek style = canli/hareketli; speed 1.15 = hizli. null yazilirsa o alan gonderilmez ve sesin varsayilani gecerli olur."
     },
 
-    "vo_match": "ElevenLabs",
-    "_vo_match_not": "Taslakta hangi ses materyalinin uzerine VO yazilacak (isim eslesmesi).",
+    "vo_match": "_vo",
+    "_vo_match_not": "Taslakta hangi ses materyalinin uzerine VO yazilacak (isim eslesmesi). Bu repoda enjekte edilen VO materyali <taslak>_vo adiyla duruyor -> tekrar uretimde ayni materyalin uzerine yazilir.",
 
     "vo_proto": "seyrangul-beauty",
     "_vo_proto_not": "Taslakta degistirilecek ses materyali YOKSA (sifirdan kurulan taslak) ses elementi bu taslaktan klonlanir ve VO yeni bir audio track olarak eklenir. Sadece iskelet/sema kaynagi - o taslagin muzigi kullanilmaz.",

@@ -1,7 +1,7 @@
 {
   "slug": "ahtapot-uc-kalp",
   "baslik": "Ahtapotun 3 Kalbi Var — Ve Yüzerken Biri Duruyor",
-  "hook": "Bu hayvanın üç kalbi var. Ve yüzmeye başladığı an biri duruyor.",
+  "hook": "Senin kalbin dursa ölürsün. Bu hayvanınki her yüzdüğünde duruyor.",
   "hedef_sure": 34,
   "etiketler": [
     "#ahtapot",
@@ -15,7 +15,7 @@
     {
       "no": 1,
       "sure": 4,
-      "anlatim": "Bu hayvanın üç kalbi var. Ve yüzmeye başladığı an biri duruyor.",
+      "anlatim": "Senin kalbin dursa ölürsün. Bu hayvanınki her yüzdüğünde duruyor.",
       "ara": [
         "octopus underwater",
         "octopus swimming ocean"
@@ -36,7 +36,7 @@
     {
       "no": 2,
       "sure": 5,
-      "anlatim": "İki kalp solungaçlara, üçüncüsü kanı tüm vücuda pompalıyor.",
+      "anlatim": "Ahtapotun üç kalbi var. İkisi solungaçlara, biri tüm vücuda pompalıyor.",
       "ara": [
         "octopus tentacles close up",
         "sea creature underwater macro"
@@ -57,7 +57,7 @@
     {
       "no": 3,
       "sure": 5,
-      "anlatim": "Ama yüzerken ana kalp duruyor. Yüzmek onu çok yoruyor.",
+      "anlatim": "Ama yüzerken ana kalp duruyor. Her yüzüşü nefes tutmak gibi.",
       "ara": [
         "octopus moving seabed",
         "deep sea dark water"
@@ -78,7 +78,7 @@
     {
       "no": 4,
       "sure": 5,
-      "anlatim": "O yüzden yüzmek yerine deniz tabanında yürüyor. Enerjisini böyle koruyor.",
+      "anlatim": "O da 'ben yüzmem' deyip dipte yürüyor. Tembellik değil, hayatta kalma.",
       "ara": [
         "octopus crawling rocks",
         "coral reef ocean floor"
@@ -99,7 +99,7 @@
     {
       "no": 5,
       "sure": 4,
-      "anlatim": "Kanı da kırmızı değil, mavi. Çünkü demir yerine bakır taşıyor.",
+      "anlatim": "Bir de kanı kırmızı değil, mavi. Demir yerine bakır taşıyor.",
       "ara": [
         "blue ocean water abstract",
         "underwater blue light rays"
@@ -120,7 +120,7 @@
     {
       "no": 6,
       "sure": 6,
-      "anlatim": "Bakırlı kan soğuk ve oksijensiz suda daha verimli. Dipte hayatta kalma sırrı bu.",
+      "anlatim": "Bakır, soğuk ve oksijensiz suda demirden verimli çalışıyor.",
       "ara": [
         "deep ocean underwater",
         "jellyfish deep sea"
@@ -141,7 +141,7 @@
     {
       "no": 7,
       "sure": 5,
-      "anlatim": "Yani üç kalp ve mavi kan bir hata değil. Tam tersi, kusursuz bir uyum.",
+      "anlatim": "Yani üç kalp ve mavi kan hata değil. Dibin kuralları öyle yazmış.",
       "ara": [
         "octopus eye close up",
         "octopus dramatic underwater"
@@ -161,6 +161,7 @@
     }
   ],
   "text": [
-    "Bu hayvanın üç kalbi var. Ve yüzmeye başladığı an biri duruyor."
-  ]
+    "Senin kalbin dursa ölürsün. Bu hayvanınki her yüzdüğünde duruyor."
+  ],
+  "_stil": "presets/senaryo-stili.md formulu (kanca -> kurulum -> ic ses -> tersine donus -> kapanis)"
 }
