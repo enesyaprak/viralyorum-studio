@@ -1,0 +1,34 @@
+{
+  "_aciklama": "Altyazi otomatik duzeltme sozlugu. Sema bluemedya ile AYNI ('global' + 'markalar') ki kopyalanan capcut_altyazi.py degismeden calissin. Bu repoda 'markalar' = KONU GRUBU. Kurallar [regex, yerine] ciftidir, sirayla uygulanir. Her yeni videoda Scribe'in bozdugu terim buraya eklenir - liste zamanla buyur.",
+
+  "global": [
+    ["(?i)\\bbi̇r\\b", "bir"],
+    ["(?i)(\\d)\\s*santi\\s*metre", "\\1 santimetre"],
+    ["(?i)(\\d)\\s*kilo\\s*gram", "\\1 kilogram"],
+    ["(?i)(\\d)\\s*yuzde\\b", "yüzde \\1"],
+    ["\\s+([,.!?])", "\\1"],
+    ["\\s{2,}", " "]
+  ],
+
+  "markalar": {
+    "deniz": [
+      ["(?i)\\bahta\\s+pot", "ahtapot"],
+      ["(?i)\\bsolun\\s*gaç", "solungaç"],
+      ["(?i)\\bsolun\\s*gaç\\s*lar", "solungaçlar"],
+      ["(?i)\\bsefalo\\s*pod", "sefalopod"],
+      ["(?i)\\bbiyo\\s*lümine\\s*sans", "biyolüminesans"],
+      ["(?i)\\bkromato\\s*for", "kromatofor"],
+      ["(?i)\\bhemo\\s*siyanin", "hemosiyanin"],
+      ["(?i)\\bplank\\s*ton", "plankton"],
+      ["(?i)\\bmer\\s*can\\s+resif", "mercan resif"]
+    ],
+    "genel_biyoloji": [
+      ["(?i)\\bomur\\s*gasız", "omurgasız"],
+      ["(?i)\\bmeta\\s*bolizma", "metabolizma"],
+      ["(?i)\\bfoto\\s*sentez", "fotosentez"],
+      ["(?i)\\beko\\s*sistem", "ekosistem"],
+      ["(?i)\\bkamu\\s*flaj", "kamuflaj"],
+      ["(?i)\\bmeme\\s*li\\s*ler", "memeliler"]
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "_aciklama": "viralyorum anlatim shorts sabit stili. EKSIK/bos alan = o adim ATLANIR (uydurma yok). Boslar referans taslaktan (balina videosu) doldurulacak.",
+
+  "seslendirme": {
+    "voice": "IuRRIAcbQK5AQk1XevPj",
+    "voice_adi": "Doga - Upbeat and Rich",
+    "_voice_not": "Kanal anlatici sesi. Turkce (language=tr), Istanbul aksani, erkek, 'confident', use_case=social_media. Enes secti (2026-08-16).",
+
+    "ses_ayarlari": {
+      "stability": 0.30,
+      "similarity": 0.75,
+      "style": 0.45,
+      "speed": 1.15,
+      "speaker_boost": true,
+      "_not": "YUKSEK ENERJI profili - Enes secti (2026-08-16). Doga varsayilani: stability 0.5, style 0.0, speed 1.0. Dusuk stability + yuksek style = canli/hareketli; speed 1.15 = hizli. null yazilirsa o alan gonderilmez ve sesin varsayilani gecerli olur."
+    },
+
+    "vo_match": "ElevenLabs",
+    "_vo_match_not": "Taslakta hangi ses materyalinin uzerine VO yazilacak (isim eslesmesi).",
+
+    "style_from": "",
+    "_style_from_not": "Karaoke altyazi stilinin klonlanacagi CapCut taslagi.",
+
+    "muzik": {
+      "from": "",
+      "match": "",
+      "volume": 0.18,
+      "_not": "Anlatim videosunda muzik VO'yu bastirmasin: 0.15-0.20 bandi."
+    },
+
+    "efekt": {
+      "from": "",
+      "_not": "Vignette + filtre track'lerinin klonlanacagi taslak."
+    },
+
+    "gecis": {
+      "from": "",
+      "names": "",
+      "_not": "from = gecislerin klonlanacagi taslak; names = belirli gecis adlari (virgulle)."
+    },
+
+    "text_from": "",
+    "text_proto": "",
+    "text_y": 0.45,
+    "_text_not": "Hook text prototipinin alinacagi taslak + o taslaktaki ornek metnin bir parcasi. y POZITIF = YUKARI; 0.45 = orta-ust (Meta kirpma payi birakir)."
+  }
+}

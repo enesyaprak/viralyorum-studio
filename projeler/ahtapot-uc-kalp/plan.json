@@ -1,0 +1,100 @@
+{
+  "slug": "ahtapot-uc-kalp",
+  "baslik": "Ahtapotun 3 Kalbi Var — Ve Yüzerken Biri Duruyor",
+  "hook": "Bu hayvanın üç kalbi var. Ve yüzmeye başladığında biri duruyor.",
+  "hedef_sure": 42,
+  "etiketler": [
+    "#ahtapot",
+    "#hayvanlar",
+    "#biyoloji",
+    "#ilginçbilgiler",
+    "#shorts"
+  ],
+  "_not": "ara[] terimleri INGILIZCE (MCP aramasi icin). klipler[] MCP ile secildikten sonra doldurulur, sonra: python scripts/indir.py --proje ahtapot-uc-kalp",
+  "sahneler": [
+    {
+      "no": 1,
+      "sure": 5,
+      "anlatim": "Bu hayvanın üç tane kalbi var. Ve yüzmeye başladığı anda bir tanesi tamamen duruyor.",
+      "ara": [
+        "octopus underwater",
+        "octopus swimming ocean"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "35819970",
+          "url": "https://videos.pexels.com/video-files/35819970/15187744_2160_3840_60fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 3840,
+          "sure": 7,
+          "sahibi": "JUN HO LEE",
+          "sayfa": "https://www.pexels.com/video/explore-vibrant-underwater-coral-reefs-35819970/"
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "sure": 6,
+      "anlatim": "İki kalbi solungaçlara kan pompalıyor, üçüncüsü de bu kanı vücudun geri kalanına dağıtıyor.",
+      "ara": [
+        "octopus tentacles close up",
+        "sea creature underwater macro"
+      ],
+      "klipler": []
+    },
+    {
+      "no": 3,
+      "sure": 6,
+      "anlatim": "Ama ahtapot yüzerken ana kalp duruyor. Bu yüzden yüzmek onu inanılmaz yoruyor.",
+      "ara": [
+        "octopus moving seabed",
+        "deep sea dark water"
+      ],
+      "klipler": []
+    },
+    {
+      "no": 4,
+      "sure": 6,
+      "anlatim": "Onun için yüzmek yerine deniz tabanında yürümeyi tercih ediyor. Enerjisini böyle koruyor.",
+      "ara": [
+        "octopus crawling rocks",
+        "coral reef ocean floor"
+      ],
+      "klipler": []
+    },
+    {
+      "no": 5,
+      "sure": 6,
+      "anlatim": "Kanı da bizimki gibi kırmızı değil, mavi. Çünkü demir yerine bakır taşıyor.",
+      "ara": [
+        "blue ocean water abstract",
+        "underwater blue light rays"
+      ],
+      "klipler": []
+    },
+    {
+      "no": 6,
+      "sure": 7,
+      "anlatim": "Bakırlı kan soğuk ve oksijeni az sularda çok daha verimli çalışıyor. Okyanusun dibinde hayatta kalmasının sebebi bu.",
+      "ara": [
+        "deep ocean underwater",
+        "jellyfish deep sea"
+      ],
+      "klipler": []
+    },
+    {
+      "no": 7,
+      "sure": 6,
+      "anlatim": "Yani üç kalp ve mavi kan bir tasarım hatası değil. Tam tersi, mükemmel bir uyum.",
+      "ara": [
+        "octopus eye close up",
+        "octopus dramatic underwater"
+      ],
+      "klipler": []
+    }
+  ],
+  "text": [
+    "Bu hayvanın üç kalbi var. Ve yüzmeye başladığında biri duruyor."
+  ]
+}
