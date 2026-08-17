@@ -1,0 +1,167 @@
+{
+  "slug": "olumsuz-denizanasi",
+  "baslik": "Yaşlandıkça Başa Saran Hayvan — Ölümsüz Denizanası",
+  "hook": "Sen yaşlandıkça ölüme yaklaşıyorsun. Bu hayvan yaşlandıkça başa sarıyor.",
+  "hedef_sure": 35,
+  "etiketler": [
+    "#denizanası",
+    "#ölümsüz",
+    "#hayvanlar",
+    "#ilginçbilgiler",
+    "#shorts"
+  ],
+  "_not": "ara[] terimleri INGILIZCE (MCP aramasi icin). klipler[] MCP ile secildikten sonra doldurulur, sonra: python scripts/indir.py --proje <slug>",
+  "text": [
+    "Sen yaşlandıkça ölüme yaklaşıyorsun. Bu hayvan yaşlandıkça başa sarıyor."
+  ],
+  "sahneler": [
+    {
+      "no": 1,
+      "sure": 5,
+      "anlatim": "Sen yaşlandıkça ölüme yaklaşıyorsun. Bu hayvan yaşlandıkça başa sarıyor.",
+      "ara": [
+        "jellyfish deep blue ocean",
+        "jellyfish glowing dark water"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "38049056",
+          "url": "https://videos.pexels.com/video-files/38049056/16150832_2160_3840_60fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 3840,
+          "sure": 10,
+          "sahibi": "Ronewa Plamer Masindi",
+          "sayfa": "https://www.pexels.com/video/graceful-moon-jellyfish-in-dark-ocean-38049056/"
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "sure": 4,
+      "anlatim": "Turritopsis dohrnii. Serçe parmağının tırnağı kadar bir denizanası.",
+      "ara": [
+        "small jellyfish macro",
+        "tiny jellyfish close up"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "34180007",
+          "url": "https://videos.pexels.com/video-files/34180007/14489028_2160_3840_30fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 3840,
+          "sure": 7,
+          "sahibi": "Pramod Giri",
+          "sayfa": "https://www.pexels.com/video/mesmerizing-jellyfish-floating-in-aquarium-34180007/"
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "sure": 6,
+      "anlatim": "Yaralandığında ya da açlıktan bittiğinde ölmüyor. Hücrelerini söküp yeniden diziyor.",
+      "ara": [
+        "jellyfish tentacles macro",
+        "underwater microscopic organism"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "9711144",
+          "url": "https://videos.pexels.com/video-files/9711144/9711144-uhd_2160_3840_30fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 3840,
+          "sure": 66,
+          "sahibi": "Andrew James Millward",
+          "sayfa": "https://www.pexels.com/video/blue-jellyfish-swimming-underwater-9711144/"
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "sure": 6,
+      "anlatim": "Yani ben pes ettim deyip tabana çöküyor ve bebeklik haline geri dönüyor.",
+      "ara": [
+        "jellyfish sinking ocean floor",
+        "seabed dark underwater"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "31972883",
+          "url": "https://videos.pexels.com/video-files/31972883/13623883_2160_3840_60fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 3840,
+          "sure": 10,
+          "sahibi": "JUN HO LEE",
+          "sayfa": "https://www.pexels.com/video/serene-underwater-ocean-floor-exploration-31972883/"
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "sure": 5,
+      "anlatim": "Sonra baştan büyüyor. Bunu teoride sonsuz kez yapabiliyor.",
+      "ara": [
+        "jellyfish swimming upward",
+        "jellyfish blue water motion"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "13320123",
+          "url": "https://videos.pexels.com/video-files/13320123/13320123-uhd_2160_3840_60fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 3840,
+          "sure": 60,
+          "sahibi": "Boyan Minchev",
+          "sayfa": "https://www.pexels.com/video/medusa-in-water-13320123/"
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "sure": 5,
+      "anlatim": "Ama ölümsüz demek yanlış. Bir balık onu yerse hikâye orada bitiyor.",
+      "ara": [
+        "fish swimming underwater predator",
+        "school of fish ocean"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "30987363",
+          "url": "https://videos.pexels.com/video-files/30987363/13247395_2160_3840_60fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 3840,
+          "sure": 16,
+          "sahibi": "JUN HO LEE",
+          "sayfa": "https://www.pexels.com/video/vibrant-school-of-fish-in-coral-reef-30987363/"
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "sure": 4,
+      "anlatim": "Yani doğa ölümü çözmüş. Sadece yenilmemeyi çözememiş.",
+      "ara": [
+        "jellyfish silhouette light",
+        "deep ocean blue calm"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "11042890",
+          "url": "https://videos.pexels.com/video-files/11042890/11042890-uhd_2160_3840_30fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 3840,
+          "sure": 11,
+          "sahibi": "Diana ✨",
+          "sayfa": "https://www.pexels.com/video/jellyfish-in-water-in-aquarium-11042890/"
+        }
+      ]
+    }
+  ],
+  "_stil": "presets/senaryo-stili.md formulu (kanca -> kurulum -> ic ses -> tersine donus -> kapanis)"
+}
