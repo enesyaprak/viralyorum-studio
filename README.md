@@ -90,6 +90,11 @@ Sonra klipler yeni bir CapCut taslağına medya havuzu olarak import edilir:
 python scripts/capcut_havuz.py --proje ahtapot-uc-kalp --ad ahtapot-uc-kalp
 ```
 
+Aynı komut `projeler/<slug>/senaryo.txt` dosyasını da üretir: anlatımın tek paragraf
+hali. Enes bunu CapCut'ta **auto clipping (akıllı klip) outline** alanına yapıştırıyor,
+CapCut klipleri metne göre diziyor. Metin VO'ya giden metinle birebir aynı — plan
+değişirse `python scripts/senaryo.py --proje <slug>` ile yenile.
+
 Boş bir taslağı iskelet alıp (otomatik bulur) yeni taslak üretir: canvas 1080x1920,
 **timeline boş**, klipler medya sekmesinde hazır. Timeline'a dokunulmaz — CapCut'ın
 timeline'ı kendi kurması, dışarıdan yazılan segmentlerin ezilmesi riskini ortadan kaldırıyor.

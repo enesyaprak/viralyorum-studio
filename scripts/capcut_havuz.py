@@ -320,7 +320,16 @@ def main():
 
     print(f"\nTAMAM: '{argumanlar.ad}' olusturuldu ({len(video_grubu['value'])} klip havuzda, timeline bos)")
     print(f"       {hedef}")
+    # Senaryo metni: Enes bunu CapCut'ta auto clipping (akilli klip) outline alanina
+    # yapistiriyor -> klip dizilimi, VO'ya giden metinle BIREBIR ayni metinden cikiyor.
+    try:
+        subprocess.run([sys.executable, str(SCRIPTS / "senaryo.py"),
+                        "--proje", argumanlar.proje], check=True)
+    except Exception as hata:
+        print(f"  uyari: senaryo.txt uretilemedi ({hata})")
+
     print("\nCapCut'i ac -> taslak listesinde gorunecek -> klipler medya sekmesinde hazir.")
+    print("Auto clipping (akilli klip) outline alanina senaryo.txt icerigini yapistir.")
     print("Acilista 'kurtar/recover' dialogu cikarsa REDDET.")
 
 

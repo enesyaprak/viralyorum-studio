@@ -55,6 +55,7 @@ Enes'in tekrar elle eklemesi gerekmiyor.
 | **VO seviyesi** | volume 1.63 (arkaplan sesinin üstünde net dursun) | Enes ayarladı (2026-08-16) |
 | **Altyazı stili** | `ahtapot-uc-kalp` taslağından klonlanır (CapCut şablonu 跟读手写黄), 2-3 kelimelik karaoke | Enes kurdu (2026-08-16) |
 | **Senaryo** | `presets/senaryo-stili.md` formülü | "Tüy Hırsızı Kuşlar" referansı |
+| **senaryo.txt** | `capcut_havuz.py` her projede otomatik üretir — Enes CapCut auto clipping (akıllı klip) **outline** alanına bunu yapıştırıyor | Enes'in iş akışı (2026-08-16) |
 
 Logo ve müzik dosyaları `Downloads`'tan repoya alındı — Downloads temizlenirse
 üretim kırılmasın diye. Logonun zemini `logo_seffaf.py` ile şeffaflaştırıldı
@@ -80,7 +81,9 @@ python scripts/yeni.py <slug>
 1. `plan.json`: konu + `presets/senaryo-stili.md` formülüyle anlatım (~15 karakter/sn;
    kurgu süresini aşmasın, VO videodan uzunsa sonu kırpılıyor)
 2. Claude MCP ile klip seçer (4K, gerçek çekim, AI üretimi eleniyor) → `indir.py`
-3. `capcut_havuz.py` → Enes CapCut'ta dizer → tepsiden tam kapatır
+3. `capcut_havuz.py` → havuz + `projeler/<slug>/senaryo.txt` çıkar →
+   Enes CapCut'ta **auto clipping outline'a senaryo.txt'yi yapıştırıp** dizer →
+   tepsiden tam kapatır
 4. `uret.py`: TTS → VO → altyazı → **arkaplan sesi + logo + geçişler otomatik**
 5. Enes: kontrol + export
 
@@ -101,6 +104,10 @@ Enes'in elle yapması gereken tek şey: **dizme ve export**.
   `preset.json > seslendirme.vo_proto` taslağından klonlayıp VO'yu yeni bir audio
   track olarak ekliyor. **VO, timeline süresine kırpılıyor** (`min(vo, video)`) —
   yani VO videodan uzunsa sonu kesilir; oran 1.0'ın altında olmalı.
+- **`senaryo.txt` ile VO metni BİREBİR aynı olmalı.** Enes klipleri CapCut auto
+  clipping'e senaryo metnini vererek dizdiriyor; VO da aynı `plan.json` anlatımından
+  üretiliyor. `plan.json` değişirse `senaryo.py` yeniden çalıştırılmalı, yoksa kurgu
+  ile ses kayar.
 - **`capcut_havuz.py` var olan taslak adının üstüne yazmaz.** Yeniden kurmak
   gerekirse önce `%LOCALAPPDATA%\CapCut Drafts\<ad>` klasörünü kaldır.
   (2026-08-16'da eski 1 kliplik taslak yedeklenip kaldırıldı, yenisi kuruldu.)
