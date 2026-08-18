@@ -1,8 +1,8 @@
 {
   "slug": "olumsuz-denizanasi",
   "baslik": "Yaşlandıkça Başa Saran Hayvan — Ölümsüz Denizanası",
-  "hook": "Sen yaşlandıkça ölüme yaklaşıyorsun. Bu hayvan yaşlandıkça başa sarıyor.",
-  "hedef_sure": 35,
+  "hook": "Sen yaşlandıkça ölüme yaklaşıyorsun. Bu hayvan başa sarıyor.",
+  "hedef_sure": 25,
   "etiketler": [
     "#denizanası",
     "#ölümsüz",
@@ -12,13 +12,13 @@
   ],
   "_not": "ara[] terimleri INGILIZCE (MCP aramasi icin). klipler[] MCP ile secildikten sonra doldurulur, sonra: python scripts/indir.py --proje <slug>",
   "text": [
-    "Sen yaşlandıkça ölüme yaklaşıyorsun. Bu hayvan yaşlandıkça başa sarıyor."
+    "Sen yaşlandıkça ölüme yaklaşıyorsun. Bu hayvan başa sarıyor."
   ],
   "sahneler": [
     {
       "no": 1,
-      "sure": 5,
-      "anlatim": "Sen yaşlandıkça ölüme yaklaşıyorsun. Bu hayvan yaşlandıkça başa sarıyor.",
+      "sure": 4,
+      "anlatim": "Sen yaşlandıkça ölüme yaklaşıyorsun. Bu hayvan başa sarıyor.",
       "ara": [
         "jellyfish deep blue ocean",
         "jellyfish glowing dark water"
@@ -38,8 +38,8 @@
     },
     {
       "no": 2,
-      "sure": 4,
-      "anlatim": "Turritopsis dohrnii. Serçe parmağının tırnağı kadar bir denizanası.",
+      "sure": 3,
+      "anlatim": "Turritopsis dohrnii. Tırnağın kadar bir denizanası.",
       "ara": [
         "small jellyfish macro",
         "tiny jellyfish close up"
@@ -59,8 +59,8 @@
     },
     {
       "no": 3,
-      "sure": 6,
-      "anlatim": "Yaralandığında ya da açlıktan bittiğinde ölmüyor. Hücrelerini söküp yeniden diziyor.",
+      "sure": 4,
+      "anlatim": "Yaralanınca ölmüyor. Hücrelerini söküp yeniden diziyor.",
       "ara": [
         "jellyfish tentacles macro",
         "underwater microscopic organism"
@@ -80,8 +80,8 @@
     },
     {
       "no": 4,
-      "sure": 6,
-      "anlatim": "Yani ben pes ettim deyip tabana çöküyor ve bebeklik haline geri dönüyor.",
+      "sure": 4,
+      "anlatim": "Yani pes edip tabana çöküyor, bebekliğine dönüyor.",
       "ara": [
         "jellyfish sinking ocean floor",
         "seabed dark underwater"
@@ -101,8 +101,8 @@
     },
     {
       "no": 5,
-      "sure": 5,
-      "anlatim": "Sonra baştan büyüyor. Bunu teoride sonsuz kez yapabiliyor.",
+      "sure": 3,
+      "anlatim": "Sonra baştan büyüyor. Teoride sonsuz kez.",
       "ara": [
         "jellyfish swimming upward",
         "jellyfish blue water motion"
@@ -122,8 +122,8 @@
     },
     {
       "no": 6,
-      "sure": 5,
-      "anlatim": "Ama ölümsüz demek yanlış. Bir balık onu yerse hikâye orada bitiyor.",
+      "sure": 4,
+      "anlatim": "Ama ölümsüz değil. Bir balık yerse hikâye biter.",
       "ara": [
         "fish swimming underwater predator",
         "school of fish ocean"
@@ -143,8 +143,8 @@
     },
     {
       "no": 7,
-      "sure": 4,
-      "anlatim": "Yani doğa ölümü çözmüş. Sadece yenilmemeyi çözememiş.",
+      "sure": 3,
+      "anlatim": "Doğa ölümü çözmüş. Yenilmemeyi çözememiş.",
       "ara": [
         "jellyfish silhouette light",
         "deep ocean blue calm"
