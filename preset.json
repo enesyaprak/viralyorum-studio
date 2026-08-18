@@ -10,13 +10,22 @@
       "stability": 0.30,
       "similarity": 0.75,
       "style": 0.45,
-      "speed": 1.15,
+      "speed": 1.20,
       "speaker_boost": true,
-      "_not": "YUKSEK ENERJI profili - Enes secti (2026-08-16). Doga varsayilani: stability 0.5, style 0.0, speed 1.0. Dusuk stability + yuksek style = canli/hareketli; speed 1.15 = hizli. null yazilirsa o alan gonderilmez ve sesin varsayilani gecerli olur."
+      "_not": "YUKSEK ENERJI profili - Enes secti (2026-08-16). speed 1.15 -> 1.20 (2026-08-16, Enes: 'tuketime layik hiz'): 1.20 ElevenLabs'in TAVANI, kalan hizlanma vo_hizlandirma ile ffmpeg tarafinda yapiliyor. Doga varsayilani: stability 0.5, style 0.0, speed 1.0. Dusuk stability + yuksek style = canli/hareketli; speed 1.15 = hizli. null yazilirsa o alan gonderilmez ve sesin varsayilani gecerli olur."
     },
 
     "vo_match": "_vo",
     "_vo_match_not": "Taslakta hangi ses materyalinin uzerine VO yazilacak (isim eslesmesi). Bu repoda enjekte edilen VO materyali <taslak>_vo adiyla duruyor -> tekrar uretimde ayni materyalin uzerine yazilir.",
+
+    "karakter_hiz": 16.5,
+    "_karakter_hiz_not": "Planlama katsayisi: saniyede kac karakter okunuyor. Senaryo uzunlugunu kurgu suresine gore hesaplamak icin (hedef karakter = kurgu saniyesi x bu sayi). speed 1.15 profilinde olculen deger 13.8-14.4'tu; yeni hizli profille (1.20 x atempo 1.15) kisa cumlede 19.5 cikti ama kisa metinlerde duraklama payi yaniltiyor - tam senaryoda ~16.5 bekleniyor. Sonraki videonun gercek VO'suyla kalibre et.",
+
+    "vo_hizlandirma": 1.15,
+    "_vo_hizlandirma_not": "TTS sonrasi ffmpeg atempo ile ek hizlandirma (perde korunur, ses inceltmez). ElevenLabs speed 1.20'de tavan yaptigi icin var. speed 1.20 x atempo 1.15 = eski 1.15'lik VO'ya gore ~%20 daha hizli - Enes'in 2026-08-16 karari. Bu ayar olumsuz-denizanasi ve ahtapot-uc-kalp'e UYGULANMADI, sonraki videolardan itibaren gecerli.",
+
+    "kapanis_cagri": "Daha fazla belgesel için beğen ve abone ol.",
+    "_kapanis_cagri_not": "HER senaryonun sonuna otomatik eklenir (2026-08-16 Enes karari). Hem VO metnine hem senaryo.txt'ye (auto clipping outline) giriyor - ikisi birebir ayni kalsin diye tek kaynaktan. Hizli okunsun diye kisa tutuldu; plan.json sahnelerine yazilmaz, uretim sirasinda eklenir.",
 
     "vo_volume": 1.63,
     "_vo_volume_not": "VO segmentinin ses seviyesi. Enes 2026-08-16'da ahtapot-uc-kalp'te 1.63'e cikardi (arkaplan sesinin uzerinde net dursun diye). Sadece VO sifirdan eklenirken kullanilir; var olan VO'nun uzerine yazilirken taslaktaki seviye korunur.",

@@ -17,6 +17,19 @@ import sys
 from pathlib import Path
 
 KOK = Path(__file__).resolve().parent.parent
+PRESET = KOK / "preset.json"
+
+
+def preset_oku():
+    try:
+        return json.loads(PRESET.read_text(encoding="utf-8")).get("seslendirme", {})
+    except Exception:
+        return {}
+
+
+def kapanis_cagri():
+    """Her senaryonun sonuna eklenen sabit CTA (preset.json'dan)."""
+    return (preset_oku().get("kapanis_cagri") or "").strip()
 
 
 def main():
@@ -36,6 +49,10 @@ def main():
         sys.exit("HATA: plan.json'da anlatim yok.")
 
     metin = " ".join(m for _, m in anlatimlar)
+    cagri = kapanis_cagri()
+    if cagri and not metin.rstrip().endswith(cagri):
+        metin = f"{metin} {cagri}"
+    hiz = preset_oku().get("karakter_hiz") or 16.5
     hedef = plan_yolu.parent / "senaryo.txt"
     hedef.write_text(metin + "\n", encoding="utf-8")
 
@@ -45,7 +62,7 @@ def main():
             print(f"{no}. {m}")
         print()
     print(metin)
-    print(f"\n[OK] {hedef}  ({len(metin)} karakter, tahmini VO ~{len(metin)/14.4:.0f} sn)")
+    print(f"\n[OK] {hedef}  ({len(metin)} karakter, tahmini VO ~{len(metin)/hiz:.0f} sn)")
     print("     CapCut > auto clipping (akilli klip) > outline alanina bu metni yapistir.")
 
 

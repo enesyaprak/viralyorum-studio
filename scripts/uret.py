@@ -87,7 +87,7 @@ def logo_var_mi(draft, dosya_adi):
                for v in dc.get("materials", {}).get("videos", []))
 
 
-def plan_oku(slug):
+def plan_oku(slug, cagri=""):
     plan_yolu = KOK / "projeler" / slug / "plan.json"
     if not plan_yolu.exists():
         sys.exit(f"HATA: plan bulunamadi: {plan_yolu}")
@@ -97,6 +97,11 @@ def plan_oku(slug):
     vo_metni = " ".join(a for a in anlatimlar if a)
     if not vo_metni:
         sys.exit("HATA: plan.json sahnelerinde 'anlatim' metni yok.")
+    # KURAL: her senaryo sabit CTA ile biter (preset > kapanis_cagri).
+    # senaryo.py de ayni eki yapiyor -> outline metni ile VO metni birebir kaliyor.
+    cagri = (cagri or "").strip()
+    if cagri and not vo_metni.rstrip().endswith(cagri):
+        vo_metni = f"{vo_metni} {cagri}"
 
     text_satirlari = plan.get("text") or ([plan["hook"]] if plan.get("hook") else [])
     return plan, vo_metni, text_satirlari
@@ -115,7 +120,8 @@ def main():
     if not yapilandirma:
         sys.exit("HATA: preset.json icinde 'seslendirme' blogu yok.")
 
-    plan, vo_metni, text_satirlari = plan_oku(argumanlar.proje)
+    plan, vo_metni, text_satirlari = plan_oku(argumanlar.proje,
+                                              yapilandirma.get("kapanis_cagri", ""))
     draft = draft_bul(argumanlar.draft)
     CIKTI.mkdir(exist_ok=True)
 
@@ -148,6 +154,8 @@ def main():
                 tts_arg += [bayrak, str(ayarlar[anahtar])]
         if ayarlar.get("speaker_boost"):
             tts_arg.append("--speaker-boost")
+        if yapilandirma.get("vo_hizlandirma"):
+            tts_arg += ["--hizlandir", str(yapilandirma["vo_hizlandirma"])]
 
         if not calistir("tts.py", tts_arg, "TTS (VO uret)"):
             sys.exit("DUR: TTS basarisiz (ElevenLabs anahtari/kredisi?).")
@@ -158,7 +166,8 @@ def main():
             oran = vo_sure / video_sure
             print(f"  VO {vo_sure:.1f}s / video {video_sure:.1f}s (oran {oran:.2f})")
             if oran < 0.85:
-                print(f"  ! VO KISA — plan.json anlatimlarini uzat, ~{video_sure * 15:.0f} karakter hedefle.")
+                hedef_kar = video_sure * (yapilandirma.get("karakter_hiz") or 16.5)
+                print(f"  ! VO KISA — plan.json anlatimlarini uzat, ~{hedef_kar:.0f} karakter hedefle.")
             elif oran > 1.1:
                 print("  ! VO UZUN — anlatimi kisalt, videoya tasiyor.")
 

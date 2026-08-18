@@ -62,6 +62,9 @@ def main():
     ap.add_argument("--similarity", type=float, help="0-1. Doga varsayilani 0.75")
     ap.add_argument("--style", type=float,
                     help="0-1. Yuksek = daha abartili/hareketli anlatim. Doga varsayilani 0.0")
+    ap.add_argument("--hizlandir", type=float, default=None,
+                    help="TTS sonrasi ffmpeg atempo ile ek hizlandirma (perde korunur). "
+                         "ElevenLabs speed parametresi 1.2'de tavan yapiyor; daha hizli VO icin bu kullanilir.")
     ap.add_argument("--speed", type=float,
                     help="0.7-1.2. >1 = daha hizli. Doga varsayilani 1.0")
     ap.add_argument("--speaker-boost", dest="speaker_boost", action="store_true",
@@ -116,6 +119,20 @@ def main():
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_bytes(audio)
     print(f"[OK] Seslendirme yazildi: {out} ({len(audio)//1024} KB)")
+
+    if args.hizlandir and abs(args.hizlandir - 1.0) > 0.001:
+        # ffmpeg atempo perdeyi korur (sesi inceltmez). 0.5-2.0 araligi tek gecis destekler.
+        import subprocess
+        gecici = out.with_suffix(".hizli.mp3")
+        sonuc = subprocess.run(
+            ["ffmpeg", "-y", "-v", "error", "-i", str(out),
+             "-filter:a", f"atempo={args.hizlandir}", "-c:a", "libmp3lame", "-q:a", "2", str(gecici)],
+            capture_output=True, text=True)
+        if sonuc.returncode != 0 or not gecici.exists():
+            print(f"  ! hizlandirma yapilamadi, ham VO birakildi: {sonuc.stderr.strip()[:200]}")
+        else:
+            gecici.replace(out)
+            print(f"[OK] VO {args.hizlandir}x hizlandirildi (atempo, perde korundu)")
 
 
 if __name__ == "__main__":

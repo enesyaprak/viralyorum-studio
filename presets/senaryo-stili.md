@@ -34,7 +34,12 @@ Enes'in hedeflediği ton bu (2026-08-16).
 - Rakam ve zıtlık kancayı güçlendirir ("üç kalbi var", "biri duruyor").
 - Sayı/terim yığmayın — bir videoda en fazla 2 sayısal bilgi.
 - **Konuyu asla başta özetleme.** Merak boşluğu kapanırsa video biter.
-- Uzunluk: 25-35 sn → **~470-560 karakter** (bu preset'in ses hızında ~15 karakter/sn).
+- **Kapanış çağrısı zorunlu:** her senaryo `preset.json > kapanis_cagri` ile bitiyor
+  ("Daha fazla belgesel için beğen ve abone ol."). Elle yazma — `senaryo.py` ve
+  `uret.py` ikisi de preset'ten ekliyor, metinler birebir aynı kalsın diye.
+- Uzunluk: hedef karakter = **kurgu saniyesi × `preset.json > karakter_hiz`**
+  (2026-08-16 itibarıyla 16.5; VO hızlandırıldı, eskiden ~14.4'tü).
+  25 sn'lik kurgu ≈ 410 karakter, CTA dahil.
 
 ## Kancada işe yarayan kalıplar
 

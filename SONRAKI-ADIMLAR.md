@@ -54,7 +54,8 @@ Enes'in tekrar elle eklemesi gerekmiyor.
 | **Geçişler** | `Left → Down → Pull In II → Pull & Reveal`, kesme fazlaysa baştan döner | Enes kurdu, `ahtapot-uc-kalp` (2026-08-16) |
 | **VO seviyesi** | volume 1.63 (arkaplan sesinin üstünde net dursun) | Enes ayarladı (2026-08-16) |
 | **Altyazı stili** | `ahtapot-uc-kalp` taslağından klonlanır (CapCut şablonu 跟读手写黄), 2-3 kelimelik karaoke | Enes kurdu (2026-08-16) |
-| **Senaryo** | `presets/senaryo-stili.md` formülü | "Tüy Hırsızı Kuşlar" referansı |
+| **Senaryo** | `presets/senaryo-stili.md` formülü, sonunda sabit CTA | "Tüy Hırsızı Kuşlar" referansı + Enes (2026-08-16) |
+| **VO hızı** | ElevenLabs `speed 1.20` (API tavanı) × ffmpeg `atempo 1.15` | Enes: "tüketime layık hız" (2026-08-16) |
 | **senaryo.txt** | `capcut_havuz.py` her projede otomatik üretir — Enes CapCut auto clipping (akıllı klip) **outline** alanına bunu yapıştırıyor | Enes'in iş akışı (2026-08-16) |
 
 Logo ve müzik dosyaları `Downloads`'tan repoya alındı — Downloads temizlenirse
@@ -78,8 +79,9 @@ logo doğru ölçek/konumla (0.145 / x 0.0 / y 0.827) tam video boyunca, arkapla
 python scripts/yeni.py <slug>
 ```
 
-1. `plan.json`: konu + `presets/senaryo-stili.md` formülüyle anlatım (~15 karakter/sn;
-   kurgu süresini aşmasın, VO videodan uzunsa sonu kırpılıyor)
+1. `plan.json`: konu + `presets/senaryo-stili.md` formülüyle anlatım.
+   Hedef karakter = **kurgu saniyesi × `karakter_hiz` (16.5)**; CTA otomatik ekleniyor,
+   onu da paya kat. VO videodan uzunsa sonu kırpılıyor
 2. Claude MCP ile klip seçer (4K, gerçek çekim, AI üretimi eleniyor) → `indir.py`
 3. `capcut_havuz.py` → havuz + `projeler/<slug>/senaryo.txt` çıkar →
    Enes CapCut'ta **auto clipping outline'a senaryo.txt'yi yapıştırıp** dizer →
