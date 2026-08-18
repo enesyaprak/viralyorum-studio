@@ -70,11 +70,38 @@ def draft_video_suresi(draft):
 
 def calistir(arac, argumanlar, etiket):
     print(f"\n--- {etiket} ---")
+    # HER ADIMDAN ONCE kontrol: zincir 1-2 dakika suruyor; CapCut arada acilirsa
+    # kapanista kendi hafizasindaki ESKI hali diske yazip yapilanlari eziyor
+    # (2026-08-18 karinca-koprusu: VO+altyazi+muzik+logo+gecis ucdu).
+    import capcut_guard
+    if capcut_guard.capcut_calisiyor_mu():
+        sys.exit(f"DUR: '{etiket}' adimindan once CapCut ACILDI. Yapilanlar ezilmesin diye "
+                 "zincir burada kesildi. CapCut'i TAMAMEN kapat (tepsi dahil), sonra ayni "
+                 "komutu tekrar calistir.")
     sonuc = subprocess.run([PY, str(SCRIPTS / arac)] + [str(x) for x in argumanlar])
     if sonuc.returncode != 0:
         print(f"  UYARI: '{etiket}' hata verdi (devam ediliyor).")
         return False
     return True
+
+
+def taslak_dogrula(draft, altyazi_bekleniyor=True):
+    """Zincir bitince taslak gercekten dolu mu (CapCut araya girip ezmemis mi)."""
+    try:
+        dc = json.loads((DRAFTS / draft / "draft_content.json").read_text(encoding="utf-8"))
+    except Exception as hata:
+        return [f"taslak okunamadi: {hata}"]
+    sayim = {}
+    for tr in dc.get("tracks", []):
+        sayim[tr["type"]] = sayim.get(tr["type"], 0) + len(tr.get("segments", []))
+    eksik = []
+    if not sayim.get("video"):
+        eksik.append("video segmenti yok")
+    if not sayim.get("audio"):
+        eksik.append("ses (VO/muzik) yok")
+    if altyazi_bekleniyor and not sayim.get("text"):
+        eksik.append("altyazi yok")
+    return eksik
 
 
 def logo_var_mi(draft, dosya_adi):
@@ -300,6 +327,12 @@ def main():
     print(f"\n=== TAMAM: {len(satirlar)} altyazi, {len(bulgular)} supheli ===")
     for sira, zaman, metin, nedenler in bulgular:
         print(f"  [{sira}] {zaman}s: \"{metin}\" -> {'; '.join(nedenler)}")
+    eksikler = taslak_dogrula(draft, altyazi_bekleniyor="altyazi" not in atla)
+    if eksikler:
+        print(chr(10) + "! TASLAK EKSIK: " + ", ".join(eksikler))
+        print("  Muhtemel sebep: zincir calisirken CapCut acildi ve kendi eski halini yazdi.")
+        print("  CapCut kapaliyken ayni komutu tekrar calistir.")
+
     print("\nExport haric hazir. CapCut'i AC, kontrol et, export al.")
     print("(Acilista 'kurtar/recover' dialogu cikarsa REDDET.)")
 
