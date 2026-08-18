@@ -110,6 +110,11 @@ Enes'in elle yapması gereken tek şey: **dizme ve export**.
   clipping'e senaryo metnini vererek dizdiriyor; VO da aynı `plan.json` anlatımından
   üretiliyor. `plan.json` değişirse `senaryo.py` yeniden çalıştırılmalı, yoksa kurgu
   ile ses kayar.
+- **Altyazıları compound clip'e alırsan script onları GÖREMEZ.** Enes altyazılar
+  kliplere yapışıp kaymasın diye hepsini compound clip yapıyor; compound'un içeriği
+  `draft_content.json`'da görünmüyor. `uret.py` artık bunu tanıyıp ikinci set altyazı
+  basmıyor (2026-08-18'de basmıştı, ekranda çift altyazı oldu). Altyazıyı yeniden
+  ürettirmek istersen önce CapCut'ta compound'u çöz.
 - **`capcut_havuz.py` var olan taslak adının üstüne yazmaz.** Yeniden kurmak
   gerekirse önce `%LOCALAPPDATA%\CapCut Drafts\<ad>` klasörünü kaldır.
   (2026-08-16'da eski 1 kliplik taslak yedeklenip kaldırıldı, yenisi kuruldu.)

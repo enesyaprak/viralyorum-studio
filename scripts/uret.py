@@ -85,6 +85,22 @@ def calistir(arac, argumanlar, etiket):
     return True
 
 
+def compound_var_mi(draft):
+    """Altyazilar compound clip icine alinmis mi (Enes altyazi kaymasin diye grupluyor).
+
+    Compound clip'in ICERIGI draft_content.json'da GORUNMEZ - script text track goremez,
+    'altyazi yok' sanip ikinci set basar ve ekranda cift altyazi olur (2026-08-18).
+    """
+    try:
+        dc = json.loads((DRAFTS / draft / "draft_content.json").read_text(encoding="utf-8"))
+    except Exception:
+        return False
+    metin_var = any(t["type"] == "text" and t.get("segments") for t in dc.get("tracks", []))
+    compound = any("compound" in str(v.get("material_name", "")).lower()
+                   for v in dc.get("materials", {}).get("videos", []))
+    return compound and not metin_var
+
+
 def taslak_dogrula(draft, altyazi_bekleniyor=True):
     """Zincir bitince taslak gercekten dolu mu (CapCut araya girip ezmemis mi)."""
     try:
@@ -246,7 +262,11 @@ def main():
                       "preset.json > seslendirme.vo_proto bos.")
 
     # 2) ALTYAZI (VO'yu transcribe et -> karaoke)
-    if "altyazi" not in atla:
+    if "altyazi" not in atla and compound_var_mi(draft):
+        print(chr(10) + "--- Karaoke altyazi ---")
+        print("  [=] Altyazilar compound clip icinde gorunuyor, ikinci set basilmadi.")
+        print("      Yeniden uretmek istersen once CapCut'ta compound'u coz.")
+    elif "altyazi" not in atla:
         calistir("transcribe.py", [vo_mp3, "--out", tr_json], "VO transcribe (kelime zamani)")
         altyazi_arg = ["--draft", draft, "--transcript", tr_json]
         if yapilandirma.get("style_from"):
@@ -327,7 +347,7 @@ def main():
     print(f"\n=== TAMAM: {len(satirlar)} altyazi, {len(bulgular)} supheli ===")
     for sira, zaman, metin, nedenler in bulgular:
         print(f"  [{sira}] {zaman}s: \"{metin}\" -> {'; '.join(nedenler)}")
-    eksikler = taslak_dogrula(draft, altyazi_bekleniyor="altyazi" not in atla)
+    eksikler = taslak_dogrula(draft, altyazi_bekleniyor=("altyazi" not in atla and not compound_var_mi(draft)))
     if eksikler:
         print(chr(10) + "! TASLAK EKSIK: " + ", ".join(eksikler))
         print("  Muhtemel sebep: zincir calisirken CapCut acildi ve kendi eski halini yazdi.")
