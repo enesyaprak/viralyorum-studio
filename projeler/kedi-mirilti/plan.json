@@ -80,8 +80,8 @@
     },
     {
       "no": 4,
-      "sure": 3,
-      "anlatim": "Yaraların kapanmasını hızlandırıyor.",
+      "sure": 7,
+      "anlatim": "Yaraların kapanmasını hızlandırıyor. Mırıltı doğduktan iki gün sonra başlıyor; yavru anneyi böyle buluyor.",
       "ara": [
         "cat licking fur",
         "cat resting calm"
@@ -101,8 +101,8 @@
     },
     {
       "no": 5,
-      "sure": 4,
-      "anlatim": "O yüzden kedi sadece mutluyken değil, acıyınca ve korkunca da mırlıyor.",
+      "sure": 8,
+      "anlatim": "O yüzden kedi sadece mutluyken değil, acıyınca ve korkunca da mırlıyor. Kedilerde kemik hastalığı köpeklere göre çok daha az görülüyor.",
       "ara": [
         "scared cat hiding",
         "cat eyes close up intense"

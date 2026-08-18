@@ -87,6 +87,35 @@ def logo_var_mi(draft, dosya_adi):
                for v in dc.get("materials", {}).get("videos", []))
 
 
+def vo_kurguya_uydur(vo_mp3, vo_sure, video_sure, alt=0.90, ust=1.30):
+    """VO'yu kurgu suresine ffmpeg atempo ile tam oturtur (perde korunur).
+
+    NEDEN: ElevenLabs stability 0.30 (yuksek enerji profili) tempoyu her uretimde
+    degistiriyor - ayni metin 18-21 karakter/sn arasinda okunuyor. Metni uzatip
+    kisaltarak tutturmak kumar; suresi olcup tek atempo gecisiyle oturtmak kesin.
+    Hedef: VO videodan 0.3 sn kisa bitsin (olu kuyruk yok, kirpilma da yok).
+    """
+    hedef = max(video_sure - 0.3, 1.0)
+    carpan = vo_sure / hedef
+    if abs(carpan - 1.0) < 0.02:
+        return vo_sure
+    if not (alt <= carpan <= ust):
+        print(f"  ! VO/kurgu farki cok buyuk (x{carpan:.2f}) - otomatik uydurma yapilmadi, "
+              f"metni elden gecir.")
+        return vo_sure
+    gecici = Path(str(vo_mp3) + ".uydur.mp3")
+    sonuc = subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", str(vo_mp3),
+                            "-filter:a", f"atempo={carpan:.4f}", "-c:a", "libmp3lame",
+                            "-q:a", "2", str(gecici)], capture_output=True, text=True)
+    if sonuc.returncode != 0 or not gecici.exists():
+        print(f"  ! uydurma basarisiz: {sonuc.stderr.strip()[:160]}")
+        return vo_sure
+    gecici.replace(vo_mp3)
+    yeni = ffprobe_sure(vo_mp3) or hedef
+    print(f"  VO kurguya uyduruldu: x{carpan:.3f} -> {yeni:.1f}s / video {video_sure:.1f}s")
+    return yeni
+
+
 def plan_oku(slug, cagri=""):
     plan_yolu = KOK / "projeler" / slug / "plan.json"
     if not plan_yolu.exists():
@@ -165,8 +194,10 @@ def main():
         if vo_sure and video_sure:
             oran = vo_sure / video_sure
             print(f"  VO {vo_sure:.1f}s / video {video_sure:.1f}s (oran {oran:.2f})")
-            if oran < 0.85:
-                hedef_kar = video_sure * (yapilandirma.get("karakter_hiz") or 16.5)
+            if yapilandirma.get("vo_uydur", True):
+                vo_sure = vo_kurguya_uydur(vo_mp3, vo_sure, video_sure)
+            elif oran < 0.85:
+                hedef_kar = video_sure * (yapilandirma.get("karakter_hiz") or 18.1)
                 print(f"  ! VO KISA — plan.json anlatimlarini uzat, ~{hedef_kar:.0f} karakter hedefle.")
             elif oran > 1.1:
                 print("  ! VO UZUN — anlatimi kisalt, videoya tasiyor.")

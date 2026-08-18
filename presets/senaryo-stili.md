@@ -48,8 +48,11 @@ bile olsa."* Kalite tek başına izletmiyor; ritim izletiyor. Somut karşılığ
 
 - **Sessiz açılış yok.** VO videonun 0. saniyesinde başlar. İlk kelime kancanın kendisi
   olmalı; "bakın şimdi", "biliyor muydunuz" gibi ısınma cümlesi yasak.
-- **Ölü kuyruk yok.** VO bitince video da bitsin — sonda 1 sn'den uzun sessiz kare kalmasın.
-  (`uret.py` VO/video oranını yazdırıyor; 0.95-1.00 bandı hedef.)
+- **Ölü kuyruk yok.** `uret.py` VO'yu ffmpeg atempo ile kurgu süresine otomatik oturtuyor
+  (`preset > vo_uydur`), video bitiminden 0.3 sn önce susuyor. Metni saniyesine kadar
+  ayarlamaya çalışma — `stability 0.30` yüzünden aynı metin her üretimde 18-21
+  karakter/sn arasında okunuyor. Uzunluk yine de ±%20 içinde tutulmalı; ötesinde
+  atempo sesi bozar ve script uyarı verip dokunmaz.
 - **Her cümle yeni bilgi taşır.** Tekrar, özet, "yani şöyle ki" bağlacı yok. Bir cümle
   kesildiğinde anlam bozulmuyorsa o cümle fazladır.
 - **Görsel 4 saniyeden uzun sabit kalmasın.** Kesme ya da geçiş gelsin; havuzdaki
