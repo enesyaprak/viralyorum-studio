@@ -41,6 +41,22 @@ Enes'in hedeflediği ton bu (2026-08-16).
   (2026-08-16 itibarıyla 16.5; VO hızlandırıldı, eskiden ~14.4'tü).
   25 sn'lik kurgu ≈ 410 karakter, CTA dahil.
 
+## Tutundurma kuralları (odak süresi yok)
+
+Enes'in duruşu (2026-08-16): *"millet odak süresi yok, çok kalamıyorlar — kaliteli
+bile olsa."* Kalite tek başına izletmiyor; ritim izletiyor. Somut karşılığı:
+
+- **Sessiz açılış yok.** VO videonun 0. saniyesinde başlar. İlk kelime kancanın kendisi
+  olmalı; "bakın şimdi", "biliyor muydunuz" gibi ısınma cümlesi yasak.
+- **Ölü kuyruk yok.** VO bitince video da bitsin — sonda 1 sn'den uzun sessiz kare kalmasın.
+  (`uret.py` VO/video oranını yazdırıyor; 0.95-1.00 bandı hedef.)
+- **Her cümle yeni bilgi taşır.** Tekrar, özet, "yani şöyle ki" bağlacı yok. Bir cümle
+  kesildiğinde anlam bozulmuyorsa o cümle fazladır.
+- **Görsel 4 saniyeden uzun sabit kalmasın.** Kesme ya da geçiş gelsin; havuzdaki
+  klipler bunun için sahne süresinden uzun seçiliyor.
+- **Merak zinciri kapanmasın.** Her cümle bir sonrakini borçlandırmalı; cevabı verdiğin
+  anda yeni soru aç. Kapanış cümlesi hariç.
+
 ## Kancada işe yarayan kalıplar
 
 - "X olmak istemiyorsan Y'den uzak dur."
