@@ -1,0 +1,167 @@
+{
+  "slug": "kedi-mirilti",
+  "baslik": "Kedin Mırıldarken Aslında Kendini Tedavi Ediyor",
+  "hook": "Kedin sana sarılırken aslında kendini tedavi ediyor.",
+  "hedef_sure": 25,
+  "etiketler": [
+    "#kedi",
+    "#mırıltı",
+    "#hayvanlar",
+    "#ilginçbilgiler",
+    "#shorts"
+  ],
+  "_not": "ara[] terimleri INGILIZCE (MCP aramasi icin). klipler[] MCP ile secildikten sonra doldurulur, sonra: python scripts/indir.py --proje <slug>",
+  "text": [
+    "Kedin sana sarılırken aslında kendini tedavi ediyor."
+  ],
+  "sahneler": [
+    {
+      "no": 1,
+      "sure": 4,
+      "anlatim": "Kedin sana sarılırken aslında kendini tedavi ediyor.",
+      "ara": [
+        "cat cuddling person",
+        "cat sleeping on lap"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "6000754",
+          "url": "https://videos.pexels.com/video-files/6000754/6000754-uhd_2160_3840_24fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 3840,
+          "sure": 11,
+          "sahibi": "Sam Lion",
+          "sayfa": "https://www.pexels.com/video/woman-petting-a-cat-while-holding-a-book-6000754/"
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "sure": 3,
+      "anlatim": "Mırıltı 25 ila 150 hertz arasında bir titreşim.",
+      "ara": [
+        "cat purring close up",
+        "cat chest breathing macro"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "7691953",
+          "url": "https://videos.pexels.com/video-files/7691953/7691953-uhd_2160_4096_30fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 4096,
+          "sure": 14,
+          "sahibi": "ROMAN ODINTSOV",
+          "sayfa": "https://www.pexels.com/video/close-up-of-cat-s-face-7691953/"
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "sure": 3,
+      "anlatim": "Bu aralık kemik yoğunluğunu artırıyor.",
+      "ara": [
+        "cat stretching slow motion",
+        "cat paws close up"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "10484823",
+          "url": "https://videos.pexels.com/video-files/10484823/10484823-uhd_2160_3840_24fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 3840,
+          "sure": 15,
+          "sahibi": "Dmitry Marchenkov",
+          "sayfa": "https://www.pexels.com/video/cat-lying-down-on-bedclothes-10484823/"
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "sure": 3,
+      "anlatim": "Yaraların kapanmasını hızlandırıyor.",
+      "ara": [
+        "cat licking fur",
+        "cat resting calm"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "11366754",
+          "url": "https://videos.pexels.com/video-files/11366754/11366754-uhd_2160_3840_24fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 3840,
+          "sure": 30,
+          "sahibi": "Dmitry Marchenkov",
+          "sayfa": "https://www.pexels.com/video/cat-cleaning-itself-on-couch-11366754/"
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "sure": 4,
+      "anlatim": "O yüzden kedi sadece mutluyken değil, acıyınca ve korkunca da mırlıyor.",
+      "ara": [
+        "scared cat hiding",
+        "cat eyes close up intense"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "19473157",
+          "url": "https://videos.pexels.com/video-files/19473157/19473157-uhd_2160_3840_30fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 3840,
+          "sure": 21,
+          "sahibi": "Atahan Demir",
+          "sayfa": "https://www.pexels.com/video/norwegian-forest-cat-19473157/"
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "sure": 5,
+      "anlatim": "Ama sen de payını alıyorsun; aynı titreşim kalp krizi riskini düşürüyor.",
+      "ara": [
+        "person petting cat",
+        "cat purring on chest"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "35536554",
+          "url": "https://videos.pexels.com/video-files/35536554/15054872_2160_3840_30fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 3840,
+          "sure": 24,
+          "sahibi": "peri ✨",
+          "sayfa": "https://www.pexels.com/video/peaceful-cat-enjoying-gentle-head-rubs-35536554/"
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "sure": 3,
+      "anlatim": "Yani kucağındaki hayvan seni de tamir ediyor.",
+      "ara": [
+        "cat portrait close up",
+        "cat sleeping peaceful"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "6000433",
+          "url": "https://videos.pexels.com/video-files/6000433/6000433-uhd_2160_3840_24fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 3840,
+          "sure": 12,
+          "sahibi": "Sam Lion",
+          "sayfa": "https://www.pexels.com/video/petting-the-pet-cat-6000433/"
+        }
+      ]
+    }
+  ],
+  "_stil": "presets/senaryo-stili.md formulu"
+}
