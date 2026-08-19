@@ -35,11 +35,14 @@ Enes'in hedeflediği ton bu (2026-08-16).
 - Sayı/terim yığmayın — bir videoda en fazla 2 sayısal bilgi.
 - **Konuyu asla başta özetleme.** Merak boşluğu kapanırsa video biter.
 - **Kapanış çağrısı zorunlu:** her senaryo `preset.json > kapanis_cagri` ile bitiyor
-  ("Daha fazla belgesel için beğen ve abone ol."). Elle yazma — `senaryo.py` ve
+  ("Sıradaki hangi hayvan olsun? Yorumlara yaz."). Elle yazma — `senaryo.py` ve
   `uret.py` ikisi de preset'ten ekliyor, metinler birebir aynı kalsın diye.
-- Uzunluk: hedef karakter = **kurgu saniyesi × `preset.json > karakter_hiz`**
-  (2026-08-16 itibarıyla 16.5; VO hızlandırıldı, eskiden ~14.4'tü).
-  25 sn'lik kurgu ≈ 410 karakter, CTA dahil.
+  2026-08-19'da abone çağrısı yerine SORU kondu: ilk iki videoda sıfır yorum geldi,
+  izleyiciye yazacak somut bir şey verilmiyordu (Enes kararı).
+- Uzunluk: **hedef bant 20-24 sn → ~380-430 karakter** (CTA dahil).
+  Formül: hedef karakter = kurgu saniyesi × `preset.json > karakter_hiz` (18.1).
+  2026-08-19'da 25-33 sn bandından indirildi: ortalama izlenme 14-17 sn'de kalıyordu,
+  Shorts'ta en güçlü sinyal tamamlanma oranı (Enes kararı).
 
 ## Tutundurma kuralları (odak süresi yok)
 
@@ -48,6 +51,11 @@ bile olsa."* Kalite tek başına izletmiyor; ritim izletiyor. Somut karşılığ
 
 - **Sessiz açılış yok.** VO videonun 0. saniyesinde başlar. İlk kelime kancanın kendisi
   olmalı; "bakın şimdi", "biliyor muydunuz" gibi ısınma cümlesi yasak.
+- **Açılış karesi aydınlık olacak.** İlk klip yüksek kontrast olmalı ve özne ilk karede
+  tanınmalı; karanlık/siyah açılış yasak (klip seçiminde süzgeç). 2026-08-19 kararı:
+  aydınlık mercan açılışlı ahtapot videosu %57,5 izlemeye devam verdi, siyah zeminli
+  denizanası açılışı %43,6'da kaldı — akışta siyah kare "yüklenmemiş video" gibi
+  görünüp parmağı hızlandırıyor olabilir. İki videoluk veri, kesin değil ama ucuz önlem.
 - **Ölü kuyruk yok.** `uret.py` VO'yu ffmpeg atempo ile kurgu süresine otomatik oturtuyor
   (`preset > vo_uydur`), video bitiminden 0.3 sn önce susuyor. Metni saniyesine kadar
   ayarlamaya çalışma — `stability 0.30` yüzünden aynı metin her üretimde 18-21

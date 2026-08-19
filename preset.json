@@ -19,7 +19,7 @@
     "_vo_match_not": "Taslakta hangi ses materyalinin uzerine VO yazilacak (isim eslesmesi). Bu repoda enjekte edilen VO materyali <taslak>_vo adiyla duruyor -> tekrar uretimde ayni materyalin uzerine yazilir.",
 
     "karakter_hiz": 18.1,
-    "_karakter_hiz_not": "Planlama katsayisi: saniyede kac karakter okunuyor. Senaryo uzunlugunu kurgu suresine gore hesaplamak icin (hedef karakter = kurgu saniyesi x bu sayi). speed 1.15 profilinde olculen deger 13.8-14.4'tu; yeni hizli profille (1.20 x atempo 1.15) kisa cumlede 19.5 cikti ama kisa metinlerde duraklama payi yaniltiyor - kedi-mirilti'nin tam VO'suyla olculdu (411 karakter / 22.7 sn = 18.1) ve deger buna gore sabitlendi (2026-08-16).",
+    "_karakter_hiz_not": "Planlama katsayisi: saniyede kac karakter okunuyor. Senaryo uzunlugunu kurgu suresine gore hesaplamak icin (hedef karakter = kurgu saniyesi x bu sayi). Hedef sure bandi 20-24 sn -> ~380-430 karakter (CTA dahil). speed 1.15 profilinde olculen deger 13.8-14.4'tu; yeni hizli profille (1.20 x atempo 1.15) kisa cumlede 19.5 cikti ama kisa metinlerde duraklama payi yaniltiyor - kedi-mirilti'nin tam VO'suyla olculdu (411 karakter / 22.7 sn = 18.1) ve deger buna gore sabitlendi (2026-08-16).",
 
     "vo_uydur": true,
     "_vo_uydur_not": "VO uretildikten sonra ffmpeg atempo ile kurgu suresine tam oturtulur (video - 0.3 sn). Sebep: stability 0.30 profilinde ayni metin 18-21 karakter/sn arasinda okunuyor, metni uzatip kisaltarak tutturmak kumar. Fark x0.90-x1.30 bandinin disindaysa dokunmaz, uyarir. false yaparsan eski davranis (sadece uyari) doner.",
@@ -27,8 +27,8 @@
     "vo_hizlandirma": 1.15,
     "_vo_hizlandirma_not": "TTS sonrasi ffmpeg atempo ile ek hizlandirma (perde korunur, ses inceltmez). ElevenLabs speed 1.20'de tavan yaptigi icin var. speed 1.20 x atempo 1.15 = eski 1.15'lik VO'ya gore ~%20 daha hizli - Enes'in 2026-08-16 karari. Bu ayar olumsuz-denizanasi ve ahtapot-uc-kalp'e UYGULANMADI, sonraki videolardan itibaren gecerli.",
 
-    "kapanis_cagri": "Daha fazla belgesel için beğen ve abone ol.",
-    "_kapanis_cagri_not": "HER senaryonun sonuna otomatik eklenir (2026-08-16 Enes karari). Hem VO metnine hem senaryo.txt'ye (auto clipping outline) giriyor - ikisi birebir ayni kalsin diye tek kaynaktan. Hizli okunsun diye kisa tutuldu; plan.json sahnelerine yazilmaz, uretim sirasinda eklenir.",
+    "kapanis_cagri": "Sıradaki hangi hayvan olsun? Yorumlara yaz.",
+    "_kapanis_cagri_not": "HER senaryonun sonuna otomatik eklenir (2026-08-16 Enes karari). Hem VO metnine hem senaryo.txt'ye (auto clipping outline) giriyor - ikisi birebir ayni kalsin diye tek kaynaktan. Hizli okunsun diye kisa tutuldu; plan.json sahnelerine yazilmaz, uretim sirasinda eklenir. 2026-08-19'da 'Daha fazla belgesel icin begen ve abone ol' yerine SORU CTA'si kondu: ilk iki videoda sifir yorum geldi, izleyiciye yazacak somut bir sey verilmiyordu (Enes karari).",
 
     "vo_volume": 1.63,
     "_vo_volume_not": "VO segmentinin ses seviyesi. Enes 2026-08-16'da ahtapot-uc-kalp'te 1.63'e cikardi (arkaplan sesinin uzerinde net dursun diye). Sadece VO sifirdan eklenirken kullanilir; var olan VO'nun uzerine yazilirken taslaktaki seviye korunur.",

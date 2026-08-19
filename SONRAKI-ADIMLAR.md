@@ -54,7 +54,9 @@ Enes'in tekrar elle eklemesi gerekmiyor.
 | **Geçişler** | `Left → Down → Pull In II → Pull & Reveal`, kesme fazlaysa baştan döner | Enes kurdu, `ahtapot-uc-kalp` (2026-08-16) |
 | **VO seviyesi** | volume 1.63 (arkaplan sesinin üstünde net dursun) | Enes ayarladı (2026-08-16) |
 | **Altyazı stili** | `ahtapot-uc-kalp` taslağından klonlanır (CapCut şablonu 跟读手写黄), 2-3 kelimelik karaoke | Enes kurdu (2026-08-16) |
-| **Senaryo** | `presets/senaryo-stili.md` formülü, sonunda sabit CTA | "Tüy Hırsızı Kuşlar" referansı + Enes (2026-08-16) |
+| **Senaryo** | `presets/senaryo-stili.md` formülü, sonunda sabit soru CTA'sı | "Tüy Hırsızı Kuşlar" referansı + Enes (2026-08-16) |
+| **Hedef süre** | 20-24 sn (~380-430 karakter, CTA dahil) | YouTube analizi sonrası Enes kararı (2026-08-19) |
+| **Açılış karesi** | aydınlık/yüksek kontrast, özne ilk karede tanınır — karanlık açılış yasak | YouTube analizi sonrası Enes kararı (2026-08-19) |
 | **VO hızı** | ElevenLabs `speed 1.20` (API tavanı) × ffmpeg `atempo 1.15` | Enes: "tüketime layık hız" (2026-08-16) |
 | **senaryo.txt** | `capcut_havuz.py` her projede otomatik üretir — Enes CapCut auto clipping (akıllı klip) **outline** alanına bunu yapıştırıyor | Enes'in iş akışı (2026-08-16) |
 
