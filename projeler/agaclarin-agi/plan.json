@@ -1,0 +1,167 @@
+{
+  "slug": "agaclarin-agi",
+  "baslik": "Ağaçlar Birbirine Mesaj Yolluyor — Ormanın Yeraltı Ağı",
+  "hook": "Bu ormandaki ağaçlar birbirine mesaj yolluyor.",
+  "hedef_sure": 24,
+  "etiketler": [
+    "#orman",
+    "#ağaç",
+    "#doğa",
+    "#ilginçbilgiler",
+    "#shorts"
+  ],
+  "_not": "ara[] terimleri INGILIZCE (MCP aramasi icin). klipler[] MCP ile secildikten sonra doldurulur, sonra: python scripts/indir.py --proje <slug>",
+  "text": [
+    "Bu ormandaki ağaçlar birbirine mesaj yolluyor."
+  ],
+  "sahneler": [
+    {
+      "no": 1,
+      "sure": 3,
+      "anlatim": "Bu ormandaki ağaçlar birbirine mesaj yolluyor.",
+      "ara": [
+        "forest looking up trees",
+        "sunlit forest canopy"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "4203536",
+          "url": "https://videos.pexels.com/video-files/4203536/4203536-uhd_2160_3840_30fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 3840,
+          "sure": 24,
+          "sahibi": "Catherine Franken",
+          "sayfa": "https://www.pexels.com/video/looking-up-the-trees-in-the-forest-4203536/"
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "sure": 4,
+      "anlatim": "Kökleri mantar iplikleriyle sarılı; ağaçtan ağaca kablo gibi uzanıyor.",
+      "ara": [
+        "wild mushrooms macro",
+        "fungi forest floor"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "6132606",
+          "url": "https://videos.pexels.com/video-files/6132606/6132606-uhd_2160_4096_25fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 4096,
+          "sure": 26,
+          "sahibi": "cottonbro studio",
+          "sayfa": "https://www.pexels.com/video/assorted-wild-mushrooms-6132606/"
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "sure": 4,
+      "anlatim": "Yaşlı ağaçlar gölgedeki fidanlara bu ağdan şeker yolluyor.",
+      "ara": [
+        "old tree moss trunk",
+        "ancient forest tree"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "15882956",
+          "url": "https://videos.pexels.com/video-files/15882956/15882956-uhd_2160_3840_60fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 3840,
+          "sure": 8,
+          "sahibi": "Philippe WEICKMANN",
+          "sayfa": "https://www.pexels.com/video/a-large-tree-with-moss-growing-on-it-15882956/"
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "sure": 4,
+      "anlatim": "Biri böceğe uğrayınca komşuları uyarı alıp savunmaya geçiyor.",
+      "ara": [
+        "orange mushrooms tree trunk",
+        "fungi growing bark"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "34461889",
+          "url": "https://videos.pexels.com/video-files/34461889/14602413_2160_3840_30fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 3840,
+          "sure": 15,
+          "sahibi": "shiva  rijal",
+          "sayfa": "https://www.pexels.com/video/close-up-of-orange-mushrooms-on-tree-trunk-34461889/"
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "sure": 2,
+      "anlatim": "Ama ağ herkesin dostu değil.",
+      "ara": [
+        "sunlight through branches",
+        "forest light rays"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "5702145",
+          "url": "https://videos.pexels.com/video-files/5702145/5702145-uhd_2160_3840_30fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 3840,
+          "sure": 20,
+          "sahibi": "Meow Meow",
+          "sayfa": "https://www.pexels.com/video/sunlight-through-branches-and-leaves-5702145/"
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "sure": 4,
+      "anlatim": "Bazı bitkiler besin çalıyor, bazıları komşusunu zehirliyor.",
+      "ara": [
+        "fungi on tree trunk close up",
+        "decaying wood fungus"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "34291474",
+          "url": "https://videos.pexels.com/video-files/34291474/14527174_2160_3840_30fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 3840,
+          "sure": 17,
+          "sahibi": "Davidsaurik",
+          "sayfa": "https://www.pexels.com/video/close-up-video-of-fungi-on-tree-trunk-in-forest-34291474/"
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "sure": 3,
+      "anlatim": "Yani orman dayanışma değil, sessiz bir pazarlık.",
+      "ara": [
+        "tranquil forest canopy",
+        "green forest summer"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "37538449",
+          "url": "https://videos.pexels.com/video-files/37538449/15905731_2160_3840_60fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 3840,
+          "sure": 7,
+          "sahibi": "Talha Kuğu",
+          "sayfa": "https://www.pexels.com/video/tranquil-forest-canopy-view-in-summer-37538449/"
+        }
+      ]
+    }
+  ],
+  "_stil": "presets/senaryo-stili.md formulu | acilis karesi parlaklik 111/255 (aydinlik kurali)"
+}
