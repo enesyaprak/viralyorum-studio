@@ -73,9 +73,18 @@ logo doğru ölçek/konumla (0.145 / x 0.0 / y 0.827) tam video boyunca, arkapla
 
 ## Yapılacaklar
 
-### Sonraki video  ← ŞU AN BURADA
+### AKTİF VİDEO: `guguk-yuva-paraziti`  ← ŞU AN BURADA (2026-08-21)
 
-`ahtapot-uc-kalp` **bitti ve export edildi** (2026-08-16). Artık referans şablon.
+Guguk kuşu / yuva parazitliği. **Senaryo yazıldı ve commit'lendi** (`d5a6114`):
+7 sahne, 30 sn, 506 karakter (bütçe 501). `plan.json` hazır, `klipler[]` alanları BOŞ.
+
+**Yapılacak ilk iş: 7 sahnenin kliplerini MCP ile seçmek.** Sonra 2-5. adımlar.
+`scripts/yeni.py` çalıştırma — proje zaten var.
+
+Bu oturumda VO hızı da değişti: `speed` 1.10, `karakter_hiz` 16.7, hedef bant 26-30 sn.
+Guguk, yeni ayarlarla üretilecek **ilk video** — VO temposunu dinleyip teyit et.
+
+#### Yeni bir video açarken (guguk bittikten sonra)
 
 ```bash
 python scripts/yeni.py <slug>
