@@ -39,10 +39,13 @@ Enes'in hedeflediği ton bu (2026-08-16).
   `uret.py` ikisi de preset'ten ekliyor, metinler birebir aynı kalsın diye.
   2026-08-19'da abone çağrısı yerine SORU kondu: ilk iki videoda sıfır yorum geldi,
   izleyiciye yazacak somut bir şey verilmiyordu (Enes kararı).
-- Uzunluk: **hedef bant 20-24 sn → ~380-430 karakter** (CTA dahil).
-  Formül: hedef karakter = kurgu saniyesi × `preset.json > karakter_hiz` (18.1).
-  2026-08-19'da 25-33 sn bandından indirildi: ortalama izlenme 14-17 sn'de kalıyordu,
-  Shorts'ta en güçlü sinyal tamamlanma oranı (Enes kararı).
+- Uzunluk: **hedef bant 26-30 sn → ~435-500 karakter** (CTA dahil).
+  Formül: hedef karakter = kurgu saniyesi × `preset.json > karakter_hiz` (16.7).
+  **Bant geçmişi:** 25-33 → 20-24 (2026-08-19, YouTube analizi: ortalama izlenme
+  14-17 sn'de kalıyordu, Shorts'ta en güçlü sinyal tamamlanma oranı) → **26-30**
+  (2026-08-21, Enes: "video uzasın sıkıntı yok"). Son değişiklik 2026-08-19'daki
+  veriye dayalı kısaltmayı geri alıyor; tamamlanma oranını sonraki YouTube
+  analizinde ayrıca kontrol et.
 
 ## Tutundurma kuralları (odak süresi yok)
 

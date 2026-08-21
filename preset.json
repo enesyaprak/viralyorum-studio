@@ -1,50 +1,38 @@
 {
   "_aciklama": "viralyorum anlatim shorts sabit stili. EKSIK/bos alan = o adim ATLANIR (uydurma yok). Boslar referans taslaktan (balina videosu) doldurulacak.",
-
   "seslendirme": {
     "voice": "IuRRIAcbQK5AQk1XevPj",
     "voice_adi": "Doga - Upbeat and Rich",
     "_voice_not": "Kanal anlatici sesi. Turkce (language=tr), Istanbul aksani, erkek, 'confident', use_case=social_media. Enes secti (2026-08-16).",
-
     "ses_ayarlari": {
-      "stability": 0.30,
+      "stability": 0.3,
       "similarity": 0.75,
       "style": 0.45,
-      "speed": 1.20,
+      "speed": 1.1,
       "speaker_boost": true,
       "_not": "YUKSEK ENERJI profili - Enes secti (2026-08-16). speed 1.15 -> 1.20 (2026-08-16, Enes: 'tuketime layik hiz'): 1.20 ElevenLabs'in TAVANI, kalan hizlanma vo_hizlandirma ile ffmpeg tarafinda yapiliyor. Doga varsayilani: stability 0.5, style 0.0, speed 1.0. Dusuk stability + yuksek style = canli/hareketli; speed 1.15 = hizli. null yazilirsa o alan gonderilmez ve sesin varsayilani gecerli olur."
     },
-
     "vo_match": "_vo",
     "_vo_match_not": "Taslakta hangi ses materyalinin uzerine VO yazilacak (isim eslesmesi). Bu repoda enjekte edilen VO materyali <taslak>_vo adiyla duruyor -> tekrar uretimde ayni materyalin uzerine yazilir.",
-
-    "karakter_hiz": 18.1,
+    "karakter_hiz": 16.7,
     "_karakter_hiz_not": "Planlama katsayisi: saniyede kac karakter okunuyor. Senaryo uzunlugunu kurgu suresine gore hesaplamak icin (hedef karakter = kurgu saniyesi x bu sayi). Hedef sure bandi 20-24 sn -> ~380-430 karakter (CTA dahil). speed 1.15 profilinde olculen deger 13.8-14.4'tu; yeni hizli profille (1.20 x atempo 1.15) kisa cumlede 19.5 cikti ama kisa metinlerde duraklama payi yaniltiyor - kedi-mirilti'nin tam VO'suyla olculdu (411 karakter / 22.7 sn = 18.1) ve deger buna gore sabitlendi (2026-08-16).",
-
     "vo_uydur": true,
     "_vo_uydur_not": "VO uretildikten sonra ffmpeg atempo ile kurgu suresine tam oturtulur (video - 0.3 sn). Sebep: stability 0.30 profilinde ayni metin 18-21 karakter/sn arasinda okunuyor, metni uzatip kisaltarak tutturmak kumar. Fark x0.90-x1.30 bandinin disindaysa dokunmaz, uyarir. false yaparsan eski davranis (sadece uyari) doner.",
-
     "vo_hizlandirma": 1.15,
     "_vo_hizlandirma_not": "TTS sonrasi ffmpeg atempo ile ek hizlandirma (perde korunur, ses inceltmez). ElevenLabs speed 1.20'de tavan yaptigi icin var. speed 1.20 x atempo 1.15 = eski 1.15'lik VO'ya gore ~%20 daha hizli - Enes'in 2026-08-16 karari. Bu ayar olumsuz-denizanasi ve ahtapot-uc-kalp'e UYGULANMADI, sonraki videolardan itibaren gecerli.",
-
     "kapanis_cagri": "Sıradaki hangi hayvan olsun? Yorumlara yaz.",
     "_kapanis_cagri_not": "HER senaryonun sonuna otomatik eklenir (2026-08-16 Enes karari). Hem VO metnine hem senaryo.txt'ye (auto clipping outline) giriyor - ikisi birebir ayni kalsin diye tek kaynaktan. Hizli okunsun diye kisa tutuldu; plan.json sahnelerine yazilmaz, uretim sirasinda eklenir. 2026-08-19'da 'Daha fazla belgesel icin begen ve abone ol' yerine SORU CTA'si kondu: ilk iki videoda sifir yorum geldi, izleyiciye yazacak somut bir sey verilmiyordu (Enes karari).",
-
     "vo_volume": 1.63,
     "_vo_volume_not": "VO segmentinin ses seviyesi. Enes 2026-08-16'da ahtapot-uc-kalp'te 1.63'e cikardi (arkaplan sesinin uzerinde net dursun diye). Sadece VO sifirdan eklenirken kullanilir; var olan VO'nun uzerine yazilirken taslaktaki seviye korunur.",
-
     "vo_proto": "seyrangul-beauty",
     "_vo_proto_not": "Taslakta degistirilecek ses materyali YOKSA (sifirdan kurulan taslak) ses elementi bu taslaktan klonlanir ve VO yeni bir audio track olarak eklenir. Sadece iskelet/sema kaynagi - o taslagin muzigi kullanilmaz.",
-
     "style_from": "ahtapot-uc-kalp",
     "_style_from_not": "Karaoke altyazi stilinin klonlanacagi CapCut taslagi. Enes stili 2026-08-16'da ahtapot-uc-kalp taslaginda kurdu (CapCut sablonu: 跟读手写黄). Hedef taslakta zaten caption varsa oradaki stil kullanilir, bu alan sadece caption YOKKEN devreye girer.",
-
     "logo": {
       "dosya": "presets/marka/viralyorum-logo.png",
       "from": "ahtapot-uc-kalp",
       "_not": "HER VIDEOYA otomatik eklenir. Konum/olcek Enes'in 2026-08-16'da ahtapot-uc-kalp taslaginda kurdugu yerlesimden klonlanir: olcek 0.145, x 0.0, y 0.827 (ust-orta), alpha 1.0, overlay track, video boyunca. Kaynak gorsel Downloads'tan repoya alindi ve zemini seffaflastirildi (logo_seffaf.py); CapCut'ta duran jpg surumu beyaz kare gosteriyordu."
     },
-
     "muzik": {
       "from": "seyrangul-beauty",
       "match": "",
@@ -53,21 +41,19 @@
       "volume": 0.24,
       "_not": "HER VIDEOYA otomatik eklenir. Enes'in sectigi arkaplan sesi (YouTube Audio Library, telif temiz). volume 0.24 ve kaynak_baslangic 1.87sn onun ahtapot-uc-kalp'teki ayarindan alindi (intro sessizligi atlaniyor). 'from' sadece ses ELEMENTININ semasi icin kullaniliyor, o taslagin muzigi degil."
     },
-
     "gecis": {
       "from": "ahtapot-uc-kalp",
       "names": "Left,Down,Pull In II,Pull & Reveal",
       "_not": "HER VIDEOYA otomatik eklenir. Enes'in ahtapot-uc-kalp'te kurdugu ve onayladigi sira (2026-08-16): Left, Down, Pull In II, Pull & Reveal - kesme sayisi fazlaysa bastan doner. Sureler her gecisin kendi prototipinden gelir (Left/Down 0.5sn, Pull In II 0.87sn, Pull & Reveal 1.57sn). names'teki gecislerin CapCut'ta en az bir kere kullanilmis olmasi sart - prototip JSON'u ancak o zaman diskte oluyor."
     },
-
     "efekt": {
       "from": "",
       "_not": "Vignette + filtre track'lerinin klonlanacagi taslak."
     },
-
     "text_from": "",
     "text_proto": "",
     "text_y": 0.45,
-    "_text_not": "Hook text prototipinin alinacagi taslak + o taslaktaki ornek metnin bir parcasi. y POZITIF = YUKARI; 0.45 = orta-ust (Meta kirpma payi birakir)."
+    "_text_not": "Hook text prototipinin alinacagi taslak + o taslaktaki ornek metnin bir parcasi. y POZITIF = YUKARI; 0.45 = orta-ust (Meta kirpma payi birakir).",
+    "_hiz_not": "2026-08-21 Enes karari: VO ~%8 yavaslatildi (speed 1.20->1.10, karakter_hiz 18.1->16.7). IKISI BIRLIKTE degismeli: vo_uydur VO'yu kurgu suresine oturttugu icin tek basina speed degisikligi duyulmaz; tek basina karakter_hiz dususu de atempo carpanini 0.90 guvenlik sinirinin altina indirip uydurmayi iptal ettirir."
   }
 }
