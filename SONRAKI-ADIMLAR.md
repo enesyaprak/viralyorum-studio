@@ -54,7 +54,7 @@ Enes'in tekrar elle eklemesi gerekmiyor.
 | **Geçişler** | `Left → Down → Pull In II → Pull & Reveal`, kesme fazlaysa baştan döner | Enes kurdu, `ahtapot-uc-kalp` (2026-08-16) |
 | **VO seviyesi** | volume 1.63 (arkaplan sesinin üstünde net dursun) | Enes ayarladı (2026-08-16) |
 | **Altyazı stili** | `ahtapot-uc-kalp` taslağından klonlanır (CapCut şablonu 跟读手写黄), 2-3 kelimelik karaoke | Enes kurdu (2026-08-16) |
-| **Senaryo** | `presets/senaryo-stili.md` formülü, sonunda sabit soru CTA'sı | "Tüy Hırsızı Kuşlar" referansı + Enes (2026-08-16) |
+| **Senaryo** | `presets/senaryo-stili.md` **6-parça formülü** (kanca→netleştirme→iç ses→rehook→tersine dönüş/payoff→kapanış), netlik-merak dengesi, sonunda sabit soru CTA'sı | "Tüy Hırsızı Kuşlar" ref. + uzman revizyonu (2026-08-21) |
 | **Hedef süre** | 26-30 sn (~435-500 karakter, CTA dahil) | Enes kararı (2026-08-21) — 20-24 bandından çıkarıldı |
 | **Açılış karesi** | aydınlık/yüksek kontrast, özne ilk karede tanınır — karanlık açılış yasak | YouTube analizi sonrası Enes kararı (2026-08-19) |
 | **VO hızı** | ElevenLabs `speed 1.20` (API tavanı) × ffmpeg `atempo 1.15` | Enes: "tüketime layık hız" (2026-08-16) |
@@ -73,16 +73,28 @@ logo doğru ölçek/konumla (0.145 / x 0.0 / y 0.827) tam video boyunca, arkapla
 
 ## Yapılacaklar
 
-### AKTİF VİDEO: `guguk-yuva-paraziti`  ← ŞU AN BURADA (2026-08-21)
+### AKTİF VİDEO: `bal-arisi-isi-topu`  ← ŞU AN BURADA (2026-08-21)
 
-Guguk kuşu / yuva parazitliği. **Senaryo yazıldı ve commit'lendi** (`d5a6114`):
-7 sahne, 30 sn, 506 karakter (bütçe 501). `plan.json` hazır, `klipler[]` alanları BOŞ.
+Japon bal arısı / ısı topu savunması. Uçtan uca üretildi, **export bekliyor**.
+7 sahne, 21 sn. `uret.py` çalıştı: VO+altyazı+müzik+logo+4 geçiş bası, **VO kurguya
+tam oturdu** (x1.167 atempo, kırpılma yok). Timeline 21 sn hedef 26-30'un altında
+ama Enes "böyle bırak, export et" dedi.
+**Kaldı:** Enes CapCut'ta kontrol + export. Not: altyazı 6-7'de replik tırnakları
+(`'iğnemiz bu zırhı delmez'`) garip-karakter uyarısı verdi — CapCut'ta kontrol,
+çirkinse elle sil.
 
-**Yapılacak ilk iş: 7 sahnenin kliplerini MCP ile seçmek.** Sonra 2-5. adımlar.
-`scripts/yeni.py` çalıştırma — proje zaten var.
+Bu, **yeni güçlendirilmiş 6-parça formülle** (rehook + net payoff, bkz.
+`senaryo-stili.md` 2026-08-21 revizyonu) üretilen İLK video.
 
-Bu oturumda VO hızı da değişti: `speed` 1.10, `karakter_hiz` 16.7, hedef bant 26-30 sn.
-Guguk, yeni ayarlarla üretilecek **ilk video** — VO temposunu dinleyip teyit et.
+### BİTTİ: `guguk-yuva-paraziti`  (Enes elle bitirdi, 2026-08-21)
+
+Klip+havuz+senaryo+üretim tamam; Enes CapCut'ta kendi bitirip kapattı. Dönme.
+Senaryo 26-30 banda inecek şekilde kısaltılmıştı (513→448 karakter). Başlık clickbait,
+etiketler optimize (plan.json). `ahtapot-uc-kalp` gibi referans olarak durabilir.
+
+**Tekrarlayan süre sorunu:** hem guguk (24.9 uzun VO) hem bal arısı (21 kısa) auto
+clipping timeline'ı hedef banttan (26-30) saptı. Enes'in dizerken hedef süreyi
+tutturması ya da senaryo.txt'ye hedef sn notu düşmek düşünülebilir.
 
 #### Yeni bir video açarken (guguk bittikten sonra)
 
@@ -136,6 +148,12 @@ Enes'in elle yapması gereken tek şey: **dizme ve export**.
 - **`capcut_havuz.py` var olan taslak adının üstüne yazmaz.** Yeniden kurmak
   gerekirse önce `%LOCALAPPDATA%\CapCut Drafts\<ad>` klasörünü kaldır.
   (2026-08-16'da eski 1 kliplik taslak yedeklenip kaldırıldı, yenisi kuruldu.)
+- **İskelet cover'sızsa `capcut_havuz.py` artık otomatik kopyalıyor** (2026-08-21).
+  `0820` iskeletinde `draft_cover.jpg` yoktu → `dogrula()` "CapCut açamaz" deyip
+  `sys.exit` ile çıkıyor ve senaryo.txt üretilmiyordu (guguk'ta yaşandı; o sefer
+  cover elle kopyalanıp senaryo.py elle çalıştırıldı). Fallback eklendi: `copytree`
+  sonrası cover yoksa `DRAFTS`'taki çalışan bir taslaktan kopyalanıyor. Bal arısında
+  sorunsuz çalıştı ("kapak: 0418 (1)'ten kopyalandi").
 - **SSL:** bu makinede Python'un varsayılan CA bundle'ı tanımsız; `api.pexels.com`
   ve ElevenLabs çağrıları `certifi` bağlamı gerektiriyor. `indir.py`, `tts.py`,
   `transcribe.py` içinde çözülü.

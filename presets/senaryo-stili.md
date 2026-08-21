@@ -4,25 +4,58 @@ Kaynak: "Tüy Hırsızı Kuşlar" (Tüyler Diken Diken) — 25 sn, ~500 karakter
 Referans transkript: `output/referans_tuy-hirsizi_tr.json`.
 Enes'in hedeflediği ton bu (2026-08-16).
 
-## Formül
+**2026-08-21 revizyonu (Enes talebi):** eski metinler merak boşluğu uğruna fazla
+belirsiz kalıp izleyiciyi kaybediyordu ("izleyici bu metni anlamaz"). Faceless
+shorts uzman kaynaklarından (retention/hook araştırması) üç eksik parça eklendi:
+**rehook**, **netlik-merak dengesi**, **net payoff**. Detay aşağıda.
+
+## Formül (6 parça)
 
 | # | Parça | Süre | Kural |
 |---|---|---|---|
-| 1 | **Kanca** | 0-3 sn | İzleyiciye **doğrudan hitap** + absürt tehdit/vaat. Konu ANONS EDİLMEZ. |
-| 2 | **Kurulum** | 3-10 sn | Olayı kur, ama sebebi henüz verme. |
-| 3 | **İç ses** | 10-15 sn | Hayvana/nesneye **replik ver** — mizah buradan gelir. |
-| 4 | **Tersine dönüş** | 15-22 sn | "Ama..." ile ironiyi patlat. Beklenti kırılır. |
-| 5 | **Kapanış** | 22-25 sn | Tek cümlelik toparlama. Ders verme, sadece bırak. |
+| 1 | **Kanca** | 0-3 sn | İzleyiciye **doğrudan hitap** + somut/absürt tehdit-vaat. Konu ANONS EDİLMEZ ama **belirsizlik ≠ kafa karışıklığı** — tek bir net görüntü kur. |
+| 2 | **Netleştirme** | 3-8 sn | Hook'un açtığı soruyu **kısmen** cevapla: özneyi tanıt, sahneyi anlaşılır kıl. İzleyici *neye baktığını* bilsin; merakı "sırada ne var"a taşı. |
+| 3 | **İç ses + kurulum** | 8-14 sn | Hayvana/nesneye **replik ver** — mizah + bilgi aynı cümlede. Sebebi henüz tam verme. |
+| 4 | **Rehook** | 14-17 sn | "Ama asıl olay şu" / "İşte tam burada" — orta düşüşü kes, **en vurucu bilgiyi vaat et**. Faceless shorts'ta orta bölüm en çok düşüşün olduğu yer. |
+| 5 | **Tersine dönüş + payoff** | 17-25 sn | "Ama..." ile ironiyi patlat **ve asıl şoku NET teslim et**. İzleyici "vaov" demeli, "ne oldu ya?" değil. Hook'ta açılan soru burada kapanır. |
+| 6 | **Kapanış + CTA** | 25-28 sn | Tek cümle toparlama (ders verme), sonra sabit soru CTA. |
+
+Not: rehook eklenince yapı 5'ten 6 parçaya çıktı; süre bandı 26-30 sn buna uygun.
+
+## Netlik vs merak dengesi (YENİ — en önemli kural)
+
+Uzman özeti: *"güçlü retention merakla DEĞİL, netlik + merakı birlikte yönetmekle
+gelir."* Faceless içerikte yüz yok — izleyici mesaja, yapıya, tona tutunur. Metin
+belirsizse tutunacak dal kalmaz ve kayar.
+
+- **İzleyici HER cümle sonunda neye baktığını anlamalı.** Merak "sırada ne var?"
+  olmalı; "şu an ne izliyorum?" ASLA. İkincisi kafa karışıklığıdır, merak değil.
+- **Gizem kelimesi / belirsiz zamir yasak.** "İşini bitiriyor", "oradan giriyor",
+  "o şeyi yapıyor" gibi somut olmayan fiiller izleyiciyi düşürür. Somut fiil kullan:
+  ne yaptığını AÇIKÇA söyle.
+- **Hook body ile eşleşmeli.** Kanca neyi vaat ettiyse gövde onu vermeli;
+  uyumsuzluk 3 saniye eşiğini geçse bile tamamlanma oranını ve güveni öldürür.
+- **Payoff videonun EN NET cümlesidir.** Asıl bilgiyi burada dolaysız söyle —
+  "narrative completion". Tatminsiz biten video paylaşılmaz.
+
+### Somut örnek: guguk videosu (netlik hatası, gelecek için ders)
+Yayınlandı, değiştirmiyoruz — ama tipik hatayı gösteriyor:
+- Kanca "Bu kuş o boşlukta **işini bitiriyor**" → "işini bitirmek" belirsiz, izleyici
+  ne olduğunu anlamıyor. Daha iyisi: somut eylemi ima et ("o boşlukta yumurtasını
+  bırakıyor" kadar açık olmasa da yönü belli).
+- Kapanış "Guguk tam **oradan giriyor**" → payoff bulanık. İzleyici "nereden, neye?"
+  diye kalıyor. Payoff net olmalıydı: guguk'un içgüdüyü nasıl sömürdüğünü açıkça söyle.
 
 ## Referansın satır satır analizi
 
 - **Kanca:** "Kel kalmak istemiyorsanız bu kuşlardan uzak durun."
-  → 2. tekil/çoğul hitap + saçma ama merak açan tehdit. "Kuşlar tüy çalıyor" DEMİYOR.
+  → 2. tekil/çoğul hitap + saçma ama merak açan tehdit. "Kuşlar tüy çalıyor" DEMİYOR
+  ama izleyici "hangi kuş, neden kel?" diye NET bir soru soruyor (belirsiz değil).
 - **İç ses:** "yumuşacık tüyler varken neden çalı çırpı toplayalım diyor"
   → Kuşa replik veriyor. Bilgi + mizah aynı cümlede.
-- **Tersine dönüş:** "Ama normalde aynı kuşlar ... parazitlerden temizlediği için masum
-  hayvanlar yaklaşmalarına izin veriyor ve tüylerinden oluyor."
-  → Güven ilişkisinin istismarı. "Tüylerinden oluyor" kelime oyunu.
+- **Tersine dönüş/payoff:** "Ama normalde aynı kuşlar ... parazitlerden temizlediği
+  için masum hayvanlar yaklaşmalarına izin veriyor ve tüylerinden oluyor."
+  → Güven ilişkisinin istismarı NET anlatılıyor. "Tüylerinden oluyor" kelime oyunu.
 - **Kapanış:** "Böylece kuşlar da yuvalarını hızlıca bitirip dinlenebiliyor."
   → Kısa, nötr, ahlak dersi yok.
 
@@ -31,9 +64,9 @@ Enes'in hedeflediği ton bu (2026-08-16).
 - **Şimdiki zaman** (`-yor`), konuşma dili. Yazılı/ansiklopedik cümle yok.
 - Cümleler kısa; bir cümlede bir fikir.
 - **İkinci tekil hitap** en az bir kere ("istemiyorsan", "sanma ki", "dur").
-- Rakam ve zıtlık kancayı güçlendirir ("üç kalbi var", "biri duruyor").
-- Sayı/terim yığmayın — bir videoda en fazla 2 sayısal bilgi.
-- **Konuyu asla başta özetleme.** Merak boşluğu kapanırsa video biter.
+- Rakam ve zıtlık kancayı güçlendirir ("üç kalbi var", "biri duruyor"). Somut sayı
+  inandırıcılık katar — ama bir videoda **en fazla 2 sayısal bilgi**.
+- **Konuyu asla başta özetleme** ama **her cümleyi anlaşılır tut** (bkz. netlik kuralı).
 - **Kapanış çağrısı zorunlu:** her senaryo `preset.json > kapanis_cagri` ile bitiyor
   ("Sıradaki hangi hayvan olsun? Yorumlara yaz."). Elle yazma — `senaryo.py` ve
   `uret.py` ikisi de preset'ten ekliyor, metinler birebir aynı kalsın diye.
@@ -43,8 +76,7 @@ Enes'in hedeflediği ton bu (2026-08-16).
   Formül: hedef karakter = kurgu saniyesi × `preset.json > karakter_hiz` (16.7).
   **Bant geçmişi:** 25-33 → 20-24 (2026-08-19, YouTube analizi: ortalama izlenme
   14-17 sn'de kalıyordu, Shorts'ta en güçlü sinyal tamamlanma oranı) → **26-30**
-  (2026-08-21, Enes: "video uzasın sıkıntı yok"). Son değişiklik 2026-08-19'daki
-  veriye dayalı kısaltmayı geri alıyor; tamamlanma oranını sonraki YouTube
+  (2026-08-21, Enes: "video uzasın sıkıntı yok"). Tamamlanma oranını sonraki YouTube
   analizinde ayrıca kontrol et.
 
 ## Tutundurma kuralları (odak süresi yok)
@@ -53,7 +85,8 @@ Enes'in duruşu (2026-08-16): *"millet odak süresi yok, çok kalamıyorlar — 
 bile olsa."* Kalite tek başına izletmiyor; ritim izletiyor. Somut karşılığı:
 
 - **Sessiz açılış yok.** VO videonun 0. saniyesinde başlar. İlk kelime kancanın kendisi
-  olmalı; "bakın şimdi", "biliyor muydunuz" gibi ısınma cümlesi yasak.
+  olmalı; "bakın şimdi", "biliyor muydunuz" gibi ısınma cümlesi yasak. Uzman verisi:
+  ilk 2-2.5 sn'de gelen kanca %19 daha fazla izleyici tutuyor.
 - **Açılış karesi aydınlık olacak.** İlk klip yüksek kontrast olmalı ve özne ilk karede
   tanınmalı; karanlık/siyah açılış yasak (klip seçiminde süzgeç). 2026-08-19 kararı:
   aydınlık mercan açılışlı ahtapot videosu %57,5 izlemeye devam verdi, siyah zeminli
@@ -66,14 +99,24 @@ bile olsa."* Kalite tek başına izletmiyor; ritim izletiyor. Somut karşılığ
   atempo sesi bozar ve script uyarı verip dokunmaz.
 - **Her cümle yeni bilgi taşır.** Tekrar, özet, "yani şöyle ki" bağlacı yok. Bir cümle
   kesildiğinde anlam bozulmuyorsa o cümle fazladır.
-- **Görsel 4 saniyeden uzun sabit kalmasın.** Kesme ya da geçiş gelsin; havuzdaki
-  klipler bunun için sahne süresinden uzun seçiliyor.
-- **Merak zinciri kapanmasın.** Her cümle bir sonrakini borçlandırmalı; cevabı verdiğin
-  anda yeni soru aç. Kapanış cümlesi hariç.
+- **Her 5-7 saniyede yeni görsel/hikâye beat'i.** Görsel 4 saniyeden uzun sabit kalmasın;
+  kesme ya da geçiş gelsin. Havuzdaki klipler bunun için sahne süresinden uzun seçiliyor.
+- **Merak zinciri kapanmasın (rehook'a kadar).** Her cümle bir sonrakini borçlandırmalı;
+  cevabı verdiğin anda yeni soru aç. Merak zinciri payoff'ta (parça 5) kapanır —
+  orada NET kapat, açık bırakma.
 
 ## Kancada işe yarayan kalıplar
 
-- "X olmak istemiyorsan Y'den uzak dur."
-- "Bunu bilseydin bir daha Y yapmazdın."
-- "Şu an Y yapıyorsun ve X bunu izliyor."
-- "Bir X'in olsaydı ölürdün. Bu hayvanın üç tane var."
+Kanal tonuna (hayvan + iç ses + ironi) uyarlanmış. Uzman "copy-paste" kalıplarından
+türetilmiş; hepsi **somut merak** açar, belirsizlik değil:
+
+- **Tehdit/uzak dur:** "X olmak istemiyorsan Y'den uzak dur."
+- **Yalanı boz:** "Y hakkında sana yıllardır yalan söylendi."
+- **Şu an sen:** "Şu an Y yapıyorsun ve X seni izliyor."
+- **Kıyas-şok:** "Bir X'in olsaydı ölürdün. Bu hayvanın üç tane var."
+- **Zıt gerçek:** "Herkes X sanıyor. Gerçek çok daha kötü."
+- **Gerçek zamanlı:** "İzle, bu hayvan on saniyede ne yapıyor."
+- **Paradoks:** "Ne kadar az X yaparsa, o kadar çok Y kazanıyor."
+
+Kalıbı seçtikten sonra **parça 2'de mutlaka netleştir** — kanca ne kadar cesur olursa
+netleştirme o kadar önemli, yoksa merak kafa karışıklığına döner.

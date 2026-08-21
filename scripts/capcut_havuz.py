@@ -244,6 +244,19 @@ def main():
 
     shutil.copytree(iskelet, hedef)
 
+    # Iskelette kapak yoksa calisan bir taslaktan kopyala: bazi bos iskeletler (0820 gibi)
+    # draft_cover.jpg tasimadigi icin dogrula() 'CapCut acamaz' der ve senaryo.txt uretilmez.
+    # CapCut taslagi ilk kaydettiginde kendi kapagini ureterek bunu ezer - placeholder yeterli.
+    hedef_kapak = hedef / "draft_cover.jpg"
+    if not hedef_kapak.exists():
+        kaynak_kapak = next((p for p in DRAFTS.glob("*/draft_cover.jpg")
+                             if p.parent != hedef), None)
+        if kaynak_kapak:
+            shutil.copy2(kaynak_kapak, hedef_kapak)
+            print(f"kapak   : {kaynak_kapak.parent.name}'ten kopyalandi (iskelette yoktu)")
+        else:
+            print("  uyari: kopyalanacak kapak bulunamadi - dogrulama basarisiz olabilir")
+
     simdi_s = int(time.time())
     simdi_us = int(time.time() * 1_000_000)
 

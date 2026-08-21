@@ -1,14 +1,15 @@
 {
   "slug": "guguk-yuva-paraziti",
-  "baslik": "Yumurtasını Başkasının Yuvasına Bırakan Kuş — Guguk",
+  "baslik": "Bu Kuş Yuvanı 10 Saniyede Ele Geçiriyor 😱",
   "hook": "Yuvandan bir an ayrılma. Bu kuş o boşlukta işini bitiriyor.",
   "hedef_sure": 30,
   "etiketler": [
+    "#shorts",
     "#guguk",
     "#kuşlar",
-    "#hayvanlar",
+    "#doğa",
     "#ilginçbilgiler",
-    "#shorts"
+    "#hayvanlar"
   ],
   "_not": "ara[] terimleri INGILIZCE (MCP aramasi icin). klipler[] MCP ile secildikten sonra doldurulur, sonra: python scripts/indir.py --proje guguk-yuva-paraziti",
   "text": [
@@ -24,73 +25,150 @@
         "songbird nest sunlight",
         "bird nest branch daylight"
       ],
-      "klipler": []
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "7363670",
+          "url": "https://videos.pexels.com/video-files/7363670/7363670-hd_1080_1920_25fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 15,
+          "sahibi": "Micheile Henderson",
+          "sayfa": "https://www.pexels.com/video/bird-eggs-on-the-nest-7363670/"
+        }
+      ]
     },
     {
       "no": 2,
       "sure": 5,
-      "anlatim": "Guguk yumurtasını başkasının yuvasına bırakıyor. Rengini bile taklit ediyor.",
+      "anlatim": "Guguk yumurtasını başka yuvaya bırakır, rengini bile taklit eder.",
       "ara": [
         "cuckoo bird perched",
         "wild bird singing tree",
         "bird perched branch closeup"
       ],
-      "klipler": []
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "29663461",
+          "url": "https://videos.pexels.com/video-files/29663461/12760696_1080_1920_60fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 29,
+          "sahibi": "Shilpesh Patil",
+          "sayfa": "https://www.pexels.com/video/asian-koel-bird-in-natural-habitat-29663461/"
+        }
+      ]
     },
     {
       "no": 3,
       "sure": 4,
-      "anlatim": "Sonra ev sahibinin bir yumurtasını atıyor, sayı tutsun diye.",
+      "anlatim": "Sonra ev sahibinin bir yumurtasını atar, sayı tutsun diye.",
       "ara": [
         "bird eggs in nest macro",
         "egg nest close up",
         "empty bird nest twigs"
       ],
-      "klipler": []
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "6288800",
+          "url": "https://videos.pexels.com/video-files/6288800/6288800-hd_1080_1920_25fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 4,
+          "sahibi": "Klaus Nielsen",
+          "sayfa": "https://www.pexels.com/video/close-up-view-of-quail-eggs-on-a-nest-6288800/"
+        }
+      ]
     },
     {
       "no": 4,
       "sure": 4,
-      "anlatim": "'Gerisi senin sorunun' deyip on saniyede çekip gidiyor.",
+      "anlatim": "'Gerisi senin sorunun' deyip saniyede kaçar.",
       "ara": [
         "bird flying away branch",
         "bird taking off tree",
         "bird wings flight slow motion"
       ],
-      "klipler": []
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "39008201",
+          "url": "https://videos.pexels.com/video-files/39008201/16598776_1080_1920_30fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 12,
+          "sahibi": "Dmytro Koplyk",
+          "sayfa": "https://www.pexels.com/video/great-blue-heron-taking-off-in-slow-motion-39008201/"
+        }
+      ]
     },
     {
       "no": 5,
       "sure": 4,
-      "anlatim": "Yavrusu erken çıkıyor ve gözü daha açılmadan diğerlerini sırtıyla yuvadan atıyor.",
+      "anlatim": "Yavrusu erken çıkar, gözü açılmadan ötekileri sırtıyla atar.",
       "ara": [
         "baby bird chick nest",
         "hatchling open beak nest",
         "newborn chick nest close up"
       ],
-      "klipler": []
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "37965342",
+          "url": "https://videos.pexels.com/video-files/37965342/16109934_1080_1920_60fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 21,
+          "sahibi": "Rajesh S Balouria",
+          "sayfa": "https://www.pexels.com/video/close-up-of-newborn-baby-birds-in-nest-37965342/"
+        }
+      ]
     },
     {
       "no": 6,
       "sure": 5,
-      "anlatim": "Ama üvey anne fark etmiyor. Kendinin iki katı yavruyu beslemeye devam ediyor.",
+      "anlatim": "Ama üvey anne fark etmez, kendinin iki katı yavruyu besler.",
       "ara": [
         "bird feeding chick nest",
         "mother bird feeding baby",
         "bird feeding young beak"
       ],
-      "klipler": []
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "25949582",
+          "url": "https://videos.pexels.com/video-files/25949582/11922919_3840_2160_24fps.mp4",
+          "genislik": 3840,
+          "yukseklik": 2160,
+          "sure": 20,
+          "sahibi": "Jesus Cambronero",
+          "sayfa": "https://www.pexels.com/video/colirrojo-tizon-cebando-25949582/"
+        }
+      ]
     },
     {
       "no": 7,
       "sure": 4,
-      "anlatim": "Ağzını açanı doyurmak içgüdü. Guguk tam oradan giriyor.",
+      "anlatim": "Ağzını açanı doyurmak içgüdü. Guguk tam oradan girer.",
       "ara": [
         "small bird beak open",
         "bird portrait close up",
         "bird head detail nature"
       ],
-      "klipler": []
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "34339102",
+          "url": "https://videos.pexels.com/video-files/34339102/14547644_1080_1920_30fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 12,
+          "sahibi": "Frank Litschel",
+          "sayfa": "https://www.pexels.com/video/close-up-portrait-of-a-brown-bird-34339102/"
+        }
+      ]
     }
   ],
   "_stil": "presets/senaryo-stili.md formulu (kanca -> kurulum -> ic ses -> tersine donus -> kapanis)"
