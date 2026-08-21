@@ -1,0 +1,786 @@
+{
+  "language_code": "tur",
+  "language_probability": 1.0,
+  "text": "Bu ormandaki ağaçlar birbirine mesaj yolluyor. Kökleri mantar iplikleriyle sarılı. Ağaçtan ağaca kablo gibi uzanıyor. Yaşlı ağaçlar gölgedeki fidanlara bu ağdan şeker yolluyor. Biri böceğe uğrayınca komşuları uyarı alıp savunmaya geçiyor. Ama ağ herkesin dostu değil. Bazı bitkiler besin çalıyor, bazıları komşusunu zehirliyor. Yani orman dayanışma değil, sessiz bir pazarlık. Sıradaki hangi hayvan olsun? Yorumlara yaz.",
+  "words": [
+    {
+      "text": "Bu",
+      "start": 0.079,
+      "end": 0.199,
+      "type": "word",
+      "logprob": -7.4741430580616e-05
+    },
+    {
+      "text": " ",
+      "start": 0.199,
+      "end": 0.239,
+      "type": "spacing",
+      "logprob": -0.0006185048841871321
+    },
+    {
+      "text": "ormandaki",
+      "start": 0.239,
+      "end": 0.639,
+      "type": "word",
+      "logprob": -0.0009379581041583959
+    },
+    {
+      "text": " ",
+      "start": 0.639,
+      "end": 0.699,
+      "type": "spacing",
+      "logprob": -8.702239938429557e-06
+    },
+    {
+      "text": "ağaçlar",
+      "start": 0.699,
+      "end": 1.039,
+      "type": "word",
+      "logprob": -2.0009855039201545e-05
+    },
+    {
+      "text": " ",
+      "start": 1.039,
+      "end": 1.059,
+      "type": "spacing",
+      "logprob": -2.2291887944447808e-05
+    },
+    {
+      "text": "birbirine",
+      "start": 1.059,
+      "end": 1.379,
+      "type": "word",
+      "logprob": -2.3205804609460756e-05
+    },
+    {
+      "text": " ",
+      "start": 1.379,
+      "end": 1.399,
+      "type": "spacing",
+      "logprob": -2.729855441430118e-05
+    },
+    {
+      "text": "mesaj",
+      "start": 1.399,
+      "end": 1.659,
+      "type": "word",
+      "logprob": -2.729855441430118e-05
+    },
+    {
+      "text": " ",
+      "start": 1.659,
+      "end": 1.74,
+      "type": "spacing",
+      "logprob": -1.1920858014491387e-05
+    },
+    {
+      "text": "yolluyor.",
+      "start": 1.74,
+      "end": 2.019,
+      "type": "word",
+      "logprob": -0.0003270307738097876
+    },
+    {
+      "text": " ",
+      "start": 2.019,
+      "end": 2.359,
+      "type": "spacing",
+      "logprob": -1.585470999998506e-05
+    },
+    {
+      "text": "Kökleri",
+      "start": 2.359,
+      "end": 2.619,
+      "type": "word",
+      "logprob": -2.7843166597969165e-05
+    },
+    {
+      "text": " ",
+      "start": 2.619,
+      "end": 2.659,
+      "type": "spacing",
+      "logprob": -9.500529267825186e-05
+    },
+    {
+      "text": "mantar",
+      "start": 2.659,
+      "end": 2.899,
+      "type": "word",
+      "logprob": -6.417132575127955e-05
+    },
+    {
+      "text": " ",
+      "start": 2.899,
+      "end": 2.919,
+      "type": "spacing",
+      "logprob": -6.151010165922344e-05
+    },
+    {
+      "text": "iplikleriyle",
+      "start": 2.919,
+      "end": 3.379,
+      "type": "word",
+      "logprob": -0.0020710399233697294
+    },
+    {
+      "text": " ",
+      "start": 3.379,
+      "end": 3.439,
+      "type": "spacing",
+      "logprob": -3.528532761265524e-05
+    },
+    {
+      "text": "sarılı.",
+      "start": 3.439,
+      "end": 3.659,
+      "type": "word",
+      "logprob": -0.03608164721715314
+    },
+    {
+      "text": " ",
+      "start": 3.659,
+      "end": 3.979,
+      "type": "spacing",
+      "logprob": -0.00012742661056108773
+    },
+    {
+      "text": "Ağaçtan",
+      "start": 3.98,
+      "end": 4.339,
+      "type": "word",
+      "logprob": -6.389295153244998e-05
+    },
+    {
+      "text": " ",
+      "start": 4.339,
+      "end": 4.479,
+      "type": "spacing",
+      "logprob": -0.000105375460407231
+    },
+    {
+      "text": "ağaca",
+      "start": 4.48,
+      "end": 4.699,
+      "type": "word",
+      "logprob": -5.8815411466639486e-05
+    },
+    {
+      "text": " ",
+      "start": 4.699,
+      "end": 4.779,
+      "type": "spacing",
+      "logprob": -2.253030106658116e-05
+    },
+    {
+      "text": "kablo",
+      "start": 4.779,
+      "end": 4.98,
+      "type": "word",
+      "logprob": -1.3851966514266678e-05
+    },
+    {
+      "text": " ",
+      "start": 4.98,
+      "end": 5.019,
+      "type": "spacing",
+      "logprob": -8.344646857949556e-07
+    },
+    {
+      "text": "gibi",
+      "start": 5.019,
+      "end": 5.139,
+      "type": "word",
+      "logprob": -8.344646857949556e-07
+    },
+    {
+      "text": " ",
+      "start": 5.139,
+      "end": 5.199,
+      "type": "spacing",
+      "logprob": -6.9141146923357155e-06
+    },
+    {
+      "text": "uzanıyor.",
+      "start": 5.199,
+      "end": 5.539,
+      "type": "word",
+      "logprob": -1.8781712444453864e-05
+    },
+    {
+      "text": " ",
+      "start": 5.539,
+      "end": 6.059,
+      "type": "spacing",
+      "logprob": -1.0132738680113107e-05
+    },
+    {
+      "text": "Yaşlı",
+      "start": 6.059,
+      "end": 6.299,
+      "type": "word",
+      "logprob": -1.7976568051381038e-05
+    },
+    {
+      "text": " ",
+      "start": 6.299,
+      "end": 6.379,
+      "type": "spacing",
+      "logprob": -2.264974000354414e-06
+    },
+    {
+      "text": "ağaçlar",
+      "start": 6.379,
+      "end": 6.679,
+      "type": "word",
+      "logprob": -5.636858125918869e-06
+    },
+    {
+      "text": " ",
+      "start": 6.679,
+      "end": 6.779,
+      "type": "spacing",
+      "logprob": -0.0005651307292282581
+    },
+    {
+      "text": "gölgedeki",
+      "start": 6.779,
+      "end": 7.099,
+      "type": "word",
+      "logprob": -0.0003479703588911636
+    },
+    {
+      "text": " ",
+      "start": 7.099,
+      "end": 7.119,
+      "type": "spacing",
+      "logprob": -0.0008187517523765564
+    },
+    {
+      "text": "fidanlara",
+      "start": 7.119,
+      "end": 7.519,
+      "type": "word",
+      "logprob": -0.0001111051957802071
+    },
+    {
+      "text": " ",
+      "start": 7.519,
+      "end": 7.559,
+      "type": "spacing",
+      "logprob": -4.172316494077677e-06
+    },
+    {
+      "text": "bu",
+      "start": 7.559,
+      "end": 7.659,
+      "type": "word",
+      "logprob": -4.172316494077677e-06
+    },
+    {
+      "text": " ",
+      "start": 7.659,
+      "end": 7.739,
+      "type": "spacing",
+      "logprob": -0.00282817124389112
+    },
+    {
+      "text": "ağdan",
+      "start": 7.739,
+      "end": 7.98,
+      "type": "word",
+      "logprob": -0.0012058650347171352
+    },
+    {
+      "text": " ",
+      "start": 7.98,
+      "end": 8.079,
+      "type": "spacing",
+      "logprob": -1.1920928244535389e-07
+    },
+    {
+      "text": "şeker",
+      "start": 8.079,
+      "end": 8.34,
+      "type": "word",
+      "logprob": -1.1920928244535389e-07
+    },
+    {
+      "text": " ",
+      "start": 8.34,
+      "end": 8.38,
+      "type": "spacing",
+      "logprob": -1.5735502529423684e-05
+    },
+    {
+      "text": "yolluyor.",
+      "start": 8.38,
+      "end": 8.699,
+      "type": "word",
+      "logprob": -0.00014651608984826857
+    },
+    {
+      "text": " ",
+      "start": 8.699,
+      "end": 9.039,
+      "type": "spacing",
+      "logprob": -0.16024431586265564
+    },
+    {
+      "text": "Biri",
+      "start": 9.039,
+      "end": 9.159,
+      "type": "word",
+      "logprob": -0.04009004626368551
+    },
+    {
+      "text": " ",
+      "start": 9.159,
+      "end": 9.22,
+      "type": "spacing",
+      "logprob": -0.00016664070426486433
+    },
+    {
+      "text": "böceğe",
+      "start": 9.22,
+      "end": 9.46,
+      "type": "word",
+      "logprob": -0.016193981311516836
+    },
+    {
+      "text": " ",
+      "start": 9.46,
+      "end": 9.5,
+      "type": "spacing",
+      "logprob": -2.2053474822314456e-05
+    },
+    {
+      "text": "uğrayınca",
+      "start": 9.5,
+      "end": 9.859,
+      "type": "word",
+      "logprob": -0.00015225408990065463
+    },
+    {
+      "text": " ",
+      "start": 9.859,
+      "end": 9.92,
+      "type": "spacing",
+      "logprob": -3.802703940891661e-05
+    },
+    {
+      "text": "komşuları",
+      "start": 9.92,
+      "end": 10.279,
+      "type": "word",
+      "logprob": -0.00010453997068301153
+    },
+    {
+      "text": " ",
+      "start": 10.279,
+      "end": 10.34,
+      "type": "spacing",
+      "logprob": -0.000102037942269817
+    },
+    {
+      "text": "uyarı",
+      "start": 10.34,
+      "end": 10.5,
+      "type": "word",
+      "logprob": -9.495759150013328e-05
+    },
+    {
+      "text": " ",
+      "start": 10.5,
+      "end": 10.539,
+      "type": "spacing",
+      "logprob": -0.000271521887043491
+    },
+    {
+      "text": "alıp",
+      "start": 10.539,
+      "end": 10.679,
+      "type": "word",
+      "logprob": -0.0001363569896284389
+    },
+    {
+      "text": " ",
+      "start": 10.679,
+      "end": 10.739,
+      "type": "spacing",
+      "logprob": -0.0003181189822498709
+    },
+    {
+      "text": "savunmaya",
+      "start": 10.739,
+      "end": 11.059,
+      "type": "word",
+      "logprob": -0.0002203877148632374
+    },
+    {
+      "text": " ",
+      "start": 11.059,
+      "end": 11.099,
+      "type": "spacing",
+      "logprob": -2.4676019165781327e-05
+    },
+    {
+      "text": "geçiyor.",
+      "start": 11.099,
+      "end": 11.359,
+      "type": "word",
+      "logprob": -1.56609341956937e-05
+    },
+    {
+      "text": " ",
+      "start": 11.359,
+      "end": 11.879,
+      "type": "spacing",
+      "logprob": -1.9192511899746023e-05
+    },
+    {
+      "text": "Ama",
+      "start": 11.88,
+      "end": 12.119,
+      "type": "word",
+      "logprob": -1.9192511899746023e-05
+    },
+    {
+      "text": " ",
+      "start": 12.119,
+      "end": 12.219,
+      "type": "spacing",
+      "logprob": -0.12817853689193726
+    },
+    {
+      "text": "ağ",
+      "start": 12.219,
+      "end": 12.399,
+      "type": "word",
+      "logprob": -0.12817853689193726
+    },
+    {
+      "text": " ",
+      "start": 12.399,
+      "end": 12.519,
+      "type": "spacing",
+      "logprob": -0.0012422234285622835
+    },
+    {
+      "text": "herkesin",
+      "start": 12.519,
+      "end": 12.92,
+      "type": "word",
+      "logprob": -0.0009319059898871274
+    },
+    {
+      "text": " ",
+      "start": 12.92,
+      "end": 12.979,
+      "type": "spacing",
+      "logprob": -1.3112935448589269e-05
+    },
+    {
+      "text": "dostu",
+      "start": 12.979,
+      "end": 13.179,
+      "type": "word",
+      "logprob": -1.0776450449156982e-05
+    },
+    {
+      "text": " ",
+      "start": 13.179,
+      "end": 13.219,
+      "type": "spacing",
+      "logprob": -1.1920928244535389e-07
+    },
+    {
+      "text": "değil.",
+      "start": 13.219,
+      "end": 13.399,
+      "type": "word",
+      "logprob": -7.351227336490259e-07
+    },
+    {
+      "text": " ",
+      "start": 13.399,
+      "end": 13.779,
+      "type": "spacing",
+      "logprob": -0.00010168035078095272
+    },
+    {
+      "text": "Bazı",
+      "start": 13.779,
+      "end": 13.979,
+      "type": "word",
+      "logprob": -7.629006540632588e-05
+    },
+    {
+      "text": " ",
+      "start": 13.979,
+      "end": 14.0,
+      "type": "spacing",
+      "logprob": -3.576278118089249e-07
+    },
+    {
+      "text": "bitkiler",
+      "start": 14.0,
+      "end": 14.319,
+      "type": "word",
+      "logprob": -2.428880613081219e-06
+    },
+    {
+      "text": " ",
+      "start": 14.319,
+      "end": 14.359,
+      "type": "spacing",
+      "logprob": -0.0001528146385680884
+    },
+    {
+      "text": "besin",
+      "start": 14.359,
+      "end": 14.559,
+      "type": "word",
+      "logprob": -9.173646685383119e-05
+    },
+    {
+      "text": " ",
+      "start": 14.559,
+      "end": 14.619,
+      "type": "spacing",
+      "logprob": -0.0005986090400256217
+    },
+    {
+      "text": "çalıyor,",
+      "start": 14.619,
+      "end": 14.859,
+      "type": "word",
+      "logprob": -0.00024431060410279315
+    },
+    {
+      "text": " ",
+      "start": 14.859,
+      "end": 15.099,
+      "type": "spacing",
+      "logprob": -0.00023100091493688524
+    },
+    {
+      "text": "bazıları",
+      "start": 15.099,
+      "end": 15.46,
+      "type": "word",
+      "logprob": -0.00011585808522340812
+    },
+    {
+      "text": " ",
+      "start": 15.46,
+      "end": 15.5,
+      "type": "spacing",
+      "logprob": -1.311301275563892e-06
+    },
+    {
+      "text": "komşusunu",
+      "start": 15.5,
+      "end": 15.839,
+      "type": "word",
+      "logprob": -9.286851662990457e-05
+    },
+    {
+      "text": " ",
+      "start": 15.839,
+      "end": 15.879,
+      "type": "spacing",
+      "logprob": -0.0004349001101218164
+    },
+    {
+      "text": "zehirliyor.",
+      "start": 15.88,
+      "end": 16.44,
+      "type": "word",
+      "logprob": -0.00011203829952095971
+    },
+    {
+      "text": " ",
+      "start": 16.44,
+      "end": 16.5,
+      "type": "spacing",
+      "logprob": -3.4570634852570947e-06
+    },
+    {
+      "text": "Yani",
+      "start": 16.5,
+      "end": 16.799,
+      "type": "word",
+      "logprob": -3.4570634852570947e-06
+    },
+    {
+      "text": " ",
+      "start": 16.799,
+      "end": 16.899,
+      "type": "spacing",
+      "logprob": -0.00011598391574807465
+    },
+    {
+      "text": "orman",
+      "start": 16.899,
+      "end": 17.159,
+      "type": "word",
+      "logprob": -5.4618951071461194e-05
+    },
+    {
+      "text": " ",
+      "start": 17.159,
+      "end": 17.239,
+      "type": "spacing",
+      "logprob": -0.0006302992696873844
+    },
+    {
+      "text": "dayanışma",
+      "start": 17.239,
+      "end": 17.699,
+      "type": "word",
+      "logprob": -0.00036402059777174145
+    },
+    {
+      "text": " ",
+      "start": 17.699,
+      "end": 17.759,
+      "type": "spacing",
+      "logprob": -1.4305104514278355e-06
+    },
+    {
+      "text": "değil,",
+      "start": 17.76,
+      "end": 18.0,
+      "type": "word",
+      "logprob": -1.098683399429016e-05
+    },
+    {
+      "text": " ",
+      "start": 18.0,
+      "end": 18.239,
+      "type": "spacing",
+      "logprob": -5.829164365422912e-05
+    },
+    {
+      "text": "sessiz",
+      "start": 18.239,
+      "end": 18.5,
+      "type": "word",
+      "logprob": -4.1841314668999985e-05
+    },
+    {
+      "text": " ",
+      "start": 18.5,
+      "end": 18.52,
+      "type": "spacing",
+      "logprob": -1.8358061424805783e-05
+    },
+    {
+      "text": "bir",
+      "start": 18.52,
+      "end": 18.6,
+      "type": "word",
+      "logprob": -1.8358061424805783e-05
+    },
+    {
+      "text": " ",
+      "start": 18.6,
+      "end": 18.639,
+      "type": "spacing",
+      "logprob": -0.00023398046323563904
+    },
+    {
+      "text": "pazarlık.",
+      "start": 18.639,
+      "end": 18.999,
+      "type": "word",
+      "logprob": -0.00010807315465576216
+    },
+    {
+      "text": " ",
+      "start": 18.999,
+      "end": 19.359,
+      "type": "spacing",
+      "logprob": -0.00010382589971413836
+    },
+    {
+      "text": "Sıradaki",
+      "start": 19.359,
+      "end": 19.659,
+      "type": "word",
+      "logprob": -3.0784426215291205e-05
+    },
+    {
+      "text": " ",
+      "start": 19.659,
+      "end": 19.739,
+      "type": "spacing",
+      "logprob": -1.1920858014491387e-05
+    },
+    {
+      "text": "hangi",
+      "start": 19.739,
+      "end": 19.939,
+      "type": "word",
+      "logprob": -1.1920858014491387e-05
+    },
+    {
+      "text": " ",
+      "start": 19.939,
+      "end": 19.959,
+      "type": "spacing",
+      "logprob": -4.768370445162873e-07
+    },
+    {
+      "text": "hayvan",
+      "start": 19.959,
+      "end": 20.139,
+      "type": "word",
+      "logprob": -4.768370445162873e-07
+    },
+    {
+      "text": " ",
+      "start": 20.139,
+      "end": 20.18,
+      "type": "spacing",
+      "logprob": -4.446407547220588e-05
+    },
+    {
+      "text": "olsun?",
+      "start": 20.18,
+      "end": 20.419,
+      "type": "word",
+      "logprob": -0.0010309123414723824
+    },
+    {
+      "text": " ",
+      "start": 20.419,
+      "end": 20.819,
+      "type": "spacing",
+      "logprob": -1.7165990357170813e-05
+    },
+    {
+      "text": "Yorumlara",
+      "start": 20.819,
+      "end": 21.119,
+      "type": "word",
+      "logprob": -2.4636018376137752e-05
+    },
+    {
+      "text": " ",
+      "start": 21.119,
+      "end": 21.159,
+      "type": "spacing",
+      "logprob": -2.264974000354414e-06
+    },
+    {
+      "text": "yaz.",
+      "start": 21.159,
+      "end": 21.34,
+      "type": "word",
+      "logprob": -0.004018819889040515
+    }
+  ],
+  "transcription_id": "r3Qt9B6RLLarFlvNy9V3",
+  "audio_duration_secs": 21.57475
+}

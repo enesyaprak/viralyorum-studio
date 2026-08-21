@@ -97,6 +97,13 @@ Enes'in elle yapması gereken tek şey: **dizme ve export**.
 
 ## Bilinmesi gereken tuzaklar
 
+- **CapCut'ın OKUDUĞU dosya `Timelines/<UUID>/draft_content.json`.** Kök
+  `draft_content.json`'ı editleyip bu dosyayı güncellemezsen CapCut projeyi ESKİ
+  haliyle açar ve kapanışta o eski hali bütün dosyalara yazıp editi siler — hiçbir
+  uyarı, hiçbir "kurtar" dialogu çıkmadan. `agaclarin-agi` ve `karinca-koprusu`'nda
+  VO+altyazı+müzik+logo+geçiş bu yüzden iki kez uçtu. `capcut_sync` 2026-08-20'den
+  beri bu dosyayı da yazıyor (Enes onayı); iki dosyanın `id`'si ve klasör adı aynı
+  olduğu için içerik birebir kopyalanabiliyor.
 - **CapCut açıkken hiçbir script çalıştırma.** Auto-save diske yazılanı eziyor.
   Pencereyi kapatmak yetmez, tepsiden tam kapat.
 - **CapCut taslak kimliği:** kök `draft_content.json > id`, `Timelines/project.json >

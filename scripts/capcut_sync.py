@@ -48,6 +48,18 @@ def sync(draft, quiet=False):
             synced.append("template.json")
         except Exception:
             pass
+    # Timelines/<UUID>/draft_content.json - YENI FORMAT PROJELERDE CAPCUT'IN OKUDUGU DOSYA.
+    # 2026-08-20'ye kadar yazilmiyordu: scriptler kok draft_content.json'i editliyor, CapCut
+    # ise nested kopyayi okuyup ESKI hali gosteriyor ve kapanista o eski hali her yere yazip
+    # editi siliyordu (agaclarin-agi + karinca-koprusu'nda VO/altyazi/muzik/logo/gecis ucdu).
+    # Iki dosyanin id'si, klasor adi ve main_timeline_id ayni; icerik birebir ayna.
+    for ic in (folder / 'Timelines').glob('*/draft_content.json'):
+        try:
+            shutil.copyfile(dc_path, ic)
+            synced.append(f'Timelines/{ic.parent.name[:8]}')
+        except Exception:
+            pass
+
     for mirror in ("template-2.tmp", "draft_content.json.bak"):
         if (folder / mirror).exists():
             try:
