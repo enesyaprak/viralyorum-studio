@@ -1,0 +1,80 @@
+[
+  {
+    "kaynak": "pexels",
+    "id": "11284501",
+    "url": "https://videos.pexels.com/video-files/11284501/11284501-uhd_3840_2160_30fps.mp4",
+    "genislik": 3840,
+    "yukseklik": 2160,
+    "sure": 17,
+    "sahibi": "Sun452",
+    "sayfa": "https://www.pexels.com/video/close-up-on-amphibian-in-aquarium-11284501/",
+    "dosya": "02_pexels11284501.mp4",
+    "sahne": 2,
+    "lisans": "Pexels License (ticari kullanim serbest, atif gerekmez)"
+  },
+  {
+    "kaynak": "pexels",
+    "id": "8838032",
+    "url": "https://videos.pexels.com/video-files/8838032/8838032-hd_1920_1080_24fps.mp4",
+    "genislik": 1920,
+    "yukseklik": 1080,
+    "sure": 9,
+    "sahibi": "Los Muertos Crew",
+    "sayfa": "https://www.pexels.com/video/an-axolotl-in-an-aquarium-8838032/",
+    "dosya": "03_pexels8838032.mp4",
+    "sahne": 3,
+    "lisans": "Pexels License (ticari kullanim serbest, atif gerekmez)"
+  },
+  {
+    "kaynak": "pixabay",
+    "id": "284279",
+    "url": "https://cdn.pixabay.com/video/2025/06/07/284279_medium.mp4",
+    "genislik": 1280,
+    "yukseklik": 720,
+    "sure": 7,
+    "sahibi": "Josefrarios",
+    "sayfa": "https://pixabay.com/videos/id-284279/",
+    "dosya": "04_pixabay284279.mp4",
+    "sahne": 4,
+    "lisans": "Pixabay Content License (ticari kullanim serbest, atif gerekmez)"
+  },
+  {
+    "kaynak": "pixabay",
+    "id": "284275",
+    "url": "https://cdn.pixabay.com/video/2025/06/07/284275_medium.mp4",
+    "genislik": 1280,
+    "yukseklik": 720,
+    "sure": 7,
+    "sahibi": "Josefrarios",
+    "sayfa": "https://pixabay.com/videos/id-284275/",
+    "dosya": "05_pixabay284275.mp4",
+    "sahne": 5,
+    "lisans": "Pixabay Content License (ticari kullanim serbest, atif gerekmez)"
+  },
+  {
+    "kaynak": "pixabay",
+    "id": "356426",
+    "url": "https://cdn.pixabay.com/video/2026/06/03/356426_medium.mp4",
+    "genislik": 1280,
+    "yukseklik": 720,
+    "sure": 8,
+    "sahibi": "yamadaaki",
+    "sayfa": "https://pixabay.com/videos/id-356426/",
+    "dosya": "06_pixabay356426.mp4",
+    "sahne": 6,
+    "lisans": "Pixabay Content License (ticari kullanim serbest, atif gerekmez)"
+  },
+  {
+    "kaynak": "pexels",
+    "id": "8838030",
+    "url": "https://videos.pexels.com/video-files/8838030/8838030-hd_1080_1920_24fps.mp4",
+    "genislik": 1080,
+    "yukseklik": 1920,
+    "sure": 11,
+    "sahibi": "Los Muertos Crew",
+    "sayfa": "https://www.pexels.com/video/an-axolotl-swimming-in-an-aquarium-8838030/",
+    "dosya": "07_pexels8838030.mp4",
+    "sahne": 7,
+    "lisans": "Pexels License (ticari kullanim serbest, atif gerekmez)"
+  }
+]

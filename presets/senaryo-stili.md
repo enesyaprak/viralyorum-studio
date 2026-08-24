@@ -72,8 +72,10 @@ Yayınlandı, değiştirmiyoruz — ama tipik hatayı gösteriyor:
   `uret.py` ikisi de preset'ten ekliyor, metinler birebir aynı kalsın diye.
   2026-08-19'da abone çağrısı yerine SORU kondu: ilk iki videoda sıfır yorum geldi,
   izleyiciye yazacak somut bir şey verilmiyordu (Enes kararı).
-- Uzunluk: **hedef bant 26-30 sn → ~435-500 karakter** (CTA dahil).
-  Formül: hedef karakter = kurgu saniyesi × `preset.json > karakter_hiz` (16.7).
+- Uzunluk: **hedef bant 26-30 sn → ~335-390 karakter** (CTA dahil).
+  Formül: hedef karakter = kurgu saniyesi × `preset.json > karakter_hiz` (**12.9**,
+  2026-08-23'te 1.05x yavaş VO profiline göre kalibre edildi — eski 16.7/435-500
+  değerleriyle yazılan senaryo artık UZUN çıkar, bu sayıları kullan).
   **Bant geçmişi:** 25-33 → 20-24 (2026-08-19, YouTube analizi: ortalama izlenme
   14-17 sn'de kalıyordu, Shorts'ta en güçlü sinyal tamamlanma oranı) → **26-30**
   (2026-08-21, Enes: "video uzasın sıkıntı yok"). Tamamlanma oranını sonraki YouTube
@@ -99,8 +101,12 @@ bile olsa."* Kalite tek başına izletmiyor; ritim izletiyor. Somut karşılığ
   atempo sesi bozar ve script uyarı verip dokunmaz.
 - **Her cümle yeni bilgi taşır.** Tekrar, özet, "yani şöyle ki" bağlacı yok. Bir cümle
   kesildiğinde anlam bozulmuyorsa o cümle fazladır.
-- **Her 5-7 saniyede yeni görsel/hikâye beat'i.** Görsel 4 saniyeden uzun sabit kalmasın;
-  kesme ya da geçiş gelsin. Havuzdaki klipler bunun için sahne süresinden uzun seçiliyor.
+- **HIZLI KESME: görsel 2-3 saniyeden uzun sabit kalmasın** (2026-08-23 Enes kararı:
+  *"izleyici 2-3 saniyeden sonra sıkılıyor"*; eski kural 4 sn'ydi). Pratik karşılığı:
+  **havuz bilerek bol tutulur** — sahne başına 1 değil **2-3 klip** seçilir, böylece
+  CapCut auto clipping aynı görüntüye dönmek zorunda kalmaz. Kaba ölçü: video saniyesi
+  ÷ 3 ≈ havuzdaki klip sayısı (45 sn → ~15-18 klip). Klip seçerken tek "kahraman"
+  görüntü yerine aynı konunun farklı açılarını topla.
 - **Merak zinciri kapanmasın (rehook'a kadar).** Her cümle bir sonrakini borçlandırmalı;
   cevabı verdiğin anda yeni soru aç. Merak zinciri payoff'ta (parça 5) kapanır —
   orada NET kapat, açık bırakma.

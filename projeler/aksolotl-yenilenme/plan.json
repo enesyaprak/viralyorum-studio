@@ -1,0 +1,175 @@
+{
+  "slug": "aksolotl-yenilenme",
+  "baslik": "Bu Hayvan Kesilen Her Yerini Yeniden Büyütüyor 😳",
+  "hook": "Kolun kopsa bir daha çıkmaz. Bu hayvan hiç umursamıyor.",
+  "hedef_sure": 28,
+  "etiketler": [
+    "#shorts",
+    "#aksolotl",
+    "#hayvanlar",
+    "#doğa",
+    "#ilginçbilgiler",
+    "#bilim"
+  ],
+  "_not": "ara[] terimleri INGILIZCE (MCP aramasi icin). klipler[] MCP ile secildikten sonra doldurulur, sonra: python scripts/indir.py --proje aksolotl-yenilenme",
+  "text": [
+    "Kolun kopsa bir daha çıkmaz. Bu hayvan hiç umursamıyor."
+  ],
+  "sahneler": [
+    {
+      "no": 1,
+      "sure": 4,
+      "anlatim": "Kolun kopsa bir daha çıkmaz. Bu hayvan hiç umursamıyor.",
+      "ara": [
+        "axolotl close up",
+        "axolotl underwater",
+        "axolotl aquarium"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "8838030",
+          "url": "https://videos.pexels.com/video-files/8838030/8838030-hd_1080_1920_24fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 11,
+          "sahibi": "Los Muertos Crew",
+          "sayfa": "https://www.pexels.com/video/an-axolotl-swimming-in-an-aquarium-8838030/"
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "sure": 4,
+      "anlatim": "Gülümseyen bu semender, kopan bacağını yeniden büyütüyor.",
+      "ara": [
+        "axolotl smiling face",
+        "axolotl pink close up",
+        "axolotl swimming"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "11284501",
+          "url": "https://videos.pexels.com/video-files/11284501/11284501-uhd_3840_2160_30fps.mp4",
+          "genislik": 3840,
+          "yukseklik": 2160,
+          "sure": 17,
+          "sahibi": "Sun452",
+          "sayfa": "https://www.pexels.com/video/close-up-on-amphibian-in-aquarium-11284501/"
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "sure": 3,
+      "anlatim": "'Bacak mı gitti? Yenisini yaparım' diyor.",
+      "ara": [
+        "axolotl legs walking",
+        "axolotl body detail",
+        "salamander limb close up"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "8838032",
+          "url": "https://videos.pexels.com/video-files/8838032/8838032-hd_1920_1080_24fps.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 9,
+          "sahibi": "Los Muertos Crew",
+          "sayfa": "https://www.pexels.com/video/an-axolotl-in-an-aquarium-8838032/"
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "sure": 3,
+      "anlatim": "Ama iş sadece bacakla bitmiyor.",
+      "ara": [
+        "axolotl gills close up",
+        "axolotl moving tank",
+        "axolotl swimming underwater"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pixabay",
+          "id": "284279",
+          "url": "https://cdn.pixabay.com/video/2025/06/07/284279_medium.mp4",
+          "genislik": 1280,
+          "yukseklik": 720,
+          "sure": 7,
+          "sahibi": "Josefrarios",
+          "sayfa": "https://pixabay.com/videos/id-284279/"
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "sure": 5,
+      "anlatim": "Kalbini, omuriliğini, hatta beyninin bir kısmını da büyütüyor.",
+      "ara": [
+        "axolotl body macro",
+        "axolotl underwater dark",
+        "amphibian close up macro"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pixabay",
+          "id": "284275",
+          "url": "https://cdn.pixabay.com/video/2025/06/07/284275_medium.mp4",
+          "genislik": 1280,
+          "yukseklik": 720,
+          "sure": 7,
+          "sahibi": "Josefrarios",
+          "sayfa": "https://pixabay.com/videos/id-284275/"
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "sure": 4,
+      "anlatim": "Üstelik hiç iz bırakmadan; yarası neredeyse görünmüyor.",
+      "ara": [
+        "axolotl skin close up",
+        "axolotl detail macro",
+        "axolotl regeneration"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pixabay",
+          "id": "356426",
+          "url": "https://cdn.pixabay.com/video/2026/06/03/356426_medium.mp4",
+          "genislik": 1280,
+          "yukseklik": 720,
+          "sure": 8,
+          "sahibi": "yamadaaki",
+          "sayfa": "https://pixabay.com/videos/id-356426/"
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "sure": 5,
+      "anlatim": "Bu yüzden kansere bile neredeyse yakalanmıyor.",
+      "ara": [
+        "axolotl face portrait",
+        "axolotl smiling close up",
+        "axolotl head detail"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "8838030",
+          "url": "https://videos.pexels.com/video-files/8838030/8838030-hd_1080_1920_24fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 11,
+          "sahibi": "Los Muertos Crew",
+          "sayfa": "https://www.pexels.com/video/an-axolotl-swimming-in-an-aquarium-8838030/"
+        }
+      ]
+    }
+  ],
+  "_stil": "presets/senaryo-stili.md 6-parca formulu (kanca -> netlestirme -> ic ses -> rehook -> tersine donus/payoff -> kapanis). Netlik-merak dengesi: her cumle somut."
+}

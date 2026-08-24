@@ -67,6 +67,7 @@ def main():
         print(f"  [{i}] -> {new[:40]!r}")
 
     dc_path.write_text(json.dumps(dc, ensure_ascii=False), encoding="utf-8")
+    import capcut_sync; capcut_sync.sync(dc_path.parent, quiet=True)
     print(f"[OK] {changed} başlık değiştirildi -> {args.draft}")
 
 

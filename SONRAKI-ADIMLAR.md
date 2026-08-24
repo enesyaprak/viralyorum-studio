@@ -55,9 +55,9 @@ Enes'in tekrar elle eklemesi gerekmiyor.
 | **VO seviyesi** | volume 1.63 (arkaplan sesinin üstünde net dursun) | Enes ayarladı (2026-08-16) |
 | **Altyazı stili** | `ahtapot-uc-kalp` taslağından klonlanır (CapCut şablonu 跟读手写黄), 2-3 kelimelik karaoke | Enes kurdu (2026-08-16) |
 | **Senaryo** | `presets/senaryo-stili.md` **6-parça formülü** (kanca→netleştirme→iç ses→rehook→tersine dönüş/payoff→kapanış), netlik-merak dengesi, sonunda sabit soru CTA'sı | "Tüy Hırsızı Kuşlar" ref. + uzman revizyonu (2026-08-21) |
-| **Hedef süre** | 26-30 sn (~435-500 karakter, CTA dahil) | Enes kararı (2026-08-21) — 20-24 bandından çıkarıldı |
+| **Hedef süre** | 26-30 sn (~335-390 karakter, CTA dahil — `karakter_hiz` 12.9). Liste/çok-konulu videoda bant aşılabilir (acimasiz-anneler 45 sn) | Enes kararı (2026-08-21); karakter bütçesi 2026-08-23'te 1.05x VO'ya göre kalibre edildi |
 | **Açılış karesi** | aydınlık/yüksek kontrast, özne ilk karede tanınır — karanlık açılış yasak | YouTube analizi sonrası Enes kararı (2026-08-19) |
-| **VO hızı** | ElevenLabs `speed 1.20` (API tavanı) × ffmpeg `atempo 1.15` | Enes: "tüketime layık hız" (2026-08-16) |
+| **VO hızı** | ElevenLabs `speed 1.05`, ek ffmpeg hızlandırma KAPALI (`vo_hizlandirma 1.0`); uydurma üst sınırı x1.10 (`vo_uydur_ust`) | Enes: "hızlı, insanlar algılayamıyor" (2026-08-22) — eski 1.20×1.15 profili iptal |
 | **senaryo.txt** | `capcut_havuz.py` her projede otomatik üretir — Enes CapCut auto clipping (akıllı klip) **outline** alanına bunu yapıştırıyor | Enes'in iş akışı (2026-08-16) |
 
 Logo ve müzik dosyaları `Downloads`'tan repoya alındı — Downloads temizlenirse
@@ -73,7 +73,18 @@ logo doğru ölçek/konumla (0.145 / x 0.0 / y 0.827) tam video boyunca, arkapla
 
 ## Yapılacaklar
 
-### AKTİF VİDEO: `bal-arisi-isi-topu`  ← ŞU AN BURADA (2026-08-21)
+### AKTİF VİDEO: `acimasiz-anneler`  ← ŞU AN BURADA (2026-08-23)
+
+"Doğanın en vicdansız 5 annesi" — panda / guguk / kara kartal / hamster / fok.
+**Liste formatı**, 45 sn hedef, 604 karakter (~47 sn VO). Klipler indi, havuz kuruldu
+(**17 benzersiz klip** — hızlı kesme için bilerek bol), `senaryo.txt` hazır.
+`plan.json > cta` ile videoya özel tartışma CTA'sı kullanılıyor.
+**Kaldı:** Enes outline'ı yapıştırıp dizer (timeline ~47 sn olmalı) → tepsiden kapat →
+`python scripts/uret.py --proje acimasiz-anneler --draft acimasiz-anneler`.
+Bu video, 2026-08-23 pipeline revizyonunun (TTS önbelleği, x1.10 tempo kilidi,
+otomatik sync, CTA override) ilk tam testi.
+
+### EXPORT BEKLİYOR: `bal-arisi-isi-topu` (2026-08-21)
 
 Japon bal arısı / ısı topu savunması. Uçtan uca üretildi, **export bekliyor**.
 7 sahne, 21 sn. `uret.py` çalıştı: VO+altyazı+müzik+logo+4 geçiş bası, **VO kurguya
@@ -103,8 +114,9 @@ python scripts/yeni.py <slug>
 ```
 
 1. `plan.json`: konu + `presets/senaryo-stili.md` formülüyle anlatım.
-   Hedef karakter = **kurgu saniyesi × `karakter_hiz` (16.7)**; CTA otomatik ekleniyor,
-   onu da paya kat. VO videodan uzunsa sonu kırpılıyor
+   Hedef karakter = **kurgu saniyesi × `karakter_hiz` (12.9)**; CTA otomatik ekleniyor,
+   onu da paya kat (`plan.json > cta` ile videoya özel CTA yazılabilir).
+   **Havuz bol tut: klip sayısı ≈ video saniyesi ÷ 3** (hızlı kesme kuralı, 2026-08-23)
 2. Claude MCP ile klip seçer (4K, gerçek çekim, AI üretimi eleniyor) → `indir.py`
 3. `capcut_havuz.py` → havuz + `projeler/<slug>/senaryo.txt` çıkar →
    Enes CapCut'ta **auto clipping outline'a senaryo.txt'yi yapıştırıp** dizer →
@@ -168,6 +180,14 @@ Enes'in elle yapması gereken tek şey: **dizme ve export**.
 ## Rol kuralı
 
 Enes solution architect ve teknik/teknoloji kararlarını o veriyor.
-Plan kurmadan önce sor, onay almadan inşaya geçme — **ama rutin yürütmede
-(klip seçimi, indirme, havuz kurma) Enes'i meşgul etme**, seçimi yap, sonucu raporla.
+Kod/preset/kural **değişikliklerinde** onay almadan uygulama (2026-08-19 kararı) —
+**ama rutin YÜRÜTMEDE Enes'i meşgul etme**: klip seçimi, `indir.py`, `capcut_havuz.py`
++ `senaryo.py` doğrudan yapılır, sonuç raporlanır.
+
+**"CapCut kapalı mı?" diye SORMA** (2026-08-23 Enes kararı): yeni video hazırlarken
+CapCut zaten kapalı; ayrıca `capcut_havuz.py` ve `uret.py` içinde
+`capcut_guard.dur_capcut_acikken()` kilidi var — açıksa script kendisi duruyor.
+İstisna: **`uret.py`**, Enes'in elle dizdiği timeline'ın üstüne yazdığı için
+"dizdim, kapattım" haberi beklenir.
+
 Enes kontrolü CapCut'ta dizerken yapıyor (2026-08-16 kararı).

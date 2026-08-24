@@ -49,10 +49,11 @@ def main():
         sys.exit("HATA: plan.json'da anlatim yok.")
 
     metin = " ".join(m for _, m in anlatimlar)
-    cagri = kapanis_cagri()
+    # plan.json > "cta" varsa preset'teki sabit CTA yerine o kullanilir (uret.py ayni)
+    cagri = (plan.get("cta") or kapanis_cagri()).strip()
     if cagri and not metin.rstrip().endswith(cagri):
         metin = f"{metin} {cagri}"
-    hiz = preset_oku().get("karakter_hiz") or 16.5
+    hiz = preset_oku().get("karakter_hiz") or 12.9
     hedef = plan_yolu.parent / "senaryo.txt"
     hedef.write_text(metin + "\n", encoding="utf-8")
 

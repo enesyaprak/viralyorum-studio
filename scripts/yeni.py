@@ -17,7 +17,8 @@ def main():
     ayristirici = argparse.ArgumentParser(description="Yeni proje iskeleti")
     ayristirici.add_argument("slug", help="proje klasor adi, ornek: balina-kalbi")
     ayristirici.add_argument("--sahne", type=int, default=7, help="sahne sayisi (varsayilan 7)")
-    ayristirici.add_argument("--sure", type=int, default=42, help="hedef toplam sure (sn)")
+    ayristirici.add_argument("--sure", type=int, default=28,
+                             help="hedef toplam sure sn (varsayilan 28; marka bandi 26-30)")
     argumanlar = ayristirici.parse_args()
 
     proje = PROJELER / argumanlar.slug
@@ -25,20 +26,31 @@ def main():
     if plan_yolu.exists():
         sys.exit(f"zaten var: {plan_yolu}")
 
+    # karakter butcesi preset'ten (VO hizi degisince otomatik dogru kalir)
+    try:
+        hiz = json.loads((KOK / "preset.json").read_text(encoding="utf-8"))["seslendirme"]["karakter_hiz"]
+    except Exception:
+        hiz = 12.9
+    hedef_karakter = round(argumanlar.sure * hiz)
+
     sahne_suresi = max(4, round(argumanlar.sure / argumanlar.sahne))
     plan = {
         "slug": argumanlar.slug,
         "baslik": "",
         "hook": "",
         "hedef_sure": argumanlar.sure,
-        "etiketler": ["#hayvanlar", "#ilginçbilgiler", "#shorts"],
+        "etiketler": ["#shorts", "#hayvanlar", "#doğa", "#ilginçbilgiler"],
         "_not": "ara[] terimleri INGILIZCE (MCP aramasi icin). klipler[] MCP ile secildikten "
-                "sonra doldurulur, sonra: python scripts/indir.py --proje <slug>",
+                "sonra doldurulur, sonra: python scripts/indir.py --proje <slug>. "
+                f"Toplam anlatim hedefi ~{hedef_karakter} karakter (CTA dahil; "
+                f"{argumanlar.sure} sn x karakter_hiz {hiz}). Etiketlere konuya ozel 1-2 tag ekle.",
         "text": [],
         "sahneler": [
             {"no": i, "sure": sahne_suresi, "anlatim": "", "ara": [], "klipler": []}
             for i in range(1, argumanlar.sahne + 1)
         ],
+        "_stil": "presets/senaryo-stili.md 6-parca formulu (kanca -> netlestirme -> ic ses -> "
+                 "rehook -> tersine donus/payoff -> kapanis). Her cumle somut, belirsiz fiil yok.",
     }
 
     (proje / "footage").mkdir(parents=True, exist_ok=True)

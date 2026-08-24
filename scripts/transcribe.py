@@ -16,6 +16,9 @@ import subprocess
 import sys
 import tempfile
 import urllib.request
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 import urllib.error
 import uuid
 from pathlib import Path

@@ -98,6 +98,7 @@ def main():
             sys.exit(f"HATA: görsel yok: {args.add}")
         add_logo_from(dc, m, args.add, args.src)
         dc_path.write_text(json.dumps(dc, ensure_ascii=False), encoding="utf-8")
+        import capcut_sync; capcut_sync.sync(dc_path.parent, quiet=True)
         print(f"[OK] Logo eklendi: {Path(args.add).name} (kaynak: {args.src})")
         return
 
@@ -121,6 +122,7 @@ def main():
             if v["id"] in photo_ids:
                 v["path"], v["width"], v["height"] = npath, st["width"], st["height"]
         dc_path.write_text(json.dumps(dc, ensure_ascii=False), encoding="utf-8")
+        import capcut_sync; capcut_sync.sync(dc_path.parent, quiet=True)
         print(f"[OK] Logo değiştirildi -> {img.name} ({st['width']}x{st['height']})")
         return
 
@@ -145,6 +147,7 @@ def main():
     m["videos"] = [v for v in m.get("videos", []) if v["id"] not in photo_ids]
 
     dc_path.write_text(json.dumps(dc, ensure_ascii=False), encoding="utf-8")
+    import capcut_sync; capcut_sync.sync(dc_path.parent, quiet=True)
     print(f"[OK] Logo kaldırıldı: {removed_seg} segment, {len(photo_ids)} foto materyali silindi.")
 
 

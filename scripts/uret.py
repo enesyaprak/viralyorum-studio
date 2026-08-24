@@ -18,9 +18,15 @@ import argparse
 import glob
 import json
 import os
+import shutil
 import subprocess
 import sys
 from pathlib import Path
+
+# Windows konsolu cp1254 acilinca Turkce karakterler bozuk basiliyordu (supheli
+# altyazi raporu okunamiyordu) - cikti her zaman utf-8.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 KOK = Path(__file__).resolve().parent.parent
 SCRIPTS = Path(__file__).resolve().parent
@@ -120,6 +126,20 @@ def taslak_dogrula(draft, altyazi_bekleniyor=True):
     return eksik
 
 
+def vo_materyali_var_mi(draft, eslesme):
+    """Taslakta adinda 'eslesme' gecen ses materyali var mi (capcut_audio bunu degistirir).
+
+    Taze (sablonsuz) taslakta yoktur - eskiden capcut_audio bosuna cagirilip her
+    seferinde sahte 'HATA' basiyordu; simdi once bakilip dogrudan klon yoluna gidilir.
+    """
+    try:
+        dc = json.loads((DRAFTS / draft / "draft_content.json").read_text(encoding="utf-8"))
+    except Exception:
+        return False
+    return any(eslesme.lower() in str(a.get("name", "")).lower()
+               for a in dc.get("materials", {}).get("audios", []))
+
+
 def logo_var_mi(draft, dosya_adi):
     """Taslakta bu logo zaten duruyor mu (tekrar uretimde ikinci kez eklenmesin)."""
     try:
@@ -130,21 +150,31 @@ def logo_var_mi(draft, dosya_adi):
                for v in dc.get("materials", {}).get("videos", []))
 
 
-def vo_kurguya_uydur(vo_mp3, vo_sure, video_sure, alt=0.90, ust=1.30):
+def vo_kurguya_uydur(vo_mp3, vo_sure, video_sure, alt=0.90, ust=1.10):
     """VO'yu kurgu suresine ffmpeg atempo ile tam oturtur (perde korunur).
 
     NEDEN: ElevenLabs stability 0.30 (yuksek enerji profili) tempoyu her uretimde
-    degistiriyor - ayni metin 18-21 karakter/sn arasinda okunuyor. Metni uzatip
-    kisaltarak tutturmak kumar; suresi olcup tek atempo gecisiyle oturtmak kesin.
+    degistiriyor - ayni metin okunusta oynuyor. Metni uzatip kisaltarak tutturmak
+    kumar; suresi olcup tek atempo gecisiyle oturtmak kesin.
     Hedef: VO videodan 0.3 sn kisa bitsin (olu kuyruk yok, kirpilma da yok).
+
+    UST SINIR 1.10 (2026-08-23, Enes karari): eskiden 1.30'du ve 'sesi yavaslat'
+    kararini sessizce eziyordu (aksolotl'a x1.20 basti). Artik VO timeline'dan
+    %10'dan fazla uzunsa DOKUNULMAZ; net hedefle uyari verilir - Enes timeline'i
+    uzatir, yeniden kosu onbellek sayesinde bedava.
     """
     hedef = max(video_sure - 0.3, 1.0)
     carpan = vo_sure / hedef
     if abs(carpan - 1.0) < 0.02:
         return vo_sure
-    if not (alt <= carpan <= ust):
-        print(f"  ! VO/kurgu farki cok buyuk (x{carpan:.2f}) - otomatik uydurma yapilmadi, "
-              f"metni elden gecir.")
+    if carpan > ust:
+        print(f"  ! VO uzun (x{carpan:.2f} hizlanma gerekirdi, sinir x{ust}) - DOKUNULMADI.")
+        print(f"    COZUM: CapCut'ta timeline'i ~{vo_sure + 0.3:.0f} sn yap, uret.py'yi tekrar kostur"
+              f" (VO onbellekte, kredi gitmez). Yoksa VO'nun sonu kirpilir!")
+        return vo_sure
+    if carpan < alt:
+        print(f"  ! VO cok kisa (x{carpan:.2f}, sinir x{alt}) - DOKUNULMADI.")
+        print(f"    COZUM: timeline'i ~{vo_sure + 0.3:.0f} sn'ye indir veya anlatimi uzat.")
         return vo_sure
     gecici = Path(str(vo_mp3) + ".uydur.mp3")
     sonuc = subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", str(vo_mp3),
@@ -169,9 +199,11 @@ def plan_oku(slug, cagri=""):
     vo_metni = " ".join(a for a in anlatimlar if a)
     if not vo_metni:
         sys.exit("HATA: plan.json sahnelerinde 'anlatim' metni yok.")
-    # KURAL: her senaryo sabit CTA ile biter (preset > kapanis_cagri).
-    # senaryo.py de ayni eki yapiyor -> outline metni ile VO metni birebir kaliyor.
-    cagri = (cagri or "").strip()
+    # KURAL: her senaryo bir CTA ile biter. Varsayilan preset > kapanis_cagri;
+    # plan.json > "cta" varsa O videoya ozel CTA kullanilir (2026-08-23: liste/tartisma
+    # videolarinda konuya ozel soru daha cok yorum getiriyor). senaryo.py ayni mantikta
+    # -> outline metni ile VO metni BIREBIR ayni kalir.
+    cagri = (plan.get("cta") or cagri or "").strip()
     if cagri and not vo_metni.rstrip().endswith(cagri):
         vo_metni = f"{vo_metni} {cagri}"
 
@@ -184,6 +216,9 @@ def main():
     ayristirici.add_argument("--proje", required=True, help="projeler/<slug>")
     ayristirici.add_argument("--draft", required=True, help="CapCut taslak adi (kismi eslesme yeterli)")
     ayristirici.add_argument("--atla", default="", help="atlanacak: vo,altyazi,muzik,efekt,gecis,text,sozluk")
+    ayristirici.add_argument("--altyazi-zorla", action="store_true",
+                             help="compound clip olsa bile altyazi bas "
+                                  "(compound'un ICINDE altyazi YOKSA kullan; varsa cift altyazi olur)")
     argumanlar = ayristirici.parse_args()
 
     if not PRESET.exists():
@@ -206,7 +241,8 @@ def main():
     atla = {x.strip() for x in argumanlar.atla.split(",") if x.strip()}
     print(f"=== VIRALYORUM: {plan.get('slug', argumanlar.proje)} | taslak: {draft} ===")
 
-    vo_mp3 = CIKTI / f"{draft}_vo.mp3"
+    vo_mp3 = CIKTI / f"{draft}_vo.mp3"          # taslaga giren (kurguya uydurulmus) kopya
+    vo_ham = CIKTI / f"{draft}_vo_ham.mp3"      # ElevenLabs'ten cikan dogal-tempo kopya
     tr_json = CIKTI / f"{draft}_vo_tr.json"
 
     # 1) TTS
@@ -215,22 +251,32 @@ def main():
         if not ses:
             sys.exit("HATA: preset.json > seslendirme.voice (ElevenLabs voice ID) bos.")
         vo_txt = CIKTI / f"{draft}_vo.txt"
-        vo_txt.write_text(vo_metni, encoding="utf-8")
 
-        tts_arg = ["--text-file", vo_txt, "--out", vo_mp3, "--voice", ses]
-        # Ses ayarlari preset'ten; TANIMSIZ olan gonderilmez -> sesin varsayilani gecerli
-        ayarlar = yapilandirma.get("ses_ayarlari") or {}
-        for anahtar, bayrak in (("stability", "--stability"), ("similarity", "--similarity"),
-                                ("style", "--style"), ("speed", "--speed")):
-            if ayarlar.get(anahtar) is not None:
-                tts_arg += [bayrak, str(ayarlar[anahtar])]
-        if ayarlar.get("speaker_boost"):
-            tts_arg.append("--speaker-boost")
-        if yapilandirma.get("vo_hizlandirma"):
-            tts_arg += ["--hizlandir", str(yapilandirma["vo_hizlandirma"])]
+        # ONBELLEK (2026-08-23): ayni metnin ham VO'su varsa ElevenLabs'e GIDILMEZ (0 kredi).
+        # Uydurma (atempo) her kosuda HAM kopyadan yapilir -> ust uste atempo binmez,
+        # timeline degistikten sonra tekrar kosu bedava ve deterministik.
+        eski_metin = vo_txt.read_text(encoding="utf-8") if vo_txt.exists() else None
+        if vo_ham.exists() and eski_metin == vo_metni:
+            print("\n--- TTS (VO uret) ---")
+            print(f"  [=] metin degismedi -> onbellekteki ham VO kullaniliyor ({vo_ham.name}), 0 kredi")
+        else:
+            vo_txt.write_text(vo_metni, encoding="utf-8")
+            tts_arg = ["--text-file", vo_txt, "--out", vo_ham, "--voice", ses]
+            # Ses ayarlari preset'ten; TANIMSIZ olan gonderilmez -> sesin varsayilani gecerli
+            ayarlar = yapilandirma.get("ses_ayarlari") or {}
+            for anahtar, bayrak in (("stability", "--stability"), ("similarity", "--similarity"),
+                                    ("style", "--style"), ("speed", "--speed")):
+                if ayarlar.get(anahtar) is not None:
+                    tts_arg += [bayrak, str(ayarlar[anahtar])]
+            if ayarlar.get("speaker_boost"):
+                tts_arg.append("--speaker-boost")
+            if yapilandirma.get("vo_hizlandirma"):
+                tts_arg += ["--hizlandir", str(yapilandirma["vo_hizlandirma"])]
 
-        if not calistir("tts.py", tts_arg, "TTS (VO uret)"):
-            sys.exit("DUR: TTS basarisiz (ElevenLabs anahtari/kredisi?).")
+            if not calistir("tts.py", tts_arg, "TTS (VO uret)"):
+                sys.exit("DUR: TTS basarisiz (ElevenLabs anahtari/kredisi?).")
+
+        shutil.copyfile(vo_ham, vo_mp3)  # uydurma bu kopyada calisir; ham hep temiz kalir
 
         # KURAL: VO suresi ~ video suresi (VO videonun tamami boyunca sursun)
         vo_sure, video_sure = ffprobe_sure(vo_mp3), draft_video_suresi(draft)
@@ -238,16 +284,23 @@ def main():
             oran = vo_sure / video_sure
             print(f"  VO {vo_sure:.1f}s / video {video_sure:.1f}s (oran {oran:.2f})")
             if yapilandirma.get("vo_uydur", True):
-                vo_sure = vo_kurguya_uydur(vo_mp3, vo_sure, video_sure)
+                vo_sure = vo_kurguya_uydur(vo_mp3, vo_sure, video_sure,
+                                           ust=yapilandirma.get("vo_uydur_ust", 1.10))
             elif oran < 0.85:
                 hedef_kar = video_sure * (yapilandirma.get("karakter_hiz") or 18.1)
                 print(f"  ! VO KISA — plan.json anlatimlarini uzat, ~{hedef_kar:.0f} karakter hedefle.")
             elif oran > 1.1:
                 print("  ! VO UZUN — anlatimi kisalt, videoya tasiyor.")
 
-        if not calistir("capcut_audio.py",
-                        ["--draft", draft, "--audio", vo_mp3,
-                         "--match", yapilandirma.get("vo_match", "ElevenLabs")], "VO enjekte"):
+        # Taslakta degistirilecek VO materyali var mi? Yoksa dogrudan prototipten klon
+        # (eskiden capcut_audio her taze taslakta sahte 'HATA' basip fallback'e dusuyordu).
+        vo_match = yapilandirma.get("vo_match", "ElevenLabs")
+        enjekte_ok = False
+        if vo_materyali_var_mi(draft, vo_match):
+            enjekte_ok = calistir("capcut_audio.py",
+                                  ["--draft", draft, "--audio", vo_mp3, "--match", vo_match],
+                                  "VO enjekte")
+        if not enjekte_ok:
             # capcut_audio.py var olan bir ses materyalini DEGISTIRIR. Sifirdan kurulan
             # taslakta (sablonsuz ilk video) degistirecek materyal yok -> ses elementini
             # bir prototip taslaktan klonlayip VO'yu YENI audio track olarak ekle.
@@ -262,10 +315,11 @@ def main():
                       "preset.json > seslendirme.vo_proto bos.")
 
     # 2) ALTYAZI (VO'yu transcribe et -> karaoke)
-    if "altyazi" not in atla and compound_var_mi(draft):
+    if "altyazi" not in atla and compound_var_mi(draft) and not argumanlar.altyazi_zorla:
         print(chr(10) + "--- Karaoke altyazi ---")
-        print("  [=] Altyazilar compound clip icinde gorunuyor, ikinci set basilmadi.")
-        print("      Yeniden uretmek istersen once CapCut'ta compound'u coz.")
+        print("  [=] Compound clip var -> 'altyazi ondadir' varsayilip basilmadi (cift altyazi korumasi).")
+        print("      Compound'un ICINDE altyazi YOKSA (2026-08-22 aksolotl durumu):")
+        print("      ayni komutu --altyazi-zorla ile tekrar calistir.")
     elif "altyazi" not in atla:
         calistir("transcribe.py", [vo_mp3, "--out", tr_json], "VO transcribe (kelime zamani)")
         altyazi_arg = ["--draft", draft, "--transcript", tr_json]
@@ -347,7 +401,8 @@ def main():
     print(f"\n=== TAMAM: {len(satirlar)} altyazi, {len(bulgular)} supheli ===")
     for sira, zaman, metin, nedenler in bulgular:
         print(f"  [{sira}] {zaman}s: \"{metin}\" -> {'; '.join(nedenler)}")
-    eksikler = taslak_dogrula(draft, altyazi_bekleniyor=("altyazi" not in atla and not compound_var_mi(draft)))
+    eksikler = taslak_dogrula(draft, altyazi_bekleniyor=(
+        "altyazi" not in atla and (argumanlar.altyazi_zorla or not compound_var_mi(draft))))
     if eksikler:
         print(chr(10) + "! TASLAK EKSIK: " + ", ".join(eksikler))
         print("  Muhtemel sebep: zincir calisirken CapCut acildi ve kendi eski halini yazdi.")

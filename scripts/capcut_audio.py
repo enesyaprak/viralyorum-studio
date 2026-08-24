@@ -95,6 +95,10 @@ def main():
         if txt != orig:
             jf.write_text(txt, encoding="utf-8")
 
+    # Ayna dosyalari guncelle (rglob path-degisiminden SONRA: dc kopyasi en guncel kalsin)
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import capcut_sync; capcut_sync.sync(folder, quiet=True)
+
     print(f"[OK] Ses değiştirildi: {Path(args.audio).name} ({round(new_dur/1e6,1)}s) -> {args.draft}")
     print(f"  {len(matched)} ses materyali güncellendi, segmentler tek parçaya toplandı.")
 

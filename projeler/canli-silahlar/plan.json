@@ -1,0 +1,336 @@
+{
+  "slug": "canli-silahlar",
+  "baslik": "Vücudu Silah Olan 5 Hayvan 😳",
+  "hook": "Bu hayvana dokunma. Silahı elinde değil, vücudunun içinde.",
+  "hedef_sure": 45,
+  "etiketler": [
+    "#shorts",
+    "#hayvanlar",
+    "#doğa",
+    "#vahşiyaşam",
+    "#ilginçbilgiler",
+    "#bilim"
+  ],
+  "_not": "ara[] terimleri INGILIZCE (MCP aramasi icin). klipler[] MCP ile secildikten sonra doldurulur, sonra: python scripts/indir.py --proje <slug>. Toplam anlatim hedefi ~580 karakter (CTA dahil; 45 sn x karakter_hiz 12.9). Etiketlere konuya ozel 1-2 tag ekle.",
+  "text": [
+    "Bu hayvana dokunma. Silahı elinde değil, vücudunun içinde."
+  ],
+  "sahneler": [
+    {
+      "no": 1,
+      "sure": 4,
+      "anlatim": "Bu hayvana dokunma. Silahı elinde değil, vücudunun içinde.",
+      "ara": [
+        "porcupine quills close up",
+        "porcupine defensive",
+        "wild animal spikes"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "38059935",
+          "url": "https://videos.pexels.com/video-files/38059935/16156381_1080_1920_30fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 20,
+          "sahibi": "Irina Fedotova",
+          "sayfa": "https://www.pexels.com/video/porcupines-eating-in-zoo-enclosure-38059935/"
+        },
+        {
+          "kaynak": "pexels",
+          "id": "857106",
+          "url": "https://videos.pexels.com/video-files/857106/857106-hd_1280_720_30fps.mp4",
+          "genislik": 1280,
+          "yukseklik": 720,
+          "sure": 33,
+          "sahibi": "Vimeo",
+          "sayfa": "https://www.pexels.com/video/climbing-porcupine-857106/"
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "sure": 8,
+      "anlatim": "Kirpide otuz bin diken var. Uçları kancalı; saplanan diken geri çıkmaz, içeri ilerler.",
+      "ara": [
+        "porcupine walking",
+        "porcupine forest",
+        "porcupine quills macro"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "38866050",
+          "url": "https://videos.pexels.com/video-files/38866050/16521787_1920_1080_30fps.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 10,
+          "sahibi": "U.Lucas Dube-Cantin",
+          "sayfa": "https://www.pexels.com/video/porcupine-foraging-in-lush-greenery-38866050/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "3348",
+          "url": "https://cdn.pixabay.com/video/2016/06/01/3348-169089436_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 89,
+          "sahibi": "brigachtal",
+          "sayfa": "https://pixabay.com/videos/id-3348/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "939",
+          "url": "https://cdn.pixabay.com/video/2015/10/09/939-141966814_medium.mp4",
+          "genislik": 1280,
+          "yukseklik": 720,
+          "sure": 33,
+          "sahibi": "Vimeo-Free-Videos",
+          "sayfa": "https://pixabay.com/videos/id-939/"
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "sure": 8,
+      "anlatim": "Kertenkele yakalanınca kuyruğunu kendi kopartır. Kuyruk kıvranırken düşman ona bakar, kertenkele kaçar.",
+      "ara": [
+        "lizard tail close up",
+        "gecko macro",
+        "iguana branch"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "36543012",
+          "url": "https://videos.pexels.com/video-files/36543012/15494775_1080_1920_24fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 10,
+          "sahibi": "Tuong Chopper",
+          "sayfa": "https://www.pexels.com/video/close-up-of-two-iguanas-on-branch-36543012/"
+        },
+        {
+          "kaynak": "pexels",
+          "id": "33876012",
+          "url": "https://videos.pexels.com/video-files/33876012/14377296_1080_1920_30fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 24,
+          "sahibi": "Tuong Chopper",
+          "sayfa": "https://www.pexels.com/video/close-up-of-iguana-resting-on-a-branch-33876012/"
+        },
+        {
+          "kaynak": "pexels",
+          "id": "11310072",
+          "url": "https://videos.pexels.com/video-files/11310072/11310072-hd_1080_1920_30fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 4,
+          "sahibi": "dharamveer",
+          "sayfa": "https://www.pexels.com/video/an-iguana-on-the-tree-branch-11310072/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "72382",
+          "url": "https://cdn.pixabay.com/video/2021/04/27/72382-542491335_medium.mp4",
+          "genislik": 3840,
+          "yukseklik": 2160,
+          "sure": 19,
+          "sahibi": "Tolmachev_Alexander",
+          "sayfa": "https://pixabay.com/videos/id-72382/"
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "sure": 6,
+      "anlatim": "Balon balığı su yutup üç katına şişer, pürüzsüz derisi diken tarlasına döner.",
+      "ara": [
+        "pufferfish reef",
+        "blowfish swimming",
+        "porcupine fish ocean"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "34836279",
+          "url": "https://videos.pexels.com/video-files/34836279/14766606_1920_1080_60fps.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 8,
+          "sahibi": "JUN HO LEE",
+          "sayfa": "https://www.pexels.com/video/underwater-coral-reef-with-pufferfish-34836279/"
+        },
+        {
+          "kaynak": "pexels",
+          "id": "3143056",
+          "url": "https://videos.pexels.com/video-files/3143056/3143056-hd_1920_1080_30fps.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 80,
+          "sahibi": "Francesco Ungaro",
+          "sayfa": "https://www.pexels.com/video/slow-motion-footage-of-a-blow-fish-swimming-close-to-a-coral-reef-3143056/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "183401",
+          "url": "https://cdn.pixabay.com/video/2023/10/03/183401-870826828_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 39,
+          "sahibi": "scitech",
+          "sayfa": "https://pixabay.com/videos/id-183401/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "217271",
+          "url": "https://cdn.pixabay.com/video/2024/06/19/217271_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 20,
+          "sahibi": "DavidClode",
+          "sayfa": "https://pixabay.com/videos/id-217271/"
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "sure": 6,
+      "anlatim": "Örümcek ipeği ağırlığına göre çelikten sağlam. Karnından üretip tuzağını kendi kurar.",
+      "ara": [
+        "spider web macro",
+        "spider weaving web",
+        "spider silk close up"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "26793257",
+          "url": "https://videos.pexels.com/video-files/26793257/12007644_1080_1920_30fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 19,
+          "sahibi": "Ambareesh Sridhar",
+          "sayfa": "https://www.pexels.com/video/spider-web-weaving-26793257/"
+        },
+        {
+          "kaynak": "pexels",
+          "id": "8745497",
+          "url": "https://videos.pexels.com/video-files/8745497/8745497-hd_1080_1920_25fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 7,
+          "sahibi": "ROMAN ODINTSOV",
+          "sayfa": "https://www.pexels.com/video/video-of-a-spider-web-8745497/"
+        },
+        {
+          "kaynak": "pexels",
+          "id": "8745452",
+          "url": "https://videos.pexels.com/video-files/8745452/8745452-hd_1080_1920_25fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 17,
+          "sahibi": "ROMAN ODINTSOV",
+          "sayfa": "https://www.pexels.com/video/close-up-of-spider-webs-8745452/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "59225",
+          "url": "https://cdn.pixabay.com/video/2020/12/14/59225-491458306_medium.mp4",
+          "genislik": 3840,
+          "yukseklik": 2160,
+          "sure": 20,
+          "sahibi": "padrinan",
+          "sayfa": "https://pixabay.com/videos/id-59225/"
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "sure": 8,
+      "anlatim": "Ama en hızlısı denizanası. Dokunacındaki mikroskobik zıpkınlar saniyenin milyonda birinde ateşleniyor.",
+      "ara": [
+        "jellyfish tentacles dark",
+        "jellyfish underwater blue",
+        "jellyfish macro"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "31314195",
+          "url": "https://videos.pexels.com/video-files/31314195/13368430_1080_1920_30fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 11,
+          "sahibi": "Kateryna Hnidash",
+          "sayfa": "https://www.pexels.com/video/mesmerizing-blue-jellyfish-in-dark-ocean-31314195/"
+        },
+        {
+          "kaynak": "pexels",
+          "id": "34268912",
+          "url": "https://videos.pexels.com/video-files/34268912/14519804_2160_3840_30fps.mp4",
+          "genislik": 2160,
+          "yukseklik": 3840,
+          "sure": 17,
+          "sahibi": "Pramod Giri",
+          "sayfa": "https://www.pexels.com/video/graceful-jellyfish-gliding-in-deep-blue-ocean-34268912/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "264272",
+          "url": "https://cdn.pixabay.com/video/2025/03/12/264272_medium.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 30,
+          "sahibi": "_marioosh",
+          "sayfa": "https://pixabay.com/videos/id-264272/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "85686",
+          "url": "https://cdn.pixabay.com/video/2021/08/19/85686-591865343_medium.mp4",
+          "genislik": 3840,
+          "yukseklik": 2160,
+          "sure": 20,
+          "sahibi": "RoyBuri",
+          "sayfa": "https://pixabay.com/videos/id-85686/"
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "sure": 5,
+      "anlatim": "Hiçbiri silah taşımıyor. Hepsi silahın ta kendisi.",
+      "ara": [
+        "wild animal portrait",
+        "predator close up nature",
+        "animal defense"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "857104",
+          "url": "https://videos.pexels.com/video-files/857104/857104-hd_1280_720_30fps.mp4",
+          "genislik": 1280,
+          "yukseklik": 720,
+          "sure": 19,
+          "sahibi": "Vimeo",
+          "sayfa": "https://www.pexels.com/video/porcupine-climbs-tree-branches-857104/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "111290",
+          "url": "https://cdn.pixabay.com/video/2022/03/19/111290-690770704_medium.mp4",
+          "genislik": 3840,
+          "yukseklik": 2160,
+          "sure": 12,
+          "sahibi": "RoyBuri",
+          "sayfa": "https://pixabay.com/videos/id-111290/"
+        }
+      ]
+    }
+  ],
+  "_stil": "senaryo-stili.md 6-parca, liste formati: kanca -> 5 vaka (artan sok, 6. rehook'lu) -> payoff.",
+  "_kurgu_notu": "HIZLI KESME: 23 benzersiz klip / 7 sahne (video sn ÷ 3 kurali, Enes 2026-08-23)."
+}

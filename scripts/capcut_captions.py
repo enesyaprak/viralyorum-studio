@@ -21,6 +21,9 @@ from pathlib import Path
 
 DRAFTS = Path(os.environ["LOCALAPPDATA"]) / "CapCut Drafts"
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 
 def nid():
     return str(uuid.uuid4()).upper()
@@ -183,6 +186,10 @@ def main():
     ttrack["segments"] = new_segs
 
     dc_path.write_text(json.dumps(dc, ensure_ascii=False), encoding="utf-8")
+    # Ayna dosyalar (Timelines/<UUID>/... vb.) guncellenmezse CapCut eski hali acar
+    # ve kapanista editi siler (2026-08-22 aksolotl: caption'lar elle sync gerektirdi).
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import capcut_sync; capcut_sync.sync(dc_path.parent, quiet=True)
     print(f"[OK] {len(chunks)} caption enjekte edildi -> {args.draft}")
     print("Örnek ilk 3:", [" ".join(w["text"] for w in c) for c in chunks[:3]])
 

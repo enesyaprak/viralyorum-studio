@@ -120,12 +120,26 @@ def main():
                     kayitli.add(kimlik)
                 continue
 
-            try:
-                boyut = indir(url, hedef)
-            except Exception as hata:
-                print(f"  ! sahne {no}: {kimlik} indirilemedi -> {hata}")
+            # Pixabay MCP sadece _medium (720p) URL veriyor; ayni CDN'de cogu videonun
+            # _large (1080p+) kopyasi da var - once onu dene, 404'te medium'a dus (2026-08-23).
+            adaylar = [url]
+            if kaynak == "pixabay" and "_medium.mp4" in url:
+                adaylar.insert(0, url.replace("_medium.mp4", "_large.mp4"))
+            boyut, inen_url, son_hata = None, url, None
+            for aday in adaylar:
+                try:
+                    boyut = indir(aday, hedef)
+                    inen_url = aday
+                    if aday != url:
+                        print(f"  i sahne {no}: pixabay _large (1080p+) bulundu, medium yerine o indirildi")
+                    break
+                except Exception as hata:
+                    son_hata = hata
+            if boyut is None:
+                print(f"  ! sahne {no}: {kimlik} indirilemedi -> {son_hata}")
                 hatali += 1
                 continue
+            klip = {**klip, "indirilen_url": inen_url}  # lisans kaydinda gercek dosya izi
 
             print(f"  + sahne {no}: {ad} ({boyut / 1e6:.1f} MB, "
                   f"{klip.get('genislik')}x{klip.get('yukseklik')})")
