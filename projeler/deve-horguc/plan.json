@@ -1,0 +1,247 @@
+{
+  "slug": "deve-horguc",
+  "baslik": "Devenin Hörgücünde Su Yok 😳",
+  "hook": "Devenin hörgücünde su taşıdığını sanıyorsun. İçinde bir damla yok.",
+  "hedef_sure": 36,
+  "etiketler": [
+    "#shorts",
+    "#deve",
+    "#hayvanlar",
+    "#doğa",
+    "#ilginçbilgiler",
+    "#bilim"
+  ],
+  "_not": "ara[] terimleri INGILIZCE (MCP aramasi icin). klipler[] MCP ile secildikten sonra doldurulur, sonra: python scripts/indir.py --proje <slug>. Toplam anlatim hedefi ~464 karakter (CTA dahil; 36 sn x karakter_hiz 12.9). Etiketlere konuya ozel 1-2 tag ekle.",
+  "text": [
+    "Devenin hörgücünde su taşıdığını sanıyorsun. İçinde bir damla yok."
+  ],
+  "sahneler": [
+    {
+      "no": 1,
+      "sure": 5,
+      "anlatim": "Devenin hörgücünde su taşıdığını sanıyorsun. İçinde bir damla yok.",
+      "ara": [
+        "camel close up",
+        "camel head detail",
+        "camel hump"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "35664968",
+          "url": "https://videos.pexels.com/video-files/35664968/15114105_1080_1920_30fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 8,
+          "sahibi": "Joolsmagools",
+          "sayfa": "https://www.pexels.com/video/camel-close-up-at-werribee-open-range-zoo-35664968/"
+        },
+        {
+          "kaynak": "pexels",
+          "id": "18752156",
+          "url": "https://videos.pexels.com/video-files/18752156/18752156-hd_1080_1920_60fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 21,
+          "sahibi": "Kashif Shah",
+          "sayfa": "https://www.pexels.com/video/camel-in-desert-18752156/"
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "sure": 5,
+      "anlatim": "Hörgüç yağ deposu. Yağ bitince hörgüç sönüp yana devriliyor.",
+      "ara": [
+        "camel walking desert",
+        "camels caravan",
+        "camel side view"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "36619755",
+          "url": "https://videos.pexels.com/video-files/36619755/15525842_1080_1920_60fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 10,
+          "sahibi": "Nicolo Monterotondo",
+          "sayfa": "https://www.pexels.com/video/camels-walking-in-desert-at-sunset-36619755/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "112040",
+          "url": "https://cdn.pixabay.com/video/2022/03/27/112040-695204669_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 19,
+          "sahibi": "Eaktas06",
+          "sayfa": "https://pixabay.com/videos/id-112040/"
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "sure": 4,
+      "anlatim": "'Suyu ben kanımda taşırım' diyor.",
+      "ara": [
+        "camel chewing",
+        "camel eating close",
+        "camel mouth"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pixabay",
+          "id": "134296",
+          "url": "https://cdn.pixabay.com/video/2022/10/10/134296-759212611_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 16,
+          "sahibi": "samirsmier",
+          "sayfa": "https://pixabay.com/videos/id-134296/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "112039",
+          "url": "https://cdn.pixabay.com/video/2022/03/27/112039-695204665_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 12,
+          "sahibi": "Eaktas06",
+          "sayfa": "https://pixabay.com/videos/id-112039/"
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "sure": 5,
+      "anlatim": "Çünkü devenin kan hücreleri yuvarlak değil, oval.",
+      "ara": [
+        "camel face macro",
+        "camel eye detail",
+        "desert heat"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pixabay",
+          "id": "112043",
+          "url": "https://cdn.pixabay.com/video/2022/03/27/112043-695204675_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 5,
+          "sahibi": "Eaktas06",
+          "sayfa": "https://pixabay.com/videos/id-112043/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "92837",
+          "url": "https://cdn.pixabay.com/video/2021/10/22/92837-638016606_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 7,
+          "sahibi": "23974438",
+          "sayfa": "https://pixabay.com/videos/id-92837/"
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "sure": 6,
+      "anlatim": "Bu yüzden on dakikada yüz litre içiyor ve hücreleri patlamıyor.",
+      "ara": [
+        "camel drinking",
+        "camel desert sun",
+        "camel herd"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pixabay",
+          "id": "112038",
+          "url": "https://cdn.pixabay.com/video/2022/03/27/112038-695204658_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 14,
+          "sahibi": "Eaktas06",
+          "sayfa": "https://pixabay.com/videos/id-112038/"
+        },
+        {
+          "kaynak": "pexels",
+          "id": "30783918",
+          "url": "https://videos.pexels.com/video-files/30783918/13167315_1080_1920_30fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 6,
+          "sahibi": "Kristen Haennel",
+          "sayfa": "https://www.pexels.com/video/camel-ride-through-majestic-sahara-desert-dunes-30783918/"
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "sure": 7,
+      "anlatim": "Sen suyunun yüzde on beşini kaybedersen ölürsün; deve otuzunu kaybedip yürümeye devam ediyor.",
+      "ara": [
+        "camel caravan dunes",
+        "desert dunes wide",
+        "harsh desert"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "32720260",
+          "url": "https://videos.pexels.com/video-files/32720260/13949312_1080_1920_30fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 5,
+          "sahibi": "Nati Borsella",
+          "sayfa": "https://www.pexels.com/video/sandy-desert-camel-caravan-under-cloudy-skies-32720260/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "284568",
+          "url": "https://cdn.pixabay.com/video/2025/06/09/284568_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 17,
+          "sahibi": "antonlukin",
+          "sayfa": "https://pixabay.com/videos/id-284568/"
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "sure": 4,
+      "anlatim": "Hörgüç su deposu değil. Çöl makinesi kanının içinde.",
+      "ara": [
+        "camel portrait desert",
+        "desert dunes sunset",
+        "camel silhouette"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pixabay",
+          "id": "284566",
+          "url": "https://cdn.pixabay.com/video/2025/06/09/284566_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 20,
+          "sahibi": "antonlukin",
+          "sayfa": "https://pixabay.com/videos/id-284566/"
+        },
+        {
+          "kaynak": "pexels",
+          "id": "18752156",
+          "url": "https://videos.pexels.com/video-files/18752156/18752156-hd_1080_1920_60fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 21,
+          "sahibi": "Kashif Shah",
+          "sayfa": "https://www.pexels.com/video/camel-in-desert-18752156/"
+        }
+      ]
+    }
+  ],
+  "_stil": "senaryo-stili.md 6-parca, MIT YIKMA: kanca (mit yikilir) -> gercek -> ic ses -> mekanizma -> sayi -> kisisel kiyas -> payoff.",
+  "_kurgu_notu": "HIZLI KESME: 13 benzersiz klip / 7 sahne (1 ve 7 ayni deve = bookend).",
+  "_kaynak_notu": "Horguc = yag deposu (su degil). Oval alyuvar: memeliler arasinda sadece develerde; susuzken kan akiciligini, su icince patlamadan sismeyi sagliyor. ~100 L / 10 dk. Insan %15 su kaybinda olur, deve %25-30'a dayanir."
+}

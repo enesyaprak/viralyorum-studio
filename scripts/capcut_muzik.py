@@ -84,7 +84,13 @@ def main():
         nm["name"] = Path(args.audio).stem
         nm["type"] = "extract_music"
     m.setdefault("audios", []).append(nm)
-    src_dur = min(nm.get("duration", total), total) if nm.get("duration") else total
+    # BOS TIMELINE (sablon akisi, 2026-08-23): total=0 iken min(vo, 0) = 0 cikiyordu ->
+    # ses taslaga SIFIR uzunlukta giriyor ve duyulmuyordu. Timeline bossa sesin kendi
+    # suresi kullanilir ve taslagin suresi de ona esitlenir (VO artik referans).
+    if nm.get("duration"):
+        src_dur = nm["duration"] if not total else min(nm["duration"], total)
+    else:
+        src_dur = total
 
     ns = copy.deepcopy(mseg) if mseg else {"extra_material_refs": []}
     ns["id"] = nid(); ns["material_id"] = nm["id"]
@@ -108,6 +114,8 @@ def main():
 
     dc["tracks"].append({"type": "audio", "attribute": 0, "flag": 0, "id": nid(),
                          "segments": [ns], "is_default_name": True, "name": ""})
+    if not total and src_dur:
+        dc["duration"] = src_dur  # bos taslakta sure VO'dan gelir
     dc_path.write_text(json.dumps(dc, ensure_ascii=False), encoding="utf-8")
     import capcut_sync; capcut_sync.sync(dc_path.parent, quiet=True)
     print(f"[OK] {'Seslendirme' if args.audio else 'Müzik'} eklendi: {nm.get('name','')[:25]} (vol {args.volume}) -> {args.draft}")

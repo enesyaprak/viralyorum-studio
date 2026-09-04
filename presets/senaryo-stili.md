@@ -18,9 +18,24 @@ shorts uzman kaynaklarından (retention/hook araştırması) üç eksik parça e
 | 3 | **İç ses + kurulum** | 8-14 sn | Hayvana/nesneye **replik ver** — mizah + bilgi aynı cümlede. Sebebi henüz tam verme. |
 | 4 | **Rehook** | 14-17 sn | "Ama asıl olay şu" / "İşte tam burada" — orta düşüşü kes, **en vurucu bilgiyi vaat et**. Faceless shorts'ta orta bölüm en çok düşüşün olduğu yer. |
 | 5 | **Tersine dönüş + payoff** | 17-25 sn | "Ama..." ile ironiyi patlat **ve asıl şoku NET teslim et**. İzleyici "vaov" demeli, "ne oldu ya?" değil. Hook'ta açılan soru burada kapanır. |
-| 6 | **Kapanış + CTA** | 25-28 sn | Tek cümle toparlama (ders verme), sonra sabit soru CTA. |
+| 6 | **Kapanış + CTA** | 25-28 sn | Tek cümle toparlama (ders verme), sonra **videoya özel** soru CTA (bkz. aşağıdaki CTA bölümü). |
 
 Not: rehook eklenince yapı 5'ten 6 parçaya çıktı; süre bandı 26-30 sn buna uygun.
+
+## Senaryo, klipler GÖRÜLDÜKTEN sonra yazılır (2026-09-04)
+
+Hibrit akışta (bkz. `scripts/klip_ekle.py`) Enes kahraman klipleri getiriyor. Metin
+onlara bakılmadan yazılırsa iki hata birden çıkıyor — bal porsuğunda ikisi de çıktı:
+
+1. **Görüntüsü olmayan cümle.** "Kendi derisinin içinde dönüp ısırıyor" yazıldı ama
+   öyle bir klip yoktu. İzleyici duyduğu şeyi göremeyince cümle boşa gidiyor.
+2. **Metinde geçmeyen güçlü görüntü.** Elde iki leoparı kaçıran porsuk, bal peteği
+   yiyen porsuk ve kobra avı vardı; hiçbiri metinde yoktu. En sert kare hook olmalıydı.
+
+**Yöntem:** `klip_ekle.py` her klip için `onizleme/*.jpg` kontak sayfası üretir.
+Metni yazmadan önce bunlara bak, klip envanterini çıkar, sonra **hook'u en sert
+görüntüye göre seç** ve her cümleyi bir klibe bağla (`plan.json > sahneler[]._kurgu`).
+Karşılığı olmayan cümleyi at, karşılığı olup metinde geçmeyen görüntüye cümle yaz.
 
 ## Netlik vs merak dengesi (YENİ — en önemli kural)
 
@@ -67,11 +82,17 @@ Yayınlandı, değiştirmiyoruz — ama tipik hatayı gösteriyor:
 - Rakam ve zıtlık kancayı güçlendirir ("üç kalbi var", "biri duruyor"). Somut sayı
   inandırıcılık katar — ama bir videoda **en fazla 2 sayısal bilgi**.
 - **Konuyu asla başta özetleme** ama **her cümleyi anlaşılır tut** (bkz. netlik kuralı).
-- **Kapanış çağrısı zorunlu:** her senaryo `preset.json > kapanis_cagri` ile bitiyor
-  ("Sıradaki hangi hayvan olsun? Yorumlara yaz."). Elle yazma — `senaryo.py` ve
-  `uret.py` ikisi de preset'ten ekliyor, metinler birebir aynı kalsın diye.
-  2026-08-19'da abone çağrısı yerine SORU kondu: ilk iki videoda sıfır yorum geldi,
-  izleyiciye yazacak somut bir şey verilmiyordu (Enes kararı).
+- **Kapanış çağrısı zorunlu ve VİDEOYA ÖZEL:** her senaryo `plan.json > "cta"` alanındaki
+  soruyla biter. Elle senaryoya yazma — `senaryo.py` ve `uret.py` ikisi de aynı alandan
+  ekliyor, `senaryo.txt` ile VO metni birebir aynı kalsın diye. Alan boşsa preset'teki
+  yedek cümle girer (istenmeyen durum).
+  **Nasıl yazılır (2026-09-04 Enes kuralı):** izleyicinin yazacak somut bir şeyi olmalı.
+  En iyi kalıp **ikili karşılaştırma / tartışma**: *"Bal porsuğu mu kazanır, sırtlan mı?
+  Yorumlara yaz."* Cevabı videoda VERİLMEMİŞ olmalı — verilmişse soru değil, tekrar olur.
+  Diğer işleyen kalıplar: *"Sence bu normal mi?"*, *"Sen olsan ne yapardın?"*,
+  *"Kaçınız bunu biliyordu?"* — hepsi videonun İÇİNDEKİ somut olaya bağlanmalı.
+  **Yasak:** konudan bağımsız sabit cümle. Eski *"Sıradaki hangi hayvan olsun?"* kaldırıldı:
+  izleyicinin kafasında hayvan listesi yok, soruya cevap üretemiyor ve yorum gelmiyor.
 - Uzunluk: **hedef bant 26-30 sn → ~335-390 karakter** (CTA dahil).
   Formül: hedef karakter = kurgu saniyesi × `preset.json > karakter_hiz` (**12.9**,
   2026-08-23'te 1.05x yavaş VO profiline göre kalibre edildi — eski 16.7/435-500

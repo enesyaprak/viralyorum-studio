@@ -1,0 +1,268 @@
+{
+  "slug": "kedi-olu-kus",
+  "baslik": "Kedin Sana Neden Ölü Kuş Getiriyor? 🐱",
+  "hook": "Kedin sana ölü kuş getiriyorsa seni aciz buluyor.",
+  "hedef_sure": 36,
+  "etiketler": [
+    "#shorts",
+    "#kedi",
+    "#hayvanlar",
+    "#kedisevenler",
+    "#ilginçbilgiler",
+    "#evcilhayvan"
+  ],
+  "_not": "ara[] terimleri INGILIZCE (MCP aramasi icin). klipler[] MCP ile secildikten sonra doldurulur, sonra: python scripts/indir.py --proje <slug>. Toplam anlatim hedefi ~452 karakter (CTA dahil; 35 sn x karakter_hiz 12.9). Etiketlere konuya ozel 1-2 tag ekle.",
+  "text": [
+    "Kedin sana ölü kuş getiriyorsa seni aciz buluyor."
+  ],
+  "sahneler": [
+    {
+      "no": 1,
+      "sure": 4,
+      "anlatim": "Kedin sana ölü kuş getiriyorsa seni aciz buluyor.",
+      "ara": [
+        "cat close up face",
+        "cat portrait eyes",
+        "cat staring"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "15159137",
+          "url": "https://videos.pexels.com/video-files/15159137/15159137-hd_1080_1920_30fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 18,
+          "sahibi": "Alina Vilchenko",
+          "sayfa": "https://www.pexels.com/video/a-cute-gray-cat-with-yellow-eyes-15159137/"
+        },
+        {
+          "kaynak": "pexels",
+          "id": "30818992",
+          "url": "https://videos.pexels.com/video-files/30818992/13180504_1080_1920_25fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 6,
+          "sahibi": "Bade Saba",
+          "sayfa": "https://www.pexels.com/video/close-up-calico-cat-portrait-with-whiskers-30818992/"
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "sure": 6,
+      "anlatim": "Bu hediye değil. Anne kedi yavrusuna avlanmayı böyle öğretir.",
+      "ara": [
+        "mother cat kitten",
+        "kitten close up",
+        "cat with kittens"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pixabay",
+          "id": "65438",
+          "url": "https://cdn.pixabay.com/video/2021/02/17/65438-514139134_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 10,
+          "sahibi": "Kmeel_com",
+          "sayfa": "https://pixabay.com/videos/id-65438/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "143890",
+          "url": "https://cdn.pixabay.com/video/2022/12/22/143890-784164224_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 25,
+          "sahibi": "JawadAliKhan",
+          "sayfa": "https://pixabay.com/videos/id-143890/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "3092",
+          "url": "https://cdn.pixabay.com/video/2016/05/11/3092-166221773_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 23,
+          "sahibi": "Julianza",
+          "sayfa": "https://pixabay.com/videos/id-3092/"
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "sure": 6,
+      "anlatim": "'Bak, bu böyle tutulur' diyor ve ölüyü ayağının dibine bırakıyor.",
+      "ara": [
+        "cat hunting stalking",
+        "cat in grass",
+        "cat prowling"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pixabay",
+          "id": "161128",
+          "url": "https://cdn.pixabay.com/video/2023/04/30/161128-822582245_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 34,
+          "sahibi": "pruslee",
+          "sayfa": "https://pixabay.com/videos/id-161128/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "217393",
+          "url": "https://cdn.pixabay.com/video/2024/06/19/217393_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 21,
+          "sahibi": "fhpicture04",
+          "sayfa": "https://pixabay.com/videos/id-217393/"
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "sure": 4,
+      "anlatim": "Yani seni avlanamayan yavrusu yerine koyuyor.",
+      "ara": [
+        "kitten playing",
+        "cat and kitten",
+        "young cat"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pixabay",
+          "id": "161726",
+          "url": "https://cdn.pixabay.com/video/2023/05/05/161726-824133858_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 10,
+          "sahibi": "JawadAliKhan",
+          "sayfa": "https://pixabay.com/videos/id-161726/"
+        },
+        {
+          "kaynak": "pexels",
+          "id": "36242522",
+          "url": "https://videos.pexels.com/video-files/36242522/15369800_1080_1920_60fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 8,
+          "sahibi": "C1 Superstar",
+          "sayfa": "https://www.pexels.com/video/close-up-of-black-and-white-cat-relaxing-36242522/"
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "sure": 5,
+      "anlatim": "Bir sebebi daha var: yuva güvenli bölgedir, avını eve taşır.",
+      "ara": [
+        "cat at home",
+        "cat resting indoor",
+        "house cat"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "30008802",
+          "url": "https://videos.pexels.com/video-files/30008802/12875122_1080_1920_25fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 59,
+          "sahibi": "MikeGz",
+          "sayfa": "https://www.pexels.com/video/charming-housecat-with-distinctive-mustache-30008802/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "39009",
+          "url": "https://cdn.pixabay.com/video/2020/05/13/39009-420224623_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 11,
+          "sahibi": "yeracastelan",
+          "sayfa": "https://pixabay.com/videos/id-39009/"
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "sure": 8,
+      "anlatim": "Kediler bu içgüdüyü bırakmadığı için yılda milyarlarca kuş ölüyor. Karnı tok kedi bile avlanır; av dürtüsü açlıktan ayrı çalışır.",
+      "ara": [
+        "small bird branch",
+        "songbird garden",
+        "robin perched"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pixabay",
+          "id": "30582",
+          "url": "https://cdn.pixabay.com/video/2019/12/27/30582-382483794_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 19,
+          "sahibi": "TheMarcKnight",
+          "sayfa": "https://pixabay.com/videos/id-30582/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "65801",
+          "url": "https://cdn.pixabay.com/video/2021/02/20/65801-515379581_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 8,
+          "sahibi": "danydory",
+          "sayfa": "https://pixabay.com/videos/id-65801/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "3063",
+          "url": "https://cdn.pixabay.com/video/2016/05/07/3063-165796682_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 18,
+          "sahibi": "jLasWilson",
+          "sayfa": "https://pixabay.com/videos/id-3063/"
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "sure": 4,
+      "anlatim": "Ayağının dibindeki kuş hediye değil. Ders.",
+      "ara": [
+        "cat portrait outdoor",
+        "cat looking at camera",
+        "cat close"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "7691954",
+          "url": "https://videos.pexels.com/video-files/7691954/7691954-hd_1080_2048_30fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 2048,
+          "sure": 16,
+          "sahibi": "ROMAN ODINTSOV",
+          "sayfa": "https://www.pexels.com/video/cats-on-outdoors-7691954/"
+        },
+        {
+          "kaynak": "pexels",
+          "id": "15159137",
+          "url": "https://videos.pexels.com/video-files/15159137/15159137-hd_1080_1920_30fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 18,
+          "sahibi": "Alina Vilchenko",
+          "sayfa": "https://www.pexels.com/video/a-cute-gray-cat-with-yellow-eyes-15159137/"
+        }
+      ]
+    }
+  ],
+  "_stil": "senaryo-stili.md 6-parca: kanca -> netlestirme -> ic ses -> rehook -> ikinci sebep -> olcek -> payoff.",
+  "_kurgu_notu": "HIZLI KESME: 15 benzersiz klip / 7 sahne (1 ve 7 ayni kedi = bookend).",
+  "_hedef_notu": "Tuyler Diken Diken analizi (211 short, 2026-08-23): KEDI temasi 1.90x, INSAN etkilesimi 1.49x, 'NEDEN' sorusu 1.27x medyan uzeri. Bu konu ucunu birden yigiyor.",
+  "_kaynak_notu": "Anne kedi yavrusuna av getirerek avlanmayi ogretir; sahibine getirme bunun insana yonelmis hali (yaygin kabul goren aciklama). Ev kedileri ABD'de yilda ~1.3-4 milyar kus olduruyor (Loss et al. 2013) - 'milyarlarca' guvenli ifade."
+}

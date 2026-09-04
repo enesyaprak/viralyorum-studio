@@ -1,0 +1,228 @@
+{
+  "slug": "bal-porsugu",
+  "baslik": "İki Leopar Saldırdı, Kaçan Leoparlar Oldu 😳",
+  "hook": "İki leopar saldırıyor. Kaçan leoparlar oluyor.",
+  "cta": "Bal porsuğu mu kazanır, sırtlan mı? Yorumlara yaz.",
+  "hedef_sure": 37,
+  "etiketler": [
+    "#shorts",
+    "#balporsuğu",
+    "#hayvanlar",
+    "#doğa",
+    "#ilginçbilgiler",
+    "#yılan"
+  ],
+  "_not": "ara[] terimleri INGILIZCE (MCP aramasi icin). klipler[] MCP ile secildikten sonra doldurulur, sonra: python scripts/indir.py --proje <slug>. Toplam anlatim hedefi ~528 karakter (CTA dahil; 35 sn x karakter_hiz 15.1). Etiketlere konuya ozel 1-2 tag ekle.",
+  "text": [],
+  "sahneler": [
+    {
+      "no": 1,
+      "sure": 5,
+      "anlatim": "İki leopar saldırıyor. Kaçan leoparlar oluyor.",
+      "ara": [
+        "lion pride savanna",
+        "lion walking away"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pixabay",
+          "id": "113204",
+          "url": "https://cdn.pixabay.com/video/2022/04/07/113204-697220702_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 11,
+          "sahibi": "RoyBuri",
+          "sayfa": "https://pixabay.com/videos/id-113204/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "199221",
+          "url": "https://cdn.pixabay.com/video/2024/02/04/199221-909835682_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 37,
+          "sahibi": "HACK5671",
+          "sayfa": "https://pixabay.com/videos/id-199221/"
+        }
+      ],
+      "_kurgu": [
+        "ig_leopar-kacar.mp4"
+      ]
+    },
+    {
+      "no": 2,
+      "sure": 5,
+      "anlatim": "Bir kediden büyük değil. Adı bal porsuğu.",
+      "ara": [
+        "honey badger",
+        "ratel walking"
+      ],
+      "klipler": [],
+      "_kurgu": [
+        "ig_aslan-yanindan-gecer.mp4"
+      ]
+    },
+    {
+      "no": 3,
+      "sure": 5,
+      "anlatim": "Aslan sürüsü etrafını sarıyor, o aldırmadan yürüyor.",
+      "ara": [
+        "honey badger aggressive",
+        "lion snarling"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pixabay",
+          "id": "215936",
+          "url": "https://cdn.pixabay.com/video/2024/06/09/215936_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 14,
+          "sahibi": "VideoAnimals",
+          "sayfa": "https://pixabay.com/videos/id-215936/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "249454",
+          "url": "https://cdn.pixabay.com/video/2024/12/29/249454_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 9,
+          "sahibi": "Thamnguyen_TBVN",
+          "sayfa": "https://pixabay.com/videos/id-249454/"
+        }
+      ],
+      "_kurgu": [
+        "ig_aslan-yanindan-gecer.mp4",
+        "01_pixabay113204.mp4",
+        "03_pixabay249454.mp4"
+      ]
+    },
+    {
+      "no": 4,
+      "sure": 5,
+      "anlatim": "Adını en sevdiği yemekten alıyor: bal. Binlerce arının arasına dalıp peteği söküyor.",
+      "ara": [
+        "honey badger close up",
+        "animal thick fur skin"
+      ],
+      "klipler": [],
+      "_kurgu": [
+        "ig_bal-petegi.mp4"
+      ]
+    },
+    {
+      "no": 5,
+      "sure": 5,
+      "anlatim": "Ama asıl silahı dişleri değil, derisi.",
+      "ara": [
+        "lion bite grab prey",
+        "predator attack"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pixabay",
+          "id": "249449",
+          "url": "https://cdn.pixabay.com/video/2024/12/29/249449_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 9,
+          "sahibi": "Thamtb_MOONLIGHT",
+          "sayfa": "https://pixabay.com/videos/id-249449/"
+        }
+      ],
+      "_kurgu": [
+        "ig_bal-petegi.mp4",
+        "ig_aslan-surusu-AI-ETIKETLI.mp4"
+      ]
+    },
+    {
+      "no": 6,
+      "sure": 5,
+      "anlatim": "Derisi hem çok kalın hem de bol; ensesinden yakalanınca deri dönüyor, o saldıranı ısırıyor.",
+      "ara": [
+        "cobra hood strike",
+        "venomous snake"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "35786469",
+          "url": "https://videos.pexels.com/video-files/35786469/15172143_1080_1920_30fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 8,
+          "sahibi": "Thanzeena Husain",
+          "sayfa": "https://www.pexels.com/video/majestic-cobra-in-a-tire-displaying-its-hood-35786469/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "143409",
+          "url": "https://cdn.pixabay.com/video/2022/12/18/143409-782363218_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 29,
+          "sahibi": "FestiMania",
+          "sayfa": "https://pixabay.com/videos/id-143409/"
+        }
+      ],
+      "_kurgu": [
+        "ig_leopar-kacar.mp4",
+        "05_pixabay249449.mp4"
+      ]
+    },
+    {
+      "no": 7,
+      "sure": 5,
+      "anlatim": "Kobra da durduramıyor. Zehir onu öldürmüyor, birkaç saat bayıltıyor; uyanıp yılanı yiyor.",
+      "ara": [
+        "snake on rocks africa",
+        "snake crawling grass"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "31702138",
+          "url": "https://videos.pexels.com/video-files/31702138/13507602_1080_1920_30fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 15,
+          "sahibi": "MC G'Zay",
+          "sayfa": "https://www.pexels.com/video/python-snake-in-natural-habitat-on-rocks-31702138/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "210902",
+          "url": "https://cdn.pixabay.com/video/2024/05/06/210902_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 11,
+          "sahibi": "TatianaTz",
+          "sayfa": "https://pixabay.com/videos/id-210902/"
+        }
+      ],
+      "_kurgu": [
+        "ig_kobra-avi.mp4",
+        "06_pexels35786469.mp4",
+        "07_pexels31702138.mp4"
+      ]
+    },
+    {
+      "no": 8,
+      "sure": 5,
+      "anlatim": "En korkusuz hayvan unvanı boşuna verilmemiş.",
+      "ara": [
+        "honey badger walking",
+        "savanna sunset"
+      ],
+      "klipler": [],
+      "_kurgu": [
+        "ig_aslan-yanindan-gecer.mp4",
+        "01_pixabay199221.mp4"
+      ]
+    }
+  ],
+  "_stil": "presets/senaryo-stili.md 6-parca formulu (kanca -> netlestirme -> ic ses -> rehook -> tersine donus/payoff -> kapanis). Her cumle somut, belirsiz fiil yok.",
+  "kaynak": "Bal porsugu (Mellivora capensis). Guinness: 'dunyanin en korkusuz hayvani'. Derisi ~6 mm ve BOL/gevsek - yirtici ensesinden kaptiginda hayvan deri icinde donup saldiraniyi isirabiliyor. Yilan zehrine dirençli: engerek/kobra isirmasindan sonra saatlerce baygin yatip uyaniyor ve yarim kalan yilani yemeye devam ediyor (BBC Kalahari kaydi). Aslan ve sirtlanlari kovaladigi belgelenmis.",
+  "_senaryo_notu": "Metin ELDEKI GORUNTUYE gore yazildi (2026-09-04): Enes'in 5 klibi incelendi (leopar kacisi / kobra avi / bal petegi / aslan yanindan gecis). Eski metindeki 'deri icinde donup isirma' ve 'zehirden bayilma' sahnelerinin goruntusu YOKTU; en guclu 3 gorsel (leopar, bal, kobra) ise metinde hic gecmiyordu."
+}

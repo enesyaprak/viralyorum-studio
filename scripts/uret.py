@@ -107,7 +107,7 @@ def compound_var_mi(draft):
     return compound and not metin_var
 
 
-def taslak_dogrula(draft, altyazi_bekleniyor=True):
+def taslak_dogrula(draft, altyazi_bekleniyor=True, video_bekleniyor=True):
     """Zincir bitince taslak gercekten dolu mu (CapCut araya girip ezmemis mi)."""
     try:
         dc = json.loads((DRAFTS / draft / "draft_content.json").read_text(encoding="utf-8"))
@@ -117,7 +117,7 @@ def taslak_dogrula(draft, altyazi_bekleniyor=True):
     for tr in dc.get("tracks", []):
         sayim[tr["type"]] = sayim.get(tr["type"], 0) + len(tr.get("segments", []))
     eksik = []
-    if not sayim.get("video"):
+    if video_bekleniyor and not sayim.get("video"):
         eksik.append("video segmenti yok")
     if not sayim.get("audio"):
         eksik.append("ses (VO/muzik) yok")
@@ -216,6 +216,11 @@ def main():
     ayristirici.add_argument("--proje", required=True, help="projeler/<slug>")
     ayristirici.add_argument("--draft", required=True, help="CapCut taslak adi (kismi eslesme yeterli)")
     ayristirici.add_argument("--atla", default="", help="atlanacak: vo,altyazi,muzik,efekt,gecis,text,sozluk")
+    ayristirici.add_argument("--sablon", action="store_true",
+                             help="SABLON MODU (2026-08-23 akisi): timeline BOSKEN calisir, "
+                                  "sadece VO + altyazi basar. VO uydurma YAPILMAZ - VO referanstir, "
+                                  "Enes goruntuleri onun uzerine elle dizer. Muzik/logo/gecis "
+                                  "dizim bittikten sonra ikinci kosuda eklenir.")
     ayristirici.add_argument("--altyazi-zorla", action="store_true",
                              help="compound clip olsa bile altyazi bas "
                                   "(compound'un ICINDE altyazi YOKSA kullan; varsa cift altyazi olur)")
@@ -239,6 +244,12 @@ def main():
         sys.exit(f"DUR: CapCut '{draft}' ile ACIK. Once tepsiden TAM KAPAT, sonra tekrar calistir.")
 
     atla = {x.strip() for x in argumanlar.atla.split(",") if x.strip()}
+    if argumanlar.sablon:
+        # Sablon asamasinda kurgu HENUZ YOK: kesme noktasi gerektiren (gecis) ve final
+        # sureye bagli olan (logo, muzik) adimlar atlanir; VO dogal temposunda kalir.
+        atla |= {"muzik", "logo", "efekt", "gecis", "text"}
+        yapilandirma = {**yapilandirma, "vo_uydur": False}
+        print("[SABLON MODU] sadece VO + altyazi basilacak; VO uydurma KAPALI (VO referans).")
     print(f"=== VIRALYORUM: {plan.get('slug', argumanlar.proje)} | taslak: {draft} ===")
 
     vo_mp3 = CIKTI / f"{draft}_vo.mp3"          # taslaga giren (kurguya uydurulmus) kopya
@@ -255,12 +266,20 @@ def main():
         # ONBELLEK (2026-08-23): ayni metnin ham VO'su varsa ElevenLabs'e GIDILMEZ (0 kredi).
         # Uydurma (atempo) her kosuda HAM kopyadan yapilir -> ust uste atempo binmez,
         # timeline degistikten sonra tekrar kosu bedava ve deterministik.
+        # Onbellek anahtari METIN + SES AYARLARI. Ayar degisip metin ayni kalirsa
+        # (2026-08-23 hiz degisikligi) eski VO yeniden kullanilmamali.
+        ayar_imza = json.dumps({"ayarlar": yapilandirma.get("ses_ayarlari") or {},
+                                "hizlandirma": yapilandirma.get("vo_hizlandirma"),
+                                "ses": yapilandirma.get("voice")}, sort_keys=True, ensure_ascii=False)
+        imza_dosyasi = CIKTI / f"{draft}_vo_ayar.json"
+        eski_imza = imza_dosyasi.read_text(encoding="utf-8") if imza_dosyasi.exists() else None
         eski_metin = vo_txt.read_text(encoding="utf-8") if vo_txt.exists() else None
-        if vo_ham.exists() and eski_metin == vo_metni:
+        if vo_ham.exists() and eski_metin == vo_metni and eski_imza == ayar_imza:
             print("\n--- TTS (VO uret) ---")
             print(f"  [=] metin degismedi -> onbellekteki ham VO kullaniliyor ({vo_ham.name}), 0 kredi")
         else:
             vo_txt.write_text(vo_metni, encoding="utf-8")
+            imza_dosyasi.write_text(ayar_imza, encoding="utf-8")
             tts_arg = ["--text-file", vo_txt, "--out", vo_ham, "--voice", ses]
             # Ses ayarlari preset'ten; TANIMSIZ olan gonderilmez -> sesin varsayilani gecerli
             ayarlar = yapilandirma.get("ses_ayarlari") or {}
@@ -285,6 +304,7 @@ def main():
             print(f"  VO {vo_sure:.1f}s / video {video_sure:.1f}s (oran {oran:.2f})")
             if yapilandirma.get("vo_uydur", True):
                 vo_sure = vo_kurguya_uydur(vo_mp3, vo_sure, video_sure,
+                                           alt=yapilandirma.get("vo_uydur_alt", 0.97),
                                            ust=yapilandirma.get("vo_uydur_ust", 1.10))
             elif oran < 0.85:
                 hedef_kar = video_sure * (yapilandirma.get("karakter_hiz") or 18.1)
@@ -402,12 +422,20 @@ def main():
     for sira, zaman, metin, nedenler in bulgular:
         print(f"  [{sira}] {zaman}s: \"{metin}\" -> {'; '.join(nedenler)}")
     eksikler = taslak_dogrula(draft, altyazi_bekleniyor=(
-        "altyazi" not in atla and (argumanlar.altyazi_zorla or not compound_var_mi(draft))))
+        "altyazi" not in atla and (argumanlar.altyazi_zorla or not compound_var_mi(draft))),
+        video_bekleniyor=not argumanlar.sablon)
     if eksikler:
         print(chr(10) + "! TASLAK EKSIK: " + ", ".join(eksikler))
         print("  Muhtemel sebep: zincir calisirken CapCut acildi ve kendi eski halini yazdi.")
         print("  CapCut kapaliyken ayni komutu tekrar calistir.")
 
+    if argumanlar.sablon:
+        print()
+        print("SABLON HAZIR. CapCut'i AC, klipleri VO'nun uzerine ELLE diz.")
+        print('Bittiginde tepsiden kapat, sonra ikinci kosu:')
+        print(f'  python scripts/uret.py --proje {argumanlar.proje} --draft {draft} --atla vo,altyazi')
+        print('  (muzik + logo + gecis eklenir; VO ve altyaziya DOKUNULMAZ)')
+        return
     print("\nExport haric hazir. CapCut'i AC, kontrol et, export al.")
     print("(Acilista 'kurtar/recover' dialogu cikarsa REDDET.)")
 

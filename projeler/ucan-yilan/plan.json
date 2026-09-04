@@ -1,0 +1,248 @@
+{
+  "slug": "ucan-yilan",
+  "baslik": "Havada Süzülen Yılan 😳",
+  "hook": "Yılan gördün, kaçtın. Ama yukarı bakmadın.",
+  "hedef_sure": 36,
+  "etiketler": [
+    "#shorts",
+    "#yılan",
+    "#hayvanlar",
+    "#doğa",
+    "#ilginçbilgiler",
+    "#bilim"
+  ],
+  "_not": "ara[] terimleri INGILIZCE (MCP aramasi icin). klipler[] MCP ile secildikten sonra doldurulur, sonra: python scripts/indir.py --proje <slug>. Toplam anlatim hedefi ~464 karakter (CTA dahil; 36 sn x karakter_hiz 12.9). Etiketlere konuya ozel 1-2 tag ekle.",
+  "text": [
+    "Yılan gördün, kaçtın. Ama yukarı bakmadın."
+  ],
+  "sahneler": [
+    {
+      "no": 1,
+      "sure": 4,
+      "anlatim": "Yılan gördün, kaçtın. Ama yukarı bakmadın.",
+      "ara": [
+        "snake close up",
+        "snake tongue macro",
+        "wild snake"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "27469278",
+          "url": "https://videos.pexels.com/video-files/27469278/12150566_1080_1920_30fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 10,
+          "sahibi": "Pablo Buendia",
+          "sayfa": "https://www.pexels.com/video/water-snake-27469278/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "143409",
+          "url": "https://cdn.pixabay.com/video/2022/12/18/143409-782363218_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 29,
+          "sahibi": "FestiMania",
+          "sayfa": "https://pixabay.com/videos/id-143409/"
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "sure": 6,
+      "anlatim": "Güneydoğu Asya'da bir yılan var; ağacın tepesinden kendini boşluğa bırakıyor.",
+      "ara": [
+        "green tree python",
+        "snake on tree trunk",
+        "jungle canopy"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pixabay",
+          "id": "212324",
+          "url": "https://cdn.pixabay.com/video/2024/05/17/212324_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 24,
+          "sahibi": "DavidClode",
+          "sayfa": "https://pixabay.com/videos/id-212324/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "204303",
+          "url": "https://cdn.pixabay.com/video/2024/03/15/204303-923909634_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 26,
+          "sahibi": "TRAPHITHO",
+          "sayfa": "https://pixabay.com/videos/id-204303/"
+        },
+        {
+          "kaynak": "pexels",
+          "id": "36750752",
+          "url": "https://videos.pexels.com/video-files/36750752/15575552_1080_1920_60fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 12,
+          "sahibi": "Ziad Mahmud",
+          "sayfa": "https://www.pexels.com/video/majestic-view-of-tall-forest-trees-from-below-36750752/"
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "sure": 4,
+      "anlatim": "Normalde taş gibi düşmesi lazım. Düşmüyor.",
+      "ara": [
+        "forest from below",
+        "tall trees void",
+        "snake tree trunk"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "10644471",
+          "url": "https://videos.pexels.com/video-files/10644471/10644471-hd_1080_1920_24fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 35,
+          "sahibi": "Dmitry Marchenkov",
+          "sayfa": "https://www.pexels.com/video/directly-below-view-of-forest-10644471/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "204300",
+          "url": "https://cdn.pixabay.com/video/2024/03/15/204300-923909625_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 20,
+          "sahibi": "TRAPHITHO",
+          "sayfa": "https://pixabay.com/videos/id-204300/"
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "sure": 6,
+      "anlatim": "Kaburgalarını açıyor, yuvarlak gövdesi bir anda yassı bir kanada dönüşüyor.",
+      "ara": [
+        "snake scales macro",
+        "python body close up",
+        "snake skin detail"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pixabay",
+          "id": "220923",
+          "url": "https://cdn.pixabay.com/video/2024/07/13/220923_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 28,
+          "sahibi": "DavidClode",
+          "sayfa": "https://pixabay.com/videos/id-220923/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "329420",
+          "url": "https://cdn.pixabay.com/video/2026/01/22/329420_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 24,
+          "sahibi": "u_0723i9qoo4",
+          "sayfa": "https://pixabay.com/videos/id-329420/"
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "sure": 6,
+      "anlatim": "Havada yüzer gibi S çiziyor; durduğu an düşer, o yüzden hiç durmuyor.",
+      "ara": [
+        "snake slithering motion",
+        "snake moving s shape",
+        "snake crawling"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "10231672",
+          "url": "https://videos.pexels.com/video-files/10231672/10231672-hd_1080_1920_30fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 35,
+          "sahibi": "Peggy Anke",
+          "sayfa": "https://www.pexels.com/video/close-up-on-snake-moving-over-planks-10231672/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "163305",
+          "url": "https://cdn.pixabay.com/video/2023/05/16/163305-827461442_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 26,
+          "sahibi": "Eaktas06",
+          "sayfa": "https://pixabay.com/videos/id-163305/"
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "sure": 6,
+      "anlatim": "Yön değiştirip nereye ineceğini seçiyor, yüz metre ötedeki ağaca konuyor.",
+      "ara": [
+        "snake head direction",
+        "viper close up",
+        "snake alert"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pixabay",
+          "id": "173405",
+          "url": "https://cdn.pixabay.com/video/2023/07/26/173405-849328180_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 14,
+          "sahibi": "FestiMania",
+          "sayfa": "https://pixabay.com/videos/id-173405/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "89796",
+          "url": "https://cdn.pixabay.com/video/2021/09/26/89796-615423254_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 20,
+          "sahibi": "TRAPHITHO",
+          "sayfa": "https://pixabay.com/videos/id-89796/"
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "sure": 4,
+      "anlatim": "Uçmayı öğrenmemiş. Düşmeyi yönetmeyi öğrenmiş.",
+      "ara": [
+        "snake portrait close",
+        "snake eye detail",
+        "serpent head"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "27469278",
+          "url": "https://videos.pexels.com/video-files/27469278/12150566_1080_1920_30fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 10,
+          "sahibi": "Pablo Buendia",
+          "sayfa": "https://www.pexels.com/video/water-snake-27469278/"
+        }
+      ]
+    }
+  ],
+  "_stil": "senaryo-stili.md 6-parca: kanca -> netlestirme -> beklenti kirilmasi -> mekanizma -> gerilim -> kontrol -> payoff.",
+  "_kurgu_notu": "HIZLI KESME: 13 benzersiz klip / 7 sahne (1 ve 7 ayni = bookend).",
+  "_stok_notu": "UYARI: havada suzulen yilan goruntusu hicbir kaynakta YOK. Anlatim olayi tasiyor, goruntu yilani/agaci gosteriyor (guguk videosuyla ayni durum). Kapanis cumlesi 'ucmuyor, dusmeyi yonetiyor' bunu dogal kiliyor.",
+  "_kaynak_notu": "Chrysopelea (uçan yılan). Kaburga yassilastirma + S hareketiyle suzulme: Jake Socha, Virginia Tech."
+}

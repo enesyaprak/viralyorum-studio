@@ -38,6 +38,12 @@ def main():
         "slug": argumanlar.slug,
         "baslik": "",
         "hook": "",
+        "cta": "",
+        "_cta_not": "ZORUNLU. Videoya OZEL, tartismali/ikili soru yaz - izleyici yorum "
+                    "yazacak somut bir sey bulsun. Ornek: Bal porsugu mu kazanir, sirtlan mi? "
+                    "Yorumlara yaz. Bos birakilirsa preset > kapanis_cagri (sabit siradaki "
+                    "hangi hayvan cumlesi) kullanilir - o cumle yorum GETIRMIYOR, izleyicinin "
+                    "kafasinda hayvan listesi yok (Enes karari 2026-09-04).",
         "hedef_sure": argumanlar.sure,
         "etiketler": ["#shorts", "#hayvanlar", "#doğa", "#ilginçbilgiler"],
         "_not": "ara[] terimleri INGILIZCE (MCP aramasi icin). klipler[] MCP ile secildikten "
