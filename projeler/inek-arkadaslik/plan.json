@@ -1,0 +1,267 @@
+{
+  "slug": "inek-arkadaslik",
+  "baslik": "İneğin En İyi Arkadaşı Var 🐄",
+  "hook": "Sen ineği aptal sanıyorsun. O senin yüzünü yıllarca hatırlıyor.",
+  "hedef_sure": 35,
+  "etiketler": [
+    "#shorts",
+    "#inek",
+    "#hayvanlar",
+    "#doğa",
+    "#ilginçbilgiler",
+    "#çiftlik"
+  ],
+  "_not": "ara[] terimleri INGILIZCE (MCP aramasi icin). klipler[] MCP ile secildikten sonra doldurulur, sonra: python scripts/indir.py --proje <slug>. Toplam anlatim hedefi ~413 karakter (CTA dahil; 32 sn x karakter_hiz 12.9). Etiketlere konuya ozel 1-2 tag ekle.",
+  "text": [
+    "Sen ineği aptal sanıyorsun. O senin yüzünü yıllarca hatırlıyor."
+  ],
+  "sahneler": [
+    {
+      "no": 1,
+      "sure": 5,
+      "anlatim": "Sen ineği aptal sanıyorsun. O senin yüzünü yıllarca hatırlıyor.",
+      "ara": [
+        "cow face close up",
+        "cow portrait",
+        "cattle head detail"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "14042350",
+          "url": "https://videos.pexels.com/video-files/14042350/14042350-hd_1080_1920_30fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 20,
+          "sahibi": "Marsel Sharipov",
+          "sayfa": "https://www.pexels.com/video/close-up-of-cow-yawning-14042350/"
+        },
+        {
+          "kaynak": "pexels",
+          "id": "15393637",
+          "url": "https://videos.pexels.com/video-files/15393637/15393637-hd_1080_1920_60fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 13,
+          "sahibi": "Amine Ispir",
+          "sayfa": "https://www.pexels.com/video/close-up-view-of-a-cow-eating-grass-15393637/"
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "sure": 5,
+      "anlatim": "Sürüyü tek bir kalabalık sanma; her ineğin en iyi arkadaşı var.",
+      "ara": [
+        "cows herd pasture",
+        "cattle grazing field",
+        "cows meadow"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pixabay",
+          "id": "65903",
+          "url": "https://cdn.pixabay.com/video/2021/02/21/65903-515617562_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 22,
+          "sahibi": "Matthias_Groeneveld",
+          "sayfa": "https://pixabay.com/videos/id-65903/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "112764",
+          "url": "https://cdn.pixabay.com/video/2022/04/03/112764-696336261_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 10,
+          "sahibi": "Eaktas06",
+          "sayfa": "https://pixabay.com/videos/id-112764/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "108077",
+          "url": "https://cdn.pixabay.com/video/2022/02/18/108077-679386057_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 15,
+          "sahibi": "NickyPe",
+          "sayfa": "https://pixabay.com/videos/id-108077/"
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "sure": 5,
+      "anlatim": "'Ben sadece bununla otlarım' diyor, başkasını yanına almıyor.",
+      "ara": [
+        "two cows together",
+        "cow and calf",
+        "cows resting pair"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pixabay",
+          "id": "118009",
+          "url": "https://cdn.pixabay.com/video/2022/05/24/118009-714270845_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 27,
+          "sahibi": "Matthias_Groeneveld",
+          "sayfa": "https://pixabay.com/videos/id-118009/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "120007",
+          "url": "https://cdn.pixabay.com/video/2022/06/11/120007-719443953_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 14,
+          "sahibi": "MabelAmber",
+          "sayfa": "https://pixabay.com/videos/id-120007/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "130238",
+          "url": "https://cdn.pixabay.com/video/2022/09/04/130238-746395351_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 9,
+          "sahibi": "MabelAmber",
+          "sayfa": "https://pixabay.com/videos/id-130238/"
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "sure": 4,
+      "anlatim": "Ama asıl olay onu ayırdığında başlıyor.",
+      "ara": [
+        "cattle grazing close",
+        "cow chewing",
+        "cow field"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "36421195",
+          "url": "https://videos.pexels.com/video-files/36421195/15443246_1080_1920_30fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 10,
+          "sahibi": "Gizem Gokce",
+          "sayfa": "https://www.pexels.com/video/close-up-shot-of-grazing-cattle-outdoors-36421195/"
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "sure": 5,
+      "anlatim": "Ayrılan ineğin kalbi hızlanıyor, stres hormonu fırlıyor.",
+      "ara": [
+        "dairy cow",
+        "milk cow pasture",
+        "brown cow farm"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pixabay",
+          "id": "312750",
+          "url": "https://cdn.pixabay.com/video/2025/10/29/312750_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 18,
+          "sahibi": "flowerrock",
+          "sayfa": "https://pixabay.com/videos/id-312750/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "298103",
+          "url": "https://cdn.pixabay.com/video/2025/08/18/298103_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 12,
+          "sahibi": "Matthias_Groeneveld",
+          "sayfa": "https://pixabay.com/videos/id-298103/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "63662",
+          "url": "https://cdn.pixabay.com/video/2021/01/31/63662-507811632_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 20,
+          "sahibi": "danydory",
+          "sayfa": "https://pixabay.com/videos/id-63662/"
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "sure": 6,
+      "anlatim": "İsmiyle çağrılan inek yılda iki yüz elli sekiz litre fazla süt veriyor.",
+      "ara": [
+        "cow calm grazing",
+        "cow looking camera",
+        "cow gentle"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pexels",
+          "id": "36251022",
+          "url": "https://videos.pexels.com/video-files/36251022/15373392_1080_1920_24fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 17,
+          "sahibi": "celal keser",
+          "sayfa": "https://www.pexels.com/video/close-up-view-of-a-cow-grazing-outdoors-36251022/"
+        },
+        {
+          "kaynak": "pexels",
+          "id": "9657777",
+          "url": "https://videos.pexels.com/video-files/9657777/9657777-hd_1080_1920_30fps.mp4",
+          "genislik": 1080,
+          "yukseklik": 1920,
+          "sure": 14,
+          "sahibi": "Deklansor 67",
+          "sayfa": "https://www.pexels.com/video/a-footage-of-a-cow-behind-a-barbed-wire-9657777/"
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "sure": 5,
+      "anlatim": "Süt makinesi sandığın hayvan, kimin ona nasıl davrandığını biliyor.",
+      "ara": [
+        "cow close up portrait",
+        "cow calf bond",
+        "cattle detail"
+      ],
+      "klipler": [
+        {
+          "kaynak": "pixabay",
+          "id": "221899",
+          "url": "https://cdn.pixabay.com/video/2024/07/18/221899_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 9,
+          "sahibi": "Kaffeesuchtig",
+          "sayfa": "https://pixabay.com/videos/id-221899/"
+        },
+        {
+          "kaynak": "pixabay",
+          "id": "118014",
+          "url": "https://cdn.pixabay.com/video/2022/05/24/118014-714270866_medium.mp4",
+          "genislik": 1920,
+          "yukseklik": 1080,
+          "sure": 71,
+          "sahibi": "Matthias_Groeneveld",
+          "sayfa": "https://pixabay.com/videos/id-118014/"
+        }
+      ]
+    }
+  ],
+  "_stil": "senaryo-stili.md 6-parca: kanca -> netlestirme -> ic ses -> rehook -> payoff -> kapanis.",
+  "_kurgu_notu": "HIZLI KESME: 16 benzersiz klip / 7 sahne (video sn / 3 kurali).",
+  "_kaynak_notu": "Arkadaslik+kalp atisi: McLennan (Northampton). 258 litre: Bertenshaw & Rowlinson, Newcastle Univ. 2009 (516 ciftlik anketi)."
+}

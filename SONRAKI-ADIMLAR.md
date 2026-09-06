@@ -73,29 +73,27 @@ logo doğru ölçek/konumla (0.145 / x 0.0 / y 0.827) tam video boyunca, arkapla
 
 ## Yapılacaklar
 
-### AKTİF VİDEO: `acimasiz-anneler`  ← ŞU AN BURADA (2026-08-23)
+### AKTİF VİDEO: `deve-horguc`  ← ŞU AN BURADA (2026-08-23)
 
-"Doğanın en vicdansız 5 annesi" — panda / guguk / kara kartal / hamster / fok.
-**Liste formatı**, 45 sn hedef, 604 karakter (~47 sn VO). Klipler indi, havuz kuruldu
-(**17 benzersiz klip** — hızlı kesme için bilerek bol), `senaryo.txt` hazır.
-`plan.json > cta` ile videoya özel tartışma CTA'sı kullanılıyor.
-**Kaldı:** Enes outline'ı yapıştırıp dizer (timeline ~47 sn olmalı) → tepsiden kapat →
-`python scripts/uret.py --proje acimasiz-anneler --draft acimasiz-anneler`.
-Bu video, 2026-08-23 pipeline revizyonunun (TTS önbelleği, x1.10 tempo kilidi,
-otomatik sync, CTA override) ilk tam testi.
+"Devenin hörgücünde su yok" — MİT YIKMA formatı (kanalda ilk). Hörgüç yağ deposu,
+oval alyuvarlar, 10 dk'da 100 litre, insan %15 su kaybında ölür / deve %30'a dayanır.
+36 sn, 466 karakter, **14 klip havuzda**, senaryo.txt hazır.
+**Kaldı:** Enes outline'ı yapıştırıp dizer (timeline ~36 sn) → tepsiden kapat →
+`python scripts/uret.py --proje deve-horguc --draft deve-horguc`.
 
-### EXPORT BEKLİYOR: `bal-arisi-isi-topu` (2026-08-21)
+### EXPORT BEKLİYOR (5 video, hepsi üretildi)
 
-Japon bal arısı / ısı topu savunması. Uçtan uca üretildi, **export bekliyor**.
-7 sahne, 21 sn. `uret.py` çalıştı: VO+altyazı+müzik+logo+4 geçiş bası, **VO kurguya
-tam oturdu** (x1.167 atempo, kırpılma yok). Timeline 21 sn hedef 26-30'un altında
-ama Enes "böyle bırak, export et" dedi.
-**Kaldı:** Enes CapCut'ta kontrol + export. Not: altyazı 6-7'de replik tırnakları
-(`'iğnemiz bu zırhı delmez'`) garip-karakter uyarısı verdi — CapCut'ta kontrol,
-çirkinse elle sil.
+| Proje | Süre | Not |
+|---|---|---|
+| `bal-arisi-isi-topu` | 21 sn | Altyazı 6-7'de replik tırnakları garip karakter uyarısı verdi |
+| `acimasiz-anneler` | 47 sn | 5 hayvan listesi, tartışma CTA'sı (`plan.json > cta`) |
+| `canli-silahlar` | 47.9 sn | En temiz koşu: oran 0.98, 0 şüpheli altyazı, 18 geçiş |
+| `inek-arkadaslik` | 34.5 sn | Metin dizimden SONRA güçlendirildi → kesme noktaları eski outline'a göre |
+| `ucan-yilan` | 36.1 sn | Sadece 3 geçiş; havuzda 14 klipten 7'si kullanılmamış, istenirse yeniden dizilip bedava tekrar koşulabilir |
 
-Bu, **yeni güçlendirilmiş 6-parça formülle** (rehook + net payoff, bkz.
-`senaryo-stili.md` 2026-08-21 revizyonu) üretilen İLK video.
+**Tekrarlayan tırnak sorunu:** ElevenLabs transkripti düz tırnağı kıvrık tırnağa
+(" ") çeviriyor, altyazıda çirkin duruyor (bal-arısı, acımasız-anneler, inek).
+Kalıcı çözüm: altyazıya giderken tırnakları düzleştiren bir adım — Enes onayı bekliyor.
 
 ### BİTTİ: `guguk-yuva-paraziti`  (Enes elle bitirdi, 2026-08-21)
 
@@ -107,26 +105,130 @@ etiketler optimize (plan.json). `ahtapot-uc-kalp` gibi referans olarak durabilir
 clipping timeline'ı hedef banttan (26-30) saptı. Enes'in dizerken hedef süreyi
 tutturması ya da senaryo.txt'ye hedef sn notu düşmek düşünülebilir.
 
-#### Yeni bir video açarken (guguk bittikten sonra)
+#### Yeni bir video açarken — GÜNCEL AKIŞ (2026-08-23 akşamı, Enes kararı)
+
+**Sıra değişti: VO ARTIK ÖNCE GİRİYOR.** Eskiden Enes dizerdi, sonra VO basılırdı; bu
+yüzden bütün gün "VO 33 sn / timeline 36 sn" sürtünmesi yaşandı. Artık VO referans,
+kurgu ona göre yapılıyor.
 
 ```bash
-python scripts/yeni.py <slug>
+python scripts/yeni.py <slug> --sure 35
+# plan.json: konu + senaryo (senaryo-stili.md 6-parca formulu)
+# hedef karakter = kurgu saniyesi x karakter_hiz (15.1)
+# havuz bol tut: klip sayisi ~ video saniyesi / 3
+python scripts/klip_ekle.py --proje <slug> --klasor ~/Downloads/<konu>   # ENES'IN KLIPLERI
+python scripts/indir.py --proje <slug>                                   # TELIFSIZ DESTEK
+python scripts/capcut_havuz.py --proje <slug> --ad <slug>
+python scripts/uret.py --proje <slug> --draft <slug> --sablon    # VO + ALTYAZI
 ```
 
-1. `plan.json`: konu + `presets/senaryo-stili.md` formülüyle anlatım.
-   Hedef karakter = **kurgu saniyesi × `karakter_hiz` (12.9)**; CTA otomatik ekleniyor,
-   onu da paya kat (`plan.json > cta` ile videoya özel CTA yazılabilir).
-   **Havuz bol tut: klip sayısı ≈ video saniyesi ÷ 3** (hızlı kesme kuralı, 2026-08-23)
-2. Claude MCP ile klip seçer (4K, gerçek çekim, AI üretimi eleniyor) → `indir.py`
-3. `capcut_havuz.py` → havuz + `projeler/<slug>/senaryo.txt` çıkar →
-   Enes CapCut'ta **auto clipping outline'a senaryo.txt'yi yapıştırıp** dizer →
-   tepsiden tam kapatır
-4. `uret.py`: TTS → VO → altyazı → **arkaplan sesi + logo + geçişler otomatik**
-5. Enes: kontrol + export
+#### HIBRIT KLIP AKISI (2026-09-04, Enes karari)
 
-Enes'in elle yapması gereken tek şey: **dizme ve export**.
+Klipler artik **iki kaynaktan** geliyor ve ikisi de ayni havuza akiyor:
+
+| Bacak | Komut | Lisans | Rol |
+|---|---|---|---|
+| Enes bulur | `klip_ekle.py` | ispatli DEGIL | konunun **kahraman** goruntusu (Instagram vb.) |
+| Claude bulur | `indir.py` | Pexels/Pixabay/Commons - ispatli | **destek/dolgu** planlar |
+
+```bash
+python scripts/klip_ekle.py --proje bal-porsugu --klasor ~/Downloads/honeybadger
+# -> footage/ig_01.mp4 ...  + onizleme/ig_01.jpg (KONTAK SAYFASI)
+# Claude onizleme/*.jpg'lere BAKAR, senaryoyu eldeki goruntuye gore yazar
+python scripts/klip_ekle.py --proje bal-porsugu --ad 1=leopar-kacar,2=kobra-avi
+```
+
+**Neden kontak sayfasi:** bal-porsugu'nda ilk metin goruntu gorulmeden yazilmisti;
+icinde goruntusu OLMAYAN sahneler vardi ("deri icinde donup isirma", "zehirden bayilma"),
+elimizdeki en guclu uc goruntu (leopar kacisi / bal petegi / kobra avi) ise metinde hic
+gecmiyordu. Kontak sayfalarina bakildiktan sonra metin bastan yazildi ve hook artik en
+sert klibe oturuyor. **Kural: senaryo, klipler gorulduKTEN sonra yazilir.**
+
+**Telif kaydi ayrisik tutuluyor:** `klip_ekle.py` kendi kliplerini `"kaynak": "elle"` ve
+`"lisans": "ISPATLI DEGIL"` diye isliyor. Boylece `kaynaklar.json` hangi klibin lisansi
+kanitli, hangisinin degil ayirt edilebiliyor - Pexels/Commons kayitlarinin degeri bozulmuyor.
+Claude Instagram indirici YAZMIYOR/otomatiklestirmiyor; klipleri Enes getiriyor.
+
+**Diger notlar:**
+- Yatay ve 3 sn'den kisa klipler uyari veriyor (9:16 kirpma / hizli kesmede yetersiz).
+- Ayni dosya iki kere alinmaz (`orijinal_ad` ile eslesme); tekrar icin `--zorla`.
+- mp4 disi (webm/mov) otomatik H.264 mp4'e cevriliyor - CapCut uyumu.
+- Meta'nin **"AI" etiketi** tasiyan klipler cikiyor (bal-porsugu ig_aslan-surusu). Script bunu
+  tespit EDEMEZ - kontak sayfasinda kosede rozet gorunuyorsa o klibi kullanma.
+
+#### CTA artik VIDEOYA OZEL (2026-09-04, Enes karari)
+
+Sabit *"Siradaki hangi hayvan olsun?"* KALDIRILDI — yorum getirmiyordu (Enes: *"sıradaki
+hayvan ne olsun nerden bilsin adam"*). Artik her videonun CTA'si `plan.json > "cta"`
+alaninda, konuya bagli **ikili/tartismali soru** olarak yaziliyor:
+
+```json
+"cta": "Bal porsuğu mu kazanır, sırtlan mı? Yorumlara yaz."
+```
+
+- `senaryo.py` ve `uret.py` ikisi de `plan > cta`'yi oncelikli okuyor (kod zaten destekliyordu);
+  eksik olan `yeni.py`'nin bu alani iskelete koymamasiydi — eklendi, rehber notuyla birlikte.
+- `preset.json > kapanis_cagri` artik sadece **yedek**: plan'da `cta` bossa devreye girer.
+- Kural detayi: `presets/senaryo-stili.md` > kapanis cagrisi maddesi. Ozet: cevabi videoda
+  VERILMEMIS bir soru sor, yoksa tekrar olur.
+
+```bash
+```
+
+Sonra **Enes**: CapCut'ta açar → **auto clipping** (outline'a senaryo.txt) ile dizer →
+timeline'ı VO süresine kırpar → tepsiden kapatır.
+
+```bash
+python scripts/uret.py --proje <slug> --draft <slug> --atla vo,altyazi   # muzik+logo+gecis
+```
+
+Sonra Enes: kontrol + export.
+
+**Doğrulandı (deve-horguc, 2026-08-23):** auto clipping önden konan VO'yu ve altyazıyı
+SİLMİYOR — ikisi de sağ kaldı. Yani şablon akışı auto clipping ile uyumlu.
+
+**Bilinmesi gerekenler:**
+- `--sablon` modunda VO **uydurulmaz** (`vo_uydur` kapalı) — VO ham temposunda kalır,
+  Enes kurguyu ona göre keser. `capcut_muzik.py` boş timeline'da sesi 0 uzunlukta
+  ekliyordu, düzeltildi (timeline boşsa sesin kendi süresi + taslak süresi VO'ya eşitlenir).
+- Auto clipping klipleri doğal uzunlukta dizdiği için timeline VO'dan uzun çıkıyor
+  (deve: 46.9 sn / VO 33.2) — **Enes kuyruğu kırpıyor**, altyazılar VO'ya bağlı olduğu
+  için otomatik hizalanıyor.
+- **Enes altyazıları compound yapıyor ve sticker ekliyor** (görüntü değişince yazılar
+  kayıp bozuluyormuş). Bu yüzden ikinci geçişte rapor `0 altyazi` der — NORMAL, panik yok;
+  ikinci geçiş zaten `--atla vo,altyazi` ile altyazıya dokunmuyor.
 
 ---
+
+## Klip kaynaklari
+
+| Kaynak | Ne icin | Lisans | Atif |
+|---|---|---|---|
+| **Pexels** / **Pixabay** (MCP) | Hayvanin KENDISI, estetik/stok cekim, yuksek cozunurluk, dikey | ticari serbest | gerekmez |
+| **Wikimedia Commons** (`scripts/ara_commons.py`) | Hayvanin YAPTIGI SEY - davranis kaydi | CC0 / CC-BY / CC-BY-SA | **CC-BY'de ZORUNLU** |
+
+**Neden Commons eklendi (2026-08-23):** Pexels/Pixabay stok odakli; hayvani bulursun ama
+davranisini bulamazsin. Uc konuda duvara toslandi: biyolüminesans (0 gercek klip, sadece AI),
+ucan yilan suzulme (0), guguk yuva parazitligi (0). Commons'a bilim insanlari/belgeselciler
+yukluyor - ornek: `Common cuckoo (Cuculus canorus) and host.webm` (1280x720, 87 sn, CC BY 3.0)
+tam da guguk videosunda bulamadigimiz kare.
+
+```bash
+python scripts/ara_commons.py "Cuculus canorus" --limit 20
+python scripts/ara_commons.py "bioluminescence" --json   # plan.json'a yapistirmak icin
+```
+
+Secilen klip plan.json'a `"kaynak": "commons"` ile yazilir. `indir.py`:
+- webm/ogv/mkv indirir ve **otomatik H.264 mp4'e cevirir** (CapCut webm'i duzgun almiyor)
+- CC-BY kliplerde is bitince **atif blogu basar** - o metni video aciklamasina yapistir
+
+**Sinirlari:** cozunurluk dusuk olabiliyor (320x240 - 1280x720 tipik), cogu yatay,
+bazi sonuclar laboratuvar/mikroskop kaydi. Yani ana govde yine Pexels/Pixabay; Commons
+"baska turlu bulunamayan tek kare" icin.
+
+**Instagram/TikTok'tan klip CEKILMEZ** (2026-08-23 Enes sordu, gerekce): telifli icerik,
+ticari kullanim lisansi yok, Content ID/strike riski var ve platform ToS'u yasakliyor.
+Kanalin telif disiplini `kaynaklar.json` uzerine kurulu - bozulmayacak.
 
 ## Bilinmesi gereken tuzaklar
 

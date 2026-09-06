@@ -8,14 +8,14 @@
       "stability": 0.3,
       "similarity": 0.75,
       "style": 0.45,
-      "speed": 1.05,
+      "speed": 1.15,
       "speaker_boost": true,
-      "_not": "YUKSEK ENERJI profili - Enes secti (2026-08-16). speed 1.15 -> 1.20 (2026-08-16) -> 1.10 (2026-08-21) -> 1.05 (2026-08-22, Enes: 'hizli, insanlar algilayamiyor'). vo_hizlandirma da 1.15 -> 1.0 yapildi; efektif tempo ~1.27x -> 1.05x. Doga varsayilani: stability 0.5, style 0.0, speed 1.0. Dusuk stability + yuksek style = canli/hareketli. null yazilirsa o alan gonderilmez ve sesin varsayilani gecerli olur."
+      "_not": "YUKSEK ENERJI profili - Enes secti (2026-08-16). speed 1.15 -> 1.20 (2026-08-16) -> 1.10 (2026-08-21) -> 1.05 (2026-08-22, Enes: 'hizli, insanlar algilayamiyor'). vo_hizlandirma da 1.15 -> 1.0 yapildi; efektif tempo ~1.27x -> 1.05x. Doga varsayilani: stability 0.5, style 0.0, speed 1.0. Dusuk stability + yuksek style = canli/hareketli. null yazilirsa o alan gonderilmez ve sesin varsayilani gecerli olur. 2026-08-23 aksami: 1.05 -> 1.15 (Enes: 'yavas, izleyici sikilir'). Tarihce 1.20x1.15 (cok hizli) -> 1.05 (cok yavas) -> 1.15 orta nokta."
     },
     "vo_match": "_vo",
     "_vo_match_not": "Taslakta hangi ses materyalinin uzerine VO yazilacak (isim eslesmesi). Bu repoda enjekte edilen VO materyali <taslak>_vo adiyla duruyor -> tekrar uretimde ayni materyalin uzerine yazilir.",
-    "karakter_hiz": 12.9,
-    "_karakter_hiz_not": "Planlama katsayisi: saniyede kac karakter okunuyor. Senaryo uzunlugunu kurgu suresine gore hesaplamak icin (hedef karakter = kurgu saniyesi x bu sayi). Hedef sure bandi 20-24 sn -> ~380-430 karakter (CTA dahil). speed 1.15 profilinde olculen deger 13.8-14.4'tu; yeni hizli profille (1.20 x atempo 1.15) kisa cumlede 19.5 cikti ama kisa metinlerde duraklama payi yaniltiyor - kedi-mirilti'nin tam VO'suyla olculdu (411 karakter / 22.7 sn = 18.1) ve deger buna gore sabitlendi (2026-08-16). 2026-08-22: efektif tempo 1.27x -> 1.05x dusunce 16.7 -> 13.9 olceklendi, sonra aksolotl'un gercek VO'suyla KALIBRE edildi: 397 karakter / 30.7 sn (ham 1.05x) = 12.9. Deger 12.9'a sabitlendi. Yani ayni kurgu suresine artik daha AZ karakter siginiyor (ses yavas).",
+    "karakter_hiz": 15.1,
+    "_karakter_hiz_not": "Planlama katsayisi: saniyede kac karakter okunuyor. Senaryo uzunlugunu kurgu suresine gore hesaplamak icin (hedef karakter = kurgu saniyesi x bu sayi). Hedef sure bandi 20-24 sn -> ~380-430 karakter (CTA dahil). speed 1.15 profilinde olculen deger 13.8-14.4'tu; yeni hizli profille (1.20 x atempo 1.15) kisa cumlede 19.5 cikti ama kisa metinlerde duraklama payi yaniltiyor - kedi-mirilti'nin tam VO'suyla olculdu (411 karakter / 22.7 sn = 18.1) ve deger buna gore sabitlendi (2026-08-16). 2026-08-22: efektif tempo 1.27x -> 1.05x dusunce 16.7 -> 13.9 olceklendi, sonra aksolotl'un gercek VO'suyla KALIBRE edildi: 397 karakter / 30.7 sn (ham 1.05x) = 12.9. Deger 12.9'a sabitlendi. Yani ayni kurgu suresine artik daha AZ karakter siginiyor (ses yavas). 2026-08-23 aksami: speed 1.05 -> 1.15 olunca 12.9 -> 14.1 olceklendi (12.9 x 1.15/1.05). Sonraki videonun gercek VO'suyla teyit et. KALIBRE (2026-08-23 aksami, kedi-olu-kus gercek VO): 501 karakter / 33.2 sn (ham 1.15x) = 15.1. Tahmin 14.1'di, gercek 15.1 - deger buna sabitlendi.",
     "vo_uydur": true,
     "_vo_uydur_not": "VO uretildikten sonra ffmpeg atempo ile kurgu suresine tam oturtulur (video - 0.3 sn). Sebep: stability 0.30 profilinde ayni metnin okunusu oynuyor, metni uzatip kisaltarak tutturmak kumar. Fark x0.90-vo_uydur_ust bandinin disindaysa dokunmaz, net hedefle uyarir. false yaparsan eski davranis (sadece uyari) doner. Uydurma HAM kopyadan (_vo_ham.mp3) yapilir - ust uste atempo binmez (2026-08-23).",
     "vo_uydur_ust": 1.1,
@@ -23,7 +23,7 @@
     "vo_hizlandirma": 1.0,
     "_vo_hizlandirma_not": "TTS sonrasi ffmpeg atempo ile ek hizlandirma (perde korunur, ses inceltmez). 2026-08-22: 1.15 -> 1.0 (KAPALI). Enes: 'hizli, insanlar algilayamiyor' - ek ffmpeg hizlanmasi kaldirildi, tempo sadece ElevenLabs speed 1.05 ile belirleniyor. Gerekirse tekrar >1.0 yapilabilir. Tarihce: speed 1.20 x atempo 1.15 = eski 1.15'lik VO'ya gore ~%20 daha hizliydi (2026-08-16 karari, olumsuz-denizanasi ve ahtapot-uc-kalp'e uygulanmadi).",
     "kapanis_cagri": "Sıradaki hangi hayvan olsun? Yorumlara yaz.",
-    "_kapanis_cagri_not": "HER senaryonun sonuna otomatik eklenir (2026-08-16 Enes karari). Hem VO metnine hem senaryo.txt'ye (auto clipping outline) giriyor - ikisi birebir ayni kalsin diye tek kaynaktan. Hizli okunsun diye kisa tutuldu; plan.json sahnelerine yazilmaz, uretim sirasinda eklenir. 2026-08-19'da 'Daha fazla belgesel icin begen ve abone ol' yerine SORU CTA'si kondu: ilk iki videoda sifir yorum geldi, izleyiciye yazacak somut bir sey verilmiyordu (Enes karari).",
+    "_kapanis_cagri_not": "YEDEK CTA. Asil kural (2026-09-04, Enes): her videonun CTA'si plan.json > 'cta' alaninda, VIDEOYA OZEL yazilir - ikili/tartismali soru (ornek: 'Bal porsugu mu kazanir, sirtlan mi? Yorumlara yaz.'). Sebep: sabit 'Siradaki hangi hayvan olsun?' yorum getirmiyor - izleyicinin kafasinda hayvan listesi yok, yazacak somut sey bulamiyor. Bu alan yalnizca plan.json'da 'cta' BOSSA devreye girer. senaryo.py ve uret.py ikisi de plan > cta oncelikli okuyor, boylece senaryo.txt ile VO metni birebir ayni kaliyor. Tarihce: 2026-08-16 CTA zorunlu kilindi; 2026-08-19 abone cagrisi yerine SORU kondu (ilk iki videoda sifir yorum); 2026-09-04 sabit soru -> videoya ozel soru.",
     "vo_volume": 1.63,
     "_vo_volume_not": "VO segmentinin ses seviyesi. Enes 2026-08-16'da ahtapot-uc-kalp'te 1.63'e cikardi (arkaplan sesinin uzerinde net dursun diye). Sadece VO sifirdan eklenirken kullanilir; var olan VO'nun uzerine yazilirken taslaktaki seviye korunur.",
     "vo_proto": "seyrangul-beauty",
@@ -56,6 +56,8 @@
     "text_proto": "",
     "text_y": 0.45,
     "_text_not": "Hook text prototipinin alinacagi taslak + o taslaktaki ornek metnin bir parcasi. y POZITIF = YUKARI; 0.45 = orta-ust (Meta kirpma payi birakir).",
-    "_hiz_not": "2026-08-21 Enes karari: VO ~%8 yavaslatildi (speed 1.20->1.10, karakter_hiz 18.1->16.7). IKISI BIRLIKTE degismeli: vo_uydur VO'yu kurgu suresine oturttugu icin tek basina speed degisikligi duyulmaz; tek basina karakter_hiz dususu de atempo carpanini 0.90 guvenlik sinirinin altina indirip uydurmayi iptal ettirir."
+    "_hiz_not": "2026-08-21 Enes karari: VO ~%8 yavaslatildi (speed 1.20->1.10, karakter_hiz 18.1->16.7). IKISI BIRLIKTE degismeli: vo_uydur VO'yu kurgu suresine oturttugu icin tek basina speed degisikligi duyulmaz; tek basina karakter_hiz dususu de atempo carpanini 0.90 guvenlik sinirinin altina indirip uydurmayi iptal ettirir.",
+    "vo_uydur_alt": 0.97,
+    "_vo_uydur_alt_not": "Uydurmanin izin verdigi en fazla YAVASLATMA. 0.90'dan 0.97'ye cekildi (2026-08-23): timeline VO'dan uzun oldugunda script sesi yavaslatiyordu - kedi-olu-kus'ta x0.914 uygulandi ve efektif tempo 0.96x'e dustu (1.0'in altinda!). Artik %3'ten fazla yavaslatmaz; onun yerine 'timeline'i kisalt' uyarisi verir."
   }
 }

@@ -24,6 +24,7 @@ import json
 import re
 import ssl
 import sys
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -48,7 +49,14 @@ BAGLAM = ssl_baglami()
 LISANSLAR = {
     "pexels": "Pexels License (ticari kullanim serbest, atif gerekmez)",
     "pixabay": "Pixabay Content License (ticari kullanim serbest, atif gerekmez)",
+    # commons: gercek lisans dosyadan dosyaya degisir (CC0 / CC-BY / CC-BY-SA).
+    # ara_commons.py klibin kendi 'lisans' alanini doldurur; asagidaki sadece yedek.
+    "commons": "Wikimedia Commons (CC - klip bazli, ATIF ZORUNLU olabilir)",
 }
+
+# CapCut webm/ogv'yi duzgun almiyor (Commons'ta cogu dosya webm). Bu uzantilar
+# indirildikten sonra H.264 mp4'e cevrilir.
+CEVRILECEK = {".webm", ".ogv", ".ogg", ".mkv", ".avi", ".mov", ".m4v"}
 
 
 def sluglastir(metin):
@@ -70,6 +78,20 @@ def indir(url, hedef: Path):
             cikti.write(parca)
     gecici.replace(hedef)  # yarim dosya birakma
     return hedef.stat().st_size
+
+
+def mp4e_cevir(kaynak: Path, hedef: Path):
+    """webm/ogv -> H.264 mp4 (CapCut uyumu). Basarisizsa kaynagi oldugu gibi birakir."""
+    import subprocess
+    sonuc = subprocess.run(
+        ["ffmpeg", "-y", "-v", "error", "-i", str(kaynak),
+         "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
+         "-pix_fmt", "yuv420p", "-c:a", "aac", str(hedef)],
+        capture_output=True, text=True)
+    if sonuc.returncode != 0 or not hedef.exists():
+        return False, sonuc.stderr.strip()[:160]
+    kaynak.unlink(missing_ok=True)
+    return True, ""
 
 
 def main():
@@ -125,10 +147,15 @@ def main():
             adaylar = [url]
             if kaynak == "pixabay" and "_medium.mp4" in url:
                 adaylar.insert(0, url.replace("_medium.mp4", "_large.mp4"))
+            # Commons dosyalari cogunlukla webm: once orijinal uzantiyla indir, sonra cevir
+            uzanti = Path(urllib.parse.urlparse(url).path).suffix.lower()
+            cevir = uzanti in CEVRILECEK
+            ham_hedef = hedef.with_suffix(uzanti) if cevir else hedef
+
             boyut, inen_url, son_hata = None, url, None
             for aday in adaylar:
                 try:
-                    boyut = indir(aday, hedef)
+                    boyut = indir(aday, ham_hedef)
                     inen_url = aday
                     if aday != url:
                         print(f"  i sahne {no}: pixabay _large (1080p+) bulundu, medium yerine o indirildi")
@@ -139,6 +166,14 @@ def main():
                 print(f"  ! sahne {no}: {kimlik} indirilemedi -> {son_hata}")
                 hatali += 1
                 continue
+            if cevir:
+                tamam, hata_metni = mp4e_cevir(ham_hedef, hedef)
+                if not tamam:
+                    print(f"  ! sahne {no}: {uzanti} -> mp4 cevrilemedi ({hata_metni})")
+                    hatali += 1
+                    continue
+                boyut = hedef.stat().st_size
+                print(f"  i sahne {no}: {uzanti} -> mp4 cevrildi (CapCut uyumu)")
             klip = {**klip, "indirilen_url": inen_url}  # lisans kaydinda gercek dosya izi
 
             print(f"  + sahne {no}: {ad} ({boyut / 1e6:.1f} MB, "
@@ -151,6 +186,19 @@ def main():
             kayitli.add(kimlik)
 
     kayit_yolu.write_text(json.dumps(kayitlar, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    # ATIF: CC-BY / CC-BY-SA kliplerde kaynak gostermek ZORUNLU. Unutulmasin diye
+    # video aciklamasina yapistirilacak blok burada uretiliyor (2026-08-23).
+    atif_gerek = [k for k in kayitlar
+                  if k.get("kaynak") == "commons"
+                  and "cc0" not in str(k.get("lisans", "")).lower()]
+    if atif_gerek:
+        print()
+        print("=== ATIF ZORUNLU - video aciklamasina ekle ===")
+        for k in atif_gerek:
+            print(f"  {k.get('dosya', k.get('id'))} - {k.get('sahibi')}, "
+                  f"{k.get('lisans')}, kaynak: {k.get('sayfa')}")
+        print("  (Pexels/Pixabay kliplerinde atif gerekmiyor.)")
 
     print(f"\ninen {inen} | zaten vardi {atlanan} | hata {hatali}")
     print(f"lisans kaydi: {kayit_yolu}  (telif kaniti - SAKLA)")
